@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="site">
+  <name>Excellerate</name>
+  <version>1.0</version>
+  <creationDate>01/07/2015</creationDate>
+  <author>codeChap</author>
+  <authorEmail>hello@codechap.com</authorEmail>
+  <copyright>Copyright (C) 2015 Excellerate Pty Ltd</copyright>
+  <description>Group template for Excellerate group companies.</description>
+  <files>
+    <filename>index.php</filename>
+    <filename>favicon.ico</filename>
+    <folder>assets</folder>
+    <folder>html</folder>
+    <folder>parts</folder>
+  </files>
+  <positions>
+        <position>debug</position>
+        <position>slider</position>
+        <position>menu</position>
+        <position>newsflash</position>
+        <position>right</position>
+        <position>left</position>
+        <position>header_a</position>
+        <position>header_b</position>
+        <position>header_c</position>
+        <position>header_d</position>
+        <position>footer_a</position>
+        <position>footer_b</position>
+        <position>footer_c</position>
+        <position>footer_d</position>
+        <position>top_left</position>
+        <position>top_right</position>
+        <position>bottom_left</position>
+        <position>bottom_right</position>
+  </positions>
+  <config>
+    <fields name="params">
+      <fieldset name="advanced">
+
+        <field name="logo" class="" type="text" default="" label="Logo Name" description="The logo to use" filter="string" />
+          
+        <field name="siteSlogan"  type="textarea" default="" label="Company Slogan" description="Holding company slogan" filter="raw" />
+
+        <field name="style"
+          type="radio"
+          label="Style"
+          description="Colour style"
+        >
+          <option value="white">None</option>
+          <option value="teal">Aqua</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="purple">Navy</option>
+          <option value="orange">Orange</option>
+          <option value="red">Red</option>
+          
+        </field>
+
+        <field name="facebook"  type="url" default="" label="Facebook page" description="Link to Facebook" filter="url" />
+        <field name="twitter"  type="url" default="" label="Twitter page" description="Link to Twitter" filter="url" />
+        <field name="linkedin"  type="url" default="" label="LinkedIn page" description="Link to Linked In" filter="url" />
+        <field name="pinterest"  type="url" default="" label="Pinterest page" description="Link to Pinterest" filter="url" />
+        <field name="googlePlus"  type="url" default="" label="Google Plus page" description="Link to Google Plus" filter="url" />
+
+      </fieldset>
+    </fields>
+  </config>
+</extension>
