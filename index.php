@@ -40,8 +40,7 @@
     $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/actions.js', 'text/javascript');
 
     // Check sliders
-    $slider = $this->countModules('slider');
-    $sliders = array_filter(
+    $slides = array_filter(
         array(
             $this->params->get('slider_a'),
             $this->params->get('slider_b'),
@@ -129,7 +128,7 @@
                 <!-- BRANDING ROW -->
                 <div id="brand" class="two column <?= $style; ?> row">
                     <div class="left floated left aligned column">
-                        <a href="<?=JURI::base();?>"><img class="ui image logo" alt="<?=$config->get('sitename');?>" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logo; ?>.png'" src="<?=$template;?>/assets/img/groupLogos<?= $logo; ?>.svg"></a>
+                        <a href="<?=JURI::base();?>"><img class="ui image logo" alt="<?=$config->get('sitename');?> Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logo; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logo; ?>.svg"></a>
                     </div>
                     <div class="right floated right aligned column">
                         <span class="slogan"><?php print $slogan; ?></span>
@@ -137,11 +136,11 @@
                 </div>
 
                 <!-- SLIDER ROW -->
-                <?php if($slider) : ?>
+                <?php if(count($slides)) : ?>
                 <div id="slider" class="row">
                     <div id="slickSlider" class="column">
-                        <?php foreach($sliders as $slide) : ?>
-                        <div><img class="ui image" src="/images/slider/guard.jpg" ></div>
+                        <?php foreach($slides as $slide) : ?>
+                        <div><img class="ui image" src="<?= $slide; ?>" ></div>
                         <?php endforeach; ?>
                     </div>
                 </div>

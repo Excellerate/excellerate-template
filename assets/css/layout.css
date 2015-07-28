@@ -123,9 +123,6 @@ small, .small{
 #brand{
     height:107px;
 }
-    #brand .logo{
-        height:60px;
-    }
     #brand .slogan{
         font-size:18px;
         font-weight:300;
@@ -227,6 +224,7 @@ small, .small{
 #bottom{
     font-size:11px;
     text-transform:uppercase;
+    min-height:56px;
 }
     #bottom p.copyright{
         padding:0px;
