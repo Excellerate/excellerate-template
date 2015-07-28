@@ -1,5 +1,5 @@
 /* SEMANTIC COLORS */
-.ui.grid>.orange.column, .ui.grid>.orange.row, .ui.grid>.row>.orange.column{
+.ui.grid>.teal.column, .ui.grid>.teal.row, .ui.grid>.row>.teal.column{
     background-color: #00A0AF !important;
     color: #FFF;
 }

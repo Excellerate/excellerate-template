@@ -39,8 +39,19 @@
     $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/slick.min.js', 'text/javascript');
     $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/actions.js', 'text/javascript');
 
-    // Check modules
+    // Check sliders
     $slider = $this->countModules('slider');
+    $sliders = array_filter(
+        array(
+            $this->params->get('slider_a'),
+            $this->params->get('slider_b'),
+            $this->params->get('slider_c'),
+            $this->params->get('slider_d'),
+            $this->params->get('slider_e')
+        )
+    );
+
+    // Check modules
     $left = $this->countModules('left');
     $right = $this->countModules('right');
     $topLeft = $this->countModules('top_left');
@@ -129,9 +140,9 @@
                 <?php if($slider) : ?>
                 <div id="slider" class="row">
                     <div id="slickSlider" class="column">
-                        <div><img class="ui image" src="<?=$template;?>/assets/img/slider/guard.jpg" ></div>
-                        <div><img class="ui image" src="<?=$template;?>/assets/img/slider/guard.jpg" ></div>
-                        <div><img class="ui image" src="<?=$template;?>/assets/img/slider/guard.jpg" ></div>
+                        <?php foreach($sliders as $slide) : ?>
+                        <div><img class="ui image" src="/images/slider/guard.jpg" ></div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
                 <?php endif; ?>

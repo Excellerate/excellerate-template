@@ -88,7 +88,7 @@
 .slick-prev:before
 {
     /*content: '←';*/
-    content: url('/templates/enforce/assets/img/right.gif');
+    content: url('/templates/excellerate/assets/img/right.gif');
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -107,7 +107,7 @@
 .slick-next:before
 {
     /*content: '→';*/
-    content: url('/templates/enforce/assets/img/left.gif');
+    content: url('/templates/excellerate/assets/img/left.gif');
 }
 [dir='rtl'] .slick-next:before
 {

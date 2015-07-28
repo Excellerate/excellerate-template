@@ -6,14 +6,17 @@
   <creationDate>01/07/2015</creationDate>
   <author>codeChap</author>
   <authorEmail>hello@codechap.com</authorEmail>
+  <authorUrl>http://codechap.com</authorUrl>
   <copyright>Copyright (C) 2015 Excellerate Pty Ltd</copyright>
   <description>Group template for Excellerate group companies.</description>
   <files>
-    <filename>index.php</filename>
-    <filename>favicon.ico</filename>
     <folder>assets</folder>
     <folder>html</folder>
     <folder>parts</folder>
+    <filename>index.php</filename>
+    <filename>favicon.ico</filename>
+    <filename>template_preview.png</filename>
+    <filename>template_thumbnail.png</filename>
   </files>
   <positions>
         <position>debug</position>
@@ -57,6 +60,12 @@
           <option value="red">Red</option>
           
         </field>
+
+        <field name="slider_a" class="" type="media" default="" label="Slider A Image" description="" />
+        <field name="slider_b" class="" type="media" default="" label="Slider B Image" description="" />
+        <field name="slider_c" class="" type="media" default="" label="Slider C Image" description="" />
+        <field name="slider_d" class="" type="media" default="" label="Slider D Image" description="" />
+        <field name="slider_e" class="" type="media" default="" label="Slider E Image" description="" />
 
         <field name="facebook"  type="url" default="" label="Facebook page" description="Link to Facebook" filter="url" />
         <field name="twitter"  type="url" default="" label="Twitter page" description="Link to Twitter" filter="url" />
