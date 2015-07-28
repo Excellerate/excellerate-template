@@ -62,6 +62,7 @@
     $topB = $this->countModules('top_b');
     $topC = $this->countModules('top_c');
     $topD = $this->countModules('top_d');
+    $topE = $this->countModules('top_e');
     $footerA = $this->countModules('footer_a');
     $footerB = $this->countModules('footer_b');
     $footerC = $this->countModules('footer_c');

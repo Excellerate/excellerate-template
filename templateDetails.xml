@@ -25,10 +25,11 @@
         <position>newsflash</position>
         <position>right</position>
         <position>left</position>
-        <position>header_a</position>
-        <position>header_b</position>
-        <position>header_c</position>
-        <position>header_d</position>
+        <position>top_a</position>
+        <position>top_b</position>
+        <position>top_c</position>
+        <position>top_d</position>
+        <position>top_e</position>
         <position>footer_a</position>
         <position>footer_b</position>
         <position>footer_c</position>
