@@ -6,7 +6,7 @@
         $show = true;
 
         // Find the correct word count
-        $count = count(array_filter(array($topA, $topB, $topC, $topD, $topD)));
+        $count = count(array_filter(array($topA, $topB, $topC, $topD, $topE)));
         switch( $count ){
             case 1 : $total = "one"; break;
             case 2 : $total = "two"; break;
