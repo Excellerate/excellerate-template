@@ -179,12 +179,16 @@ small, .small{
 
 #content ul, #content ol{
     list-style-position: inside;
+    list-style:none;
     margin-left:0px;
     padding-left:0px;
 }
 #content ul li:before {
-    content:"";
     padding-right:15px;
+    content: '\2022'; /* FontAwesome char code inside the '' */
+    font-family: Icons; /* FontAwesome or whatever */
+    display: inline-block;
+    font-size:16px;
 }
 
 /* THREE CONTENT BLOCKS */
