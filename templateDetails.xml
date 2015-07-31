@@ -30,10 +30,16 @@
         <position>top_c</position>
         <position>top_d</position>
         <position>top_e</position>
+        <position>bottom_a</position>
+        <position>bottom_b</position>
+        <position>bottom_c</position>
+        <position>bottom_d</position>
+        <position>bottom_e</position>
         <position>footer_a</position>
         <position>footer_b</position>
         <position>footer_c</position>
         <position>footer_d</position>
+        <position>footer_e</position>
         <position>top_left</position>
         <position>top_right</position>
         <position>bottom_left</position>

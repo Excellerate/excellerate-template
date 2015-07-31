@@ -63,10 +63,16 @@
     $topC = $this->countModules('top_c');
     $topD = $this->countModules('top_d');
     $topE = $this->countModules('top_e');
+    $bottomA = $this->countModules('bottom_a');
+    $bottomB = $this->countModules('bottom_b');
+    $bottomC = $this->countModules('bottom_c');
+    $bottomD = $this->countModules('bottom_d');
+    $bottomE = $this->countModules('bottom_e');
     $footerA = $this->countModules('footer_a');
     $footerB = $this->countModules('footer_b');
     $footerC = $this->countModules('footer_c');
     $footerD = $this->countModules('footer_d');
+    $footerE = $this->countModules('footer_E');
 
 ?>
 
@@ -180,6 +186,15 @@
                 </div>
 
                 <!-- BELOW CONTENT ROW -->
+                <?php if($bottomA or $bottomB or $bottomC or $bottomD) : ?>
+                <div id="bottom" class="row">
+                    <div class="column">
+                        <?php include("parts/bottom.php"); ?>
+                    </div>
+                </div>
+                <?php endif; ?>
+
+                <!-- FOOTER ROW -->
                 <?php if($footerA or $footerB or $footerC or $footerD) : ?>
                 <div id="footer" class="light row">
                     <div class="column">
@@ -189,7 +204,7 @@
                 <?php endif; ?>
 
                 <!-- FOOTER ROW -->
-                <div id="bottom" class="grey two column row">
+                <div id="copyright" class="grey two column row">
                     <div class="column">
                         <p class="copyright">Copyright &copy; 2015 Enforce Security Services</p>
                     </div>
