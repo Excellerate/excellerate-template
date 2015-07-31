@@ -179,14 +179,16 @@ small, .small{
 
 #content ul, #content ol{
     list-style-position: inside;
-    list-style:none;
+    margin-left:0px;
+    padding-left:0px;
 }
 #content ul li:before {
-    content: "• ";
+    content:"";
+    padding-right:15px;
 }
 
 /* THREE CONTENT BLOCKS */
-#top, #content, #footer{
+#top, #content, #bottom, #footer{
 
 }
     #top img, #content img, #footer img{
@@ -196,6 +198,10 @@ small, .small{
         vertical-align: middle;
         max-width:100%;
         background-color: transparent;
+    }
+
+    #top .segment, #bottom .segment{
+        min-height:350px !important;
     }
 
     #footer ul, #footer ol{
@@ -221,28 +227,28 @@ small, .small{
             border-top:0px;
         }
 
-#bottom{
+#copyright{
     font-size:11px;
     text-transform:uppercase;
     min-height:56px;
 }
-    #bottom p.copyright{
+    #copyright p.copyright{
         padding:0px;
         margin:0px;
         position:absolute;
         bottom:-1px;
     }
-    #bottom .socialLink{
+    #copyright .socialLink{
         color:white;
         text-decoration:none !important;
     }
-    #bottom i{
+    #copyright i{
         font-size: 28px;
     }
 
     /* Mobile */
     @media only screen and (max-width: 767px) {
-        #bottom p.copyright{
+        #copyright p.copyright{
             padding:0px;
             margin:0px;
             position:relative;
