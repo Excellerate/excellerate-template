@@ -11,6 +11,7 @@
     $logo = strtolower($this->params->get('logo'));
     $logo_b = strtolower($this->params->get('logo_b'));
     $logo_c = strtolower($this->params->get('logo_c'));
+    $company = $this->params->get('company');
     $slogan = $this->params->get('siteSlogan');
     $style = $this->params->get('style', 'white');
 
@@ -199,7 +200,7 @@
                 <!-- FOOTER ROW -->
                 <div id="copyright" class="grey two column row">
                     <div class="column">
-                        <p class="copyright">Copyright &copy; 2015 Enforce Security Services</p>
+                        <p class="copyright">Copyright &copy; 2015 <?= $company; ?></p>
                     </div>
                     <div class="right floated right aligned column">
                         <?php include("parts/social.php"); ?>
