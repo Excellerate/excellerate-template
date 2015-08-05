@@ -9,6 +9,8 @@
 
     // Template params
     $logo = strtolower($this->params->get('logo'));
+    $logo_b = strtolower($this->params->get('logo_b'));
+    $logo_c = strtolower($this->params->get('logo_c'));
     $slogan = $this->params->get('siteSlogan');
     $style = $this->params->get('style', 'white');
 
@@ -30,27 +32,14 @@
     // Document style sheets and js
     $doc = JFactory::getDocument();
     $doc->addStyleSheet(JUri::base() . 'templates/' . $this->template . '/assets/css/semantic.min.css', $type = 'text/css');
-    $doc->addStyleSheet(JUri::base() . 'templates/' . $this->template . '/assets/css/slick.css', $type = 'text/css');
-    $doc->addStyleSheet(JUri::base() . 'templates/' . $this->template . '/assets/css/slick-theme.css', $type = 'text/css');
     $doc->addStyleSheet(JUri::base() . 'templates/' . $this->template . '/assets/css/layout.css', $type = 'text/css');
     $doc->addStyleSheet(JUri::base() . 'templates/' . $this->template . '/assets/css/styles/'.$style.'.css', $type = 'text/css');
     $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/jquery.min.js', 'text/javascript');
     $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/semantic.min.js', 'text/javascript');
-    $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/slick.min.js', 'text/javascript');
     $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/actions.js', 'text/javascript');
 
-    // Check sliders
-    $slides = array_filter(
-        array(
-            $this->params->get('slider_a'),
-            $this->params->get('slider_b'),
-            $this->params->get('slider_c'),
-            $this->params->get('slider_d'),
-            $this->params->get('slider_e')
-        )
-    );
-
     // Check modules
+    $slider = $this->countModules('slider');
     $left = $this->countModules('left');
     $right = $this->countModules('right');
     $topLeft = $this->countModules('top_left');
@@ -136,6 +125,12 @@
                 <div id="brand" class="two column <?= $style; ?> row">
                     <div class="left floated left aligned column">
                         <a href="<?=JURI::base();?>"><img class="ui image logo" alt="<?=$config->get('sitename');?> Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logo; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logo; ?>.svg"></a>
+                        <?php if($logo_b) : ?>
+                            <a href="<?=JURI::base();?>"><img class="ui image logo" alt="Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logo_b; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logo_b; ?>.svg"></a>
+                        <?php endif; ?>
+                        <?php if($logo_c) : ?>
+                            <a href="<?=JURI::base();?>"><img class="ui image logo" alt="Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logo_c; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logo_c; ?>.svg"></a>
+                        <?php endif; ?>
                     </div>
                     <div class="right floated right aligned column">
                         <span class="slogan"><?php print $slogan; ?></span>
@@ -143,12 +138,10 @@
                 </div>
 
                 <!-- SLIDER ROW -->
-                <?php if(count($slides)) : ?>
+                <?php if($slider) : ?>
                 <div id="slider" class="row">
-                    <div id="slickSlider" class="column">
-                        <?php foreach($slides as $slide) : ?>
-                        <div><img class="ui image" src="<?= $slide; ?>" ></div>
-                        <?php endforeach; ?>
+                    <div class="column">
+                        <jdoc:include type="modules" name="slider" />
                     </div>
                 </div>
                 <?php endif; ?>

@@ -67,6 +67,10 @@ img.profile{
     margin-right:8px;
     text-align:top;
 }
+.ui.membership.image{
+    max-width:100%;
+    width:100%;
+}
 
 .ui.small.image{
     width:200px !important;
@@ -121,12 +125,16 @@ small, .small{
     }
 
 #brand{
-    height:107px;
+    min-height:107px;
 }
     #brand .slogan{
         font-size:18px;
         font-weight:300;
         text-transform:uppercase;
+    }
+
+    #brand .image.logo{
+        margin-bottom:3px;
     }
 
     #brand .phone{
@@ -170,11 +178,53 @@ small, .small{
 #slider.row{
     height:223px !important;
     padding:0px !important;
-    overflow:hidden;
 }
+    #slider.row img{
+        max-height:223px;
+        width:100%;
+    }
     #slider .column{
-        padding:0px !important;
-        
+        padding:0px !important;   
+    }
+    /* Arrows */
+    #slider .slick-prev, #slider .slick-next{
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        top: 41%;
+        display: block;
+        width: 38px;
+        height: 61px;
+        margin-top: -10px;
+        padding: 0;
+        cursor: pointer;
+        color: transparent;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+    /* SLDIER PREV */
+    #slider .slick-prev{
+        left: 0px !important;
+        z-index:999;
+    }
+    #slider .slick-prev:before{
+        content: url('/templates/excellerate/assets/img/right.gif') !important;
+    }
+    /* SLIDER NEXT */
+    #slider .slick-next{
+        right: 0px !important;
+    }
+    #slider .slick-next:before{
+        content: url('/templates/excellerate/assets/img/left.gif') !important;
+    }
+    /* DOTS */
+    .slick-dots{
+        position: absolute !important;
+        bottom: 0px !important;
+    }
+    .slick-dots li button:before{
+        font-size: 12px !important;
     }
 
 #content ul, #content ol{
@@ -206,6 +256,7 @@ small, .small{
 
     #top .segment, #bottom .segment{
         min-height:350px !important;
+        min-height:220px !important;
     }
 
     #footer ul, #footer ol{
@@ -328,17 +379,6 @@ small, .small{
     }
 
 /* SLICK */
-#slick{
-
-}
-    #slickSlider .my-next-arrow, #slickSlider .my-prev-arrow{
-        display:absolute;
-        top:0px;
-        width:30px;
-        height:30px;
-        background-image:url('/templates/enforce/assets/img/arrows.gif');
-        z-index:999;
-    }
 
 /* SEMANTIC TWEEKS */
 .ui.link.menu .item:hover, .ui.menu .dropdown.item:hover, .ui.menu .link.item:hover, .ui.menu a.item:hover {

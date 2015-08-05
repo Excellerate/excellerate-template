@@ -50,7 +50,78 @@
       <fieldset name="advanced">
 
         <field name="logo" class="" type="text" default="" label="Logo Name" description="The logo to use" filter="string" />
-          
+
+        <field name="logo" type="list" label="logo" description="Select main logo">
+          <option value="enforce">Enforce</option>
+          <option value="eradico">Eradico</option>
+          <option value="excellerate-brand-management">Excellerate Brand Management</option>
+          <option value="excellerate-facility-management">Excellerate Facility Management</option>
+          <option value="excellerate-holdings">Excellerate Holdings</option>
+          <option value="excellerate-utilities-management">Excellerate Utilities Management</option>
+          <option value="first">First Technical</option>
+          <option value="fresh">Fresh Cafe</option>
+          <option value="interpark">Interpark</option>
+          <option value="jhi-advisory">JHI Advisory</option>
+          <option value="jhi-cres">JHI Cres</option>
+          <option value="jhi-projects">JHI Projects</option>
+          <option value="jhi-projects">JHI Projects</option>
+          <option value="jhi-retail">JHI Retail</option>
+          <option value="jhi-structures">JHI Structures</option>
+          <option value="jhi">JHI</option>
+          <option value="katanga">Katanga</option>
+          <option value="Spark">Spark</option>
+          <option value="sterikleen">Sterikleen</option>
+          <option value="syenap">Syenap</option>
+        </field>
+
+        <field name="logo_b" type="list" label="Logo two" description="Select second logo">
+          <option value="">None</option>
+          <option value="enforce">Enforce</option>
+          <option value="eradico">Eradico</option>
+          <option value="excellerate-brand-management">Excellerate Brand Management</option>
+          <option value="excellerate-facility-management">Excellerate Facility Management</option>
+          <option value="excellerate-holdings">Excellerate Holdings</option>
+          <option value="excellerate-utilities-management">Excellerate Utilities Management</option>
+          <option value="first">First Technical</option>
+          <option value="fresh">Fresh Cafe</option>
+          <option value="interpark">Interpark</option>
+          <option value="jhi-advisory">JHI Advisory</option>
+          <option value="jhi-cres">JHI Cres</option>
+          <option value="jhi-projects">JHI Projects</option>
+          <option value="jhi-projects">JHI Projects</option>
+          <option value="jhi-retail">JHI Retail</option>
+          <option value="jhi-structures">JHI Structures</option>
+          <option value="jhi">JHI</option>
+          <option value="katanga">Katanga</option>
+          <option value="Spark">Spark</option>
+          <option value="sterikleen">Sterikleen</option>
+          <option value="syenap">Syenap</option>
+        </field>
+
+        <field name="logo_c" type="list" label="Logo three" description="Select third logo">
+          <option value="">None</option>
+          <option value="enforce">Enforce</option>
+          <option value="eradico">Eradico</option>
+          <option value="excellerate-brand-management">Excellerate Brand Management</option>
+          <option value="excellerate-facility-management">Excellerate Facility Management</option>
+          <option value="excellerate-holdings">Excellerate Holdings</option>
+          <option value="excellerate-utilities-management">Excellerate Utilities Management</option>
+          <option value="first">First Technical</option>
+          <option value="fresh">Fresh Cafe</option>
+          <option value="interpark">Interpark</option>
+          <option value="jhi-advisory">JHI Advisory</option>
+          <option value="jhi-cres">JHI Cres</option>
+          <option value="jhi-projects">JHI Projects</option>
+          <option value="jhi-projects">JHI Projects</option>
+          <option value="jhi-retail">JHI Retail</option>
+          <option value="jhi-structures">JHI Structures</option>
+          <option value="jhi">JHI</option>
+          <option value="katanga">Katanga</option>
+          <option value="Spark">Spark</option>
+          <option value="sterikleen">Sterikleen</option>
+          <option value="syenap">Syenap</option>
+        </field>
+
         <field name="siteSlogan"  type="textarea" default="" label="Company Slogan" description="Holding company slogan" filter="raw" />
 
         <field name="style"
@@ -67,12 +138,6 @@
           <option value="red">Red</option>
           
         </field>
-
-        <field name="slider_a" class="" type="media" default="" label="Slider A Image" description="" />
-        <field name="slider_b" class="" type="media" default="" label="Slider B Image" description="" />
-        <field name="slider_c" class="" type="media" default="" label="Slider C Image" description="" />
-        <field name="slider_d" class="" type="media" default="" label="Slider D Image" description="" />
-        <field name="slider_e" class="" type="media" default="" label="Slider E Image" description="" />
 
         <field name="facebook"  type="url" default="" label="Facebook page" description="Link to Facebook" filter="url" />
         <field name="twitter"  type="url" default="" label="Twitter page" description="Link to Twitter" filter="url" />

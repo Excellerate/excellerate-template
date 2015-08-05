@@ -32,7 +32,10 @@
             
             <!-- CONTENT -->
             <div class="ui one column grid">
-                <div class="column"><jdoc:include type="component" /></div>
+                <div class="column">
+                    <jdoc:include type="message" />
+                    <jdoc:include type="component" />
+                </div>
             </div>
             
             <!-- Below content to the left and right -->

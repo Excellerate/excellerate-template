@@ -26,8 +26,8 @@ a{
 
 /* SLICK SLIDER */
 .slick-dots li button:before{
-    color: #00A0AF;
+    color: #00A0AF !important;
 }
 .slick-dots li.slick-active button:before{
-    color: #00A0AF;
+    color: #00A0AF !important;
 }

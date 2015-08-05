@@ -12,8 +12,7 @@
     }
     else{
         $title = array(
-            $this->item->title,
-            $this->item->category_alias == 'uncategorised' ? false : $this->item->category_title  
+            $this->item->title 
         );
     }
 
