@@ -249,17 +249,34 @@ small, .small{
     }
 
 #content ul, #content ol{
-    list-style-position: inside;
+    /*
+    list-style-position: outside;
     list-style:none;
     margin-left:0px;
     padding-left:0px;
+    */
 }
 #content ul li:before {
+    /*
     padding-right:15px;
-    content: '\2022'; /* FontAwesome char code inside the '' */
-    font-family: Icons; /* FontAwesome or whatever */
+    content: '\2022';
+    font-family: Icons;
     display: inline-block;
     font-size:16px;
+    */
+}
+
+#content ul, #content ol{
+    list-style:none;
+    margin-left:20px;
+    padding-left:0px;
+}
+#content ul li:before {
+    position: absolute;
+    content: '\2022';
+    font-family: Icons;
+    left:15px;
+
 }
 
 /* THREE CONTENT BLOCKS */
