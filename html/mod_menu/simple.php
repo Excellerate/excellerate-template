@@ -42,7 +42,7 @@
 ?>
 
 <nav>
-    <div class="ui menu">
+    <div class="ui stackable menu">
 
         <?php
 

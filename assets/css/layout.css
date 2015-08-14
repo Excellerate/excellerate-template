@@ -180,6 +180,9 @@ small, .small{
         #brand .logo{
 
         }
+        #brand .slogan{
+            font-size:14px;
+        }
     }
 
     /* Tablet */
@@ -442,6 +445,37 @@ small, .small{
     background: white;
     color: rgba(0, 0, 0, 0.95);
 }
+    /* Mobile */
+    @media only screen and (max-width: 767px) {
+        #slider.row img{
+            min-width:800px !important;
+            overflow:hidden;
+            left:-33%;
+        }
+        #slider.row{
+            max-height:156px;
+        }
+    }
+    /* Mobile Portrait */
+    @media only screen and (max-width: 767px) and (orientation: portrait){
+        #slider.row img{
+            left:-100%;
+        }
+    }
+
+    /* Tablet */
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        #brand .logo{
+
+        }
+    }
+
+    /* Small Monitor */
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        #brand .logo{
+
+        }
+    }
 
 .segment h3.header{
     border-bottom:1px solid #f0f0f0;   
@@ -462,3 +496,4 @@ small, .small{
     margin:15px;
     margin-right:30px;
 }
+
