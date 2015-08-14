@@ -56,6 +56,7 @@
         <field name="logo_a" type="list" label="Main logo" description="Select main logo">
           <option value="enforce">Enforce</option>
           <option value="eradico">Eradico</option>
+          <option value="eradicoMono">Eradico (monotone)</option>
           <option value="excellerate-brand-management">Excellerate Brand Management</option>
           <option value="excellerate-facility-management">Excellerate Facility Management</option>
           <option value="excellerate-holdings">Excellerate Holdings</option>
@@ -71,8 +72,10 @@
           <option value="jhi-structures">JHI Structures</option>
           <option value="jhi">JHI</option>
           <option value="katanga">Katanga</option>
+          <option value="katangaMono">Katanga (monotone)</option>
           <option value="Spark">Spark</option>
           <option value="sterikleen">Sterikleen</option>
+          <option value="sterikleenMono">Sterikleen (monotone)</option>
           <option value="syenap">Syenap</option>
         </field>
 
