@@ -267,16 +267,18 @@ small, .small{
 }
 
 #content ul, #content ol{
-    list-style:none;
-    margin-left:20px;
+    position:relative;
+    left:25px;
+    margin-left:-10px;
     padding-left:0px;
+    float:clear;
 }
-#content ul li:before {
-    position: absolute;
-    content: '\2022';
-    font-family: Icons;
-    left:15px;
-
+#content ul{
+    list-style:none;
+    list-style-image:url('/templates/excellerate/assets/img/dot.gif');
+}
+#content ul li, #content ol li{
+    padding-left:10px;
 }
 
 /* THREE CONTENT BLOCKS */
