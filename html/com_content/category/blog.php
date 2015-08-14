@@ -1,5 +1,5 @@
 
-<div class="ui grid">
+<div class="ui stackable grid">
 
     <!-- LEADING ARTICLE -->
     <?php if ( ! empty($this->lead_items)) : ?>            

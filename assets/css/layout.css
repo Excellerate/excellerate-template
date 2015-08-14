@@ -76,6 +76,11 @@ img.profile{
     width:200px !important;
     margin-bottom:8px;
 }
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    .ui.left.floated.small.image{
+        float:none;
+    }
+}
 
 /* TEXT HELPERS */
 .lead{

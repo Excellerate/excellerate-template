@@ -47,7 +47,7 @@
     }
 ?>
 
-<div class="ui grid">
+<div class="ui stackable grid">
     <?php foreach($data as $row) : ?>
         <div class="ui two column row">
             <?php print $row; ?>
