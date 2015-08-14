@@ -129,6 +129,8 @@
         <field name="company"  type="text" default="" label="Full company name" description="Enter full name of the group company" filter="string" />
 
         <field name="siteSlogan"  type="textarea" default="" label="Company Slogan" description="Holding company slogan" filter="raw" />
+        
+        <field name="siteNumber"  type="text" default="" label="Phone number" description="Holding company number" filter="string" />
 
         <field name="style"
           type="radio"

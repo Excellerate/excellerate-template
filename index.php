@@ -13,6 +13,7 @@
     $logo_c = strtolower($this->params->get('logo_c'));
     $company = $this->params->get('company');
     $slogan = $this->params->get('siteSlogan');
+    $number = $this->params->get('siteNumber');
     $style = $this->params->get('style', 'white');
 
     // Gather Config
@@ -106,6 +107,7 @@
     <body>
 
         <!-- Mobile Menu -->
+
         <div class="ui sidebar inverted vertical menu">
             <a class="item">1</a>
             <a class="item">2</a>
@@ -120,9 +122,15 @@
                 <div id="byExcellerate" class="two column row">
                     <div class="left floated left aligned column">
                         <a href="http://excellerate.co.za"><img class="ui logo image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/driven-by-excellerate.png'" src="<?=$template;?>/assets/img/driven-by-excellerate.svg" ></a>
+                        <?php if($number) : ?>
+                            <a id="numberLeft" href="tel:<?= preg_replace("/[^0-9]/","",$number) ;?>"><?= $number; ?></a>
+                        <?php endif; ?>
                     </div>
-                    <div class="right floated right aligned tablet only mobile only column">
+                    <div class="right floated right aligned column">
                         <a id="mobileMenuTrigger"><i class="ui content icon"></i>Menu</a>
+                        <?php if($number) : ?>
+                            <a id="numberRight" href="tel:<?= preg_replace("/[^0-9]/","",$number) ;?>"><?= $number; ?></a>
+                        <?php endif; ?>
                     </div>
                 </div>
 

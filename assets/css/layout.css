@@ -124,6 +124,43 @@ small, .small{
         top:25px;
     }
 
+#numberLeft, #numberRight{
+    display:none;
+    font-size:22px;
+    color:black;
+    padding-top:25px;
+}
+    #numberRight{
+        display:block;
+    }
+
+    #numberLeft:hover, #numberRight:hover{
+        text-decoration:none;
+    }
+
+    /* Mobile */
+    @media only screen and (max-width: 767px) {
+        #numberRight{
+            display:none;
+        }
+        #numberLeft{
+            display:block;
+            font-size:16px;
+            margin-top:30px;
+        }
+    }
+    /* Tablet */
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        #numberRight{
+            display:none;
+        }
+        #numberLeft{
+            display:block;
+            font-size:16px;
+            margin-top:30px;
+        }
+    }
+
 #brand{
     min-height:107px;
 }
@@ -328,9 +365,26 @@ small, .small{
     color:white;
     padding:3px;
     position:absolute;
-    top:16px;
-    right:12px;
+    top:30px;
+    right:0px;
+    display:none;
 }
+    #mobileMenuTrigger:hover{
+        text-decoration:none;
+    }
+    /* Mobile */
+    @media only screen and (max-width: 767px) {
+        #mobileMenuTrigger{
+            display:block;
+        }
+    }
+
+    /* Tablet */
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        #mobileMenuTrigger{
+            display:block;
+        }
+    }
 
 /* COMPUTER MENU */
 #menu.row{
