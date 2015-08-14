@@ -8,13 +8,24 @@
     $template = JUri::base() . 'templates/' . $this->template;
 
     // Template params
-    $logo = strtolower($this->params->get('logo'));
-    $logo_b = strtolower($this->params->get('logo_b'));
-    $logo_c = strtolower($this->params->get('logo_c'));
+    $logoA = strtolower($this->params->get('logo_a'));
+    $logoB = strtolower($this->params->get('logo_b'));
+    $logoC = strtolower($this->params->get('logo_c'));
     $company = $this->params->get('company');
     $slogan = $this->params->get('siteSlogan');
     $number = $this->params->get('siteNumber');
     $style = $this->params->get('style', 'white');
+
+    // Set logo width and height
+    if($logoA and $logoB and $logoC){
+        $logoWidth = "width=150px";
+    }
+    else if ($logoA and $logoB){
+        $logoWidth = "width=226px";
+    }
+    else{
+        $logoWidth = false;
+    }
 
     // Gather Config
     $config = JFactory::getConfig();
@@ -137,12 +148,12 @@
                 <!-- BRANDING ROW -->
                 <div id="brand" class="two column <?= $style; ?> row">
                     <div class="left floated left aligned column">
-                        <a href="<?=JURI::base();?>"><img class="ui image logo" alt="<?=$config->get('sitename');?> Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logo; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logo; ?>.svg"></a>
-                        <?php if($logo_b) : ?>
-                            <a href="<?=JURI::base();?>"><img class="ui image logo" alt="Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logo_b; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logo_b; ?>.svg"></a>
+                        <a href="<?=JURI::base();?>"><img <?= $logoWidth; ?> class="ui image logo" alt="<?=$config->get('sitename');?> Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logoA; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logoA; ?>.svg"></a>
+                        <?php if($logoB) : ?>
+                            <a href="<?=JURI::base();?>"><img <?= $logoWidth; ?> class="ui image logo" alt="Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logoB; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logoB; ?>.svg"></a>
                         <?php endif; ?>
-                        <?php if($logo_c) : ?>
-                            <a href="<?=JURI::base();?>"><img class="ui image logo" alt="Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logo_c; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logo_c; ?>.svg"></a>
+                        <?php if($logoC) : ?>
+                            <a href="<?=JURI::base();?>"><img <?= $logoWidth; ?> class="ui image logo" alt="Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logoC; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logoC; ?>.svg"></a>
                         <?php endif; ?>
                     </div>
                     <div class="right floated right aligned column">

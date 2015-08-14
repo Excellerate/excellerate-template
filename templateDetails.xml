@@ -53,9 +53,7 @@
     <fields name="params">
       <fieldset name="advanced">
 
-        <field name="logo" class="" type="text" default="" label="Logo Name" description="The logo to use" filter="string" />
-
-        <field name="logo" type="list" label="Main logo" description="Select main logo">
+        <field name="logo_a" type="list" label="Main logo" description="Select main logo">
           <option value="enforce">Enforce</option>
           <option value="eradico">Eradico</option>
           <option value="excellerate-brand-management">Excellerate Brand Management</option>

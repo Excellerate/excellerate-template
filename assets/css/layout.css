@@ -162,7 +162,8 @@ small, .small{
     }
 
 #brand{
-    min-height:107px;
+    height:107px;
+    overflow: hidden;
 }
     #brand .slogan{
         font-size:18px;
@@ -174,20 +175,9 @@ small, .small{
         margin-bottom:3px;
     }
 
-    #brand .phone{
-        display:block;
-        padding-top:35px;
-        font-size:32px;
-        font-weight:400;
-        color:white !important;
-    }
-
     /* Mobile */
     @media only screen and (max-width: 767px) {
         #brand .logo{
-
-        }
-        #brand .phone{
 
         }
     }
@@ -197,17 +187,11 @@ small, .small{
         #brand .logo{
 
         }
-        #brand .phone{
-
-        }
     }
 
     /* Small Monitor */
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
         #brand .logo{
-
-        }
-        #brand .phone{
 
         }
     }
