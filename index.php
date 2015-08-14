@@ -47,7 +47,11 @@
     $bottomLeft = $this->countModules('bottom_left');
     $topRight = $this->countModules('top_right');
     $bottomRight = $this->countModules('bottom_right');
-    $newsFlash = $this->countModules('newsflash');
+    $newsFlashA = $this->countModules('newsflash_a');
+    $newsFlashB = $this->countModules('newsflash_b');
+    $newsFlashC = $this->countModules('newsflash_c');
+    $newsFlashD = $this->countModules('newsflash_d');
+    $newsFlashE = $this->countModules('newsflash_e');
     $topA = $this->countModules('top_a');
     $topB = $this->countModules('top_b');
     $topC = $this->countModules('top_c');
@@ -155,10 +159,10 @@
                 </div>
 
                 <!-- NEWSFLASH ROW -->
-                <?php if($newsFlash) : ?>
+                <?php if($newsFlashA or $newsFlashB or $newsFlashC or $newsFlashD or $newsFlashE) : ?>
                 <div id="newsFlash" class="row">
                     <div class="column">
-                        <jdoc:include type="modules" name="newsflash" style="block" />
+                        <?php include("parts/newsflash.php"); ?>
                     </div>
                 </div>
                 <?php endif; ?>

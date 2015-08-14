@@ -43,7 +43,7 @@
             $readMore = '<a class="readMore" href="'.$link.'">Read more about '.$item->title.' here.</a>';
         }
 
-        $data[] = '<div class="ui four wide column">' . $image . '</div><div class="ui twelve wide column">' . $title . $text . ($readMore ? $readMore : null) . '</div>';
+        $data[] = '<div class="ui six wide column">' . $image . '</div><div class="ui ten wide column">' . $title . $text . ($readMore ? $readMore : null) . '</div>';
     }
 ?>
 

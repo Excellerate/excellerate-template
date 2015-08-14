@@ -41,7 +41,7 @@ function modChrome_block($module, &$params, &$attribs)
             {
                 echo '<' . $headerTag . ' class="ui header ' . $headerClass . '">' . $module->title . '</' . $headerTag . '>';
             }
-
+            
             echo $module->content;
         echo '</' . $moduleTag . '>';
     }

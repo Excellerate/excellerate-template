@@ -22,7 +22,11 @@
         <position>debug</position>
         <position>slider</position>
         <position>menu</position>
-        <position>newsflash</position>
+        <position>newsflash_a</position>
+        <position>newsflash_b</position>
+        <position>newsflash_c</position>
+        <position>newsflash_d</position>
+        <position>newsflash_e</position>
         <position>right</position>
         <position>left</position>
         <position>top_a</position>
