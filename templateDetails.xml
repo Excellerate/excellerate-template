@@ -64,6 +64,7 @@
           <option value="first">First Technical</option>
           <option value="fresh">Fresh Cafe</option>
           <option value="interpark">Interpark</option>
+          <option value="interparkMono">Interpark (Monotone)</option>
           <option value="jhi-advisory">JHI Advisory</option>
           <option value="jhi-cres">JHI Cres</option>
           <option value="jhi-projects">JHI Projects</option>
