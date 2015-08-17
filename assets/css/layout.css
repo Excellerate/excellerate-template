@@ -4,6 +4,11 @@
     color: #FFF;
 }
 
+.equal.height.grid > .column .segment{
+    height: 150px;
+
+}
+
 /* HTML */
 body{
     font-family: 'Open Sans';
@@ -68,9 +73,16 @@ img.profile{
     text-align:top;
 }
 .ui.membership.image{
-    max-width:100%;
-    width:100%;
+    max-width:auto;
+    width:auto;
+    height:50px;
 }
+.ui.membership.large.image{
+    height:80px;
+    display:block;
+    float:right;
+}
+
 
 .ui.small.image{
     width:200px !important;
