@@ -149,7 +149,7 @@
           
         </field>
 
-        <field name="analytics"  type="string" default="" label="Google Analytics code" description="Your analytics code" filter="raw" />
+        <field name="analytics"  type="string" default="" label="Google Analytics Code" description="Your analytics tracking ID" filter="raw" />
 
       </fieldset>
 

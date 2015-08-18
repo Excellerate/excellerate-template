@@ -15,6 +15,7 @@
     $slogan = $this->params->get('siteSlogan');
     $number = $this->params->get('siteNumber');
     $style = $this->params->get('style', 'white');
+    $analytics = $this->params->get('analytics', false);
 
     // Set logo width and height
     if($logoA and $logoB and $logoC){
@@ -102,13 +103,13 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
         <!-- Analytics -->
-        <?php if( getenv('environment') == 'production' ) : ?>
+        <?php if( getenv('environment') == 'production' and $analytics ) : ?>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-4886194-21', 'auto');
+            ga('create', '<?= $analytics; ?>', 'auto');
             ga('send', 'pageview');
         </script>
         <?php endif; ?>
