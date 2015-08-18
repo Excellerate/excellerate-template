@@ -148,13 +148,18 @@
           
         </field>
 
+        <field name="analytics"  type="string" default="" label="Google Analytics code" description="Your analytics code" filter="raw" />
+
+      </fieldset>
+
+      <fieldset name="social" label="Social">
         <field name="facebook"  type="url" default="" label="Facebook page" description="Link to Facebook" filter="url" />
         <field name="twitter"  type="url" default="" label="Twitter page" description="Link to Twitter" filter="url" />
         <field name="linkedin"  type="url" default="" label="LinkedIn page" description="Link to Linked In" filter="url" />
         <field name="pinterest"  type="url" default="" label="Pinterest page" description="Link to Pinterest" filter="url" />
         <field name="googlePlus"  type="url" default="" label="Google Plus page" description="Link to Google Plus" filter="url" />
-
       </fieldset>
+
     </fields>
   </config>
 </extension>
