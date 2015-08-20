@@ -96,7 +96,7 @@
         <jdoc:include type="head" />
 
         <!-- Icons -->
-        <link rel="shortcut icon" href="<?= $template; ?>/assets/img/groupLogos/<?= $logo; ?>.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="<?= $template; ?>/assets/img/groupLogos/<?= $logoA; ?>.ico" type="image/x-icon">
         <link rel="icon" href="<?= $template; ?>/assets/img/groupLogos/<?= $logoA; ?>.ico" type="image/x-icon">
 
         <!-- Excellerate Font -->
