@@ -130,7 +130,7 @@
                 <!-- BY EXCELLERATE ROW -->
                 <div id="byExcellerate" class="two column row">
                     <div class="left floated left aligned column">
-                        <a href="http://excellerate.co.za"><img class="ui logo image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/driven-by-excellerate.png'" src="<?=$template;?>/assets/img/driven-by-excellerate.svg" ></a>
+                        <a href="http://epsgroup.co.za"><img class="ui logo image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/driven-by-excellerate.png'" src="<?=$template;?>/assets/img/driven-by-excellerate.svg" ></a>
                         <?php if($number) : ?>
                             <a id="numberLeft" href="tel:<?= preg_replace("/[^0-9]/","",$number) ;?>"><?= $number; ?></a>
                         <?php endif; ?>
