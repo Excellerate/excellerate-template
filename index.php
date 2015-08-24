@@ -236,7 +236,7 @@
                     <a class="login" href="<?= JUri::base(); ?>administrator/index.php">Admin Login</a>
                 </div>
                 <div class="right floated right aligned column">
-                    <a href="http://codechap.com">codeChap</a>
+                    <a href="http://codechap.com">codeChap</a> <?= getenv('ENV') ? ' | ' . strtolower(getenv('ENV')) . ' server' : null; ?>
                 </div>
             </div>
 
