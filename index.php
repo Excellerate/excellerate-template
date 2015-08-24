@@ -4,6 +4,9 @@
      * Add Semantic UI and custom styles
      */
 
+    // Set ENV variable
+    $env = getenv('ENV');
+
     // Set template
     $template = JUri::base() . 'templates/' . $this->template;
 
@@ -103,7 +106,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
         <!-- Analytics -->
-        <?php if( $analytics ) : ?>
+        <?php if( ($env == false or $env == 'production') and $analytics ) : ?>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -113,6 +116,7 @@
             ga('send', 'pageview');
         </script>
         <?php endif; ?>
+        <!--End Analytics -->
 
     </head>
 
@@ -236,7 +240,7 @@
                     <a class="login" href="<?= JUri::base(); ?>administrator/index.php">Admin Login</a>
                 </div>
                 <div class="right floated right aligned column">
-                    <a href="http://codechap.com">codeChap</a> <?= getenv('ENV') ? ' | ' . strtolower(getenv('ENV')) . ' server' : null; ?>
+                    <a href="http://codechap.com">codeChap</a> <?= $env ? ' | ' . ucFirst($env) . ' Server' : null; ?>
                 </div>
             </div>
 
