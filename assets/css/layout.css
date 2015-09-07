@@ -5,7 +5,7 @@
 }
 
 .equal.height.grid > .column .segment{
-    height: 150px;
+    height: 180px;
 
 }
 
@@ -73,14 +73,10 @@ img.profile{
     text-align:top;
 }
 .ui.membership.image{
-    max-width:auto;
-    width:auto;
-    height:50px;
+
 }
 .ui.membership.large.image{
-    height:80px;
-    display:block;
-    float:right;
+
 }
 
 
@@ -513,4 +509,3 @@ small, .small{
     margin:15px;
     margin-right:30px;
 }
-
