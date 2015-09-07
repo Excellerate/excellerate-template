@@ -69,6 +69,7 @@ table{
 }
 img.profile{
     min-width:141px !important;
+    width:141px !important;
     margin-right:8px;
     text-align:top;
 }
@@ -267,24 +268,6 @@ small, .small{
     .slick-dots li button:before{
         font-size: 12px !important;
     }
-
-#content ul, #content ol{
-    /*
-    list-style-position: outside;
-    list-style:none;
-    margin-left:0px;
-    padding-left:0px;
-    */
-}
-#content ul li:before {
-    /*
-    padding-right:15px;
-    content: '\2022';
-    font-family: Icons;
-    display: inline-block;
-    font-size:16px;
-    */
-}
 
 #content ul, #content ol{
     position:relative;
