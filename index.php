@@ -1,9 +1,5 @@
 <?php
 
-    /**
-     * Add Semantic UI and custom styles
-     */
-
     // Set ENV variable
     $env = getenv('ENV');
 
