@@ -18,7 +18,7 @@
 
     // Set logo width and height
     if($logoA and $logoB and $logoC){
-        $logoWidth = "width=150px";
+        $logoWidth = "width=151px";
     }
     else if ($logoA and $logoB){
         $logoWidth = "width=226px";
@@ -34,8 +34,13 @@
     // Home page site name only
     $app = JFactory::getApplication();
     $menu = $app->getMenu();
-    if ($menu->getActive() == $menu->getDefault()) {
+    $active = $menu->getActive();
+    $showPageHeading = false;
+    if ($active == $menu->getDefault()) {
         $this->setTitle($app->getCfg( 'sitename' ) );
+    }
+    if($active->params->get('show_page_heading')){
+        $showPageHeading = '<h1 class="ui header">'.$active->params->get('page_heading', $active->title).'</h1>';
     }
 
     // Gather Menu
@@ -74,6 +79,11 @@
     $bottomC = $this->countModules('bottom_c');
     $bottomD = $this->countModules('bottom_d');
     $bottomE = $this->countModules('bottom_e');
+    $bottomF = $this->countModules('bottom_f');
+    $bottomG = $this->countModules('bottom_g');
+    $bottomH = $this->countModules('bottom_h');
+    $bottomI = $this->countModules('bottom_i');
+    $bottomJ = $this->countModules('bottom_j');
     $footerA = $this->countModules('footer_a');
     $footerB = $this->countModules('footer_b');
     $footerC = $this->countModules('footer_c');
@@ -93,6 +103,10 @@
 
         <!-- Joomla Head -->
         <jdoc:include type="head" />
+
+        <!--[if IE]>
+        <link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/ie.css" />
+        <![endif]-->
 
         <!-- Icons -->
         <link rel="shortcut icon" href="<?= $template; ?>/assets/img/groupLogos/<?= $logoA; ?>.ico" type="image/x-icon">
@@ -119,7 +133,6 @@
     <body>
 
         <!-- Mobile Menu -->
-
         <div class="ui sidebar">
              <jdoc:include type="modules" name="menu" />
         </div>
@@ -185,6 +198,8 @@
                 </div>
                 <?php endif; ?>
 
+                <?= $showPageHeading; ?>
+
                 <!-- ABOVE CONTENT ROW -->
                 <?php if($topA or $topB or $topC or $topD) : ?>
                 <div id="top" class="row">
@@ -236,7 +251,7 @@
                     <a class="login" href="<?= JUri::base(); ?>administrator/index.php">Admin Login</a>
                 </div>
                 <div class="right floated right aligned column">
-                    <a href="http://codechap.com">codeChap</a> <?= $env ? ' | ' . ucFirst($env) . ' Server' : null; ?>
+                    <a href="http://codechap.com">codechap</a> <?= $env ? ' | ' . ucFirst($env) . ' Server' : null; ?>
                 </div>
             </div>
 
