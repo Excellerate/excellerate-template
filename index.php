@@ -11,6 +11,7 @@
     $template = JUri::base() . 'templates/' . $this->template;
 
     // Template params
+    $groupLogo = strtolower($this->params->get('group_logo', 'driven-by-excellerate'));
     $logoA = strtolower($this->params->get('logo_a'));
     $logoB = strtolower($this->params->get('logo_b'));
     $logoC = strtolower($this->params->get('logo_c'));
@@ -18,6 +19,7 @@
     $slogan = $this->params->get('siteSlogan');
     $number = $this->params->get('siteNumber');
     $style = $this->params->get('style', 'white');
+    $branding = $this->params->get('branding', 'yes');
     $analytics = $this->params->get('analytics', false);
 
     // Set logo width and height
@@ -93,6 +95,7 @@
     $footerC = $this->countModules('footer_c');
     $footerD = $this->countModules('footer_d');
     $footerE = $this->countModules('footer_E');
+    $splash = $this->countModules('splash');
 
 ?>
 
@@ -144,7 +147,7 @@
                 <!-- BY EXCELLERATE ROW -->
                 <div id="byExcellerate" class="two column row">
                     <div class="left floated left aligned column">
-                        <a href="http://epsgroup.co.za"><img class="ui logo image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/driven-by-excellerate.png'" src="<?=$template;?>/assets/img/driven-by-excellerate.svg" ></a>
+                        <a href="http://epsgroup.co.za"><img class="ui logo image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" ></a>
                         <?php if($number) : ?>
                             <a id="numberLeft" href="tel:<?= preg_replace("/[^0-9]/","",$number) ;?>"><?= $number; ?></a>
                         <?php endif; ?>
@@ -158,6 +161,7 @@
                 </div>
 
                 <!-- BRANDING ROW -->
+                <?php if($branding == 'yes') : ?>
                 <div id="brand" class="two column <?= $style; ?> row">
                     <div class="left floated left aligned column">
                         <a href="<?=JURI::base();?>"><img <?= $logoWidth; ?> class="ui image logo" alt="<?=$config->get('sitename');?> Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logoA; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logoA; ?>.svg"></a>
@@ -172,13 +176,21 @@
                         <span class="slogan"><?php print $slogan; ?></span>
                     </div>
                 </div>
+                <?php endif; ?>
 
                 <!-- SLIDER ROW -->
                 <?php if($slider) : ?>
-                <div id="slider" class="row">
-                    <div class="column">
+                <div id="slider" class="two column <?= $style; ?> row">
+                    <div class="<?= $splash ? "twelve" : "sixteen" ;?> wide column">
                         <jdoc:include type="modules" name="slider" />
                     </div>
+                    <?php if($splash) : ?>
+                    <div class="four wide column">
+                        <div id="splashWrapper">
+                        <jdoc:include type="modules" name="splash" />
+                        </div>
+                    </div>
+                    <?php endif; ?>
                 </div>
                 <?php endif; ?>
 

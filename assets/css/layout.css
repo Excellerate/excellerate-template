@@ -217,16 +217,20 @@ small, .small{
         }
     }
 
+/* SLIDER */
 #slider.row{
     height:223px !important;
     padding:0px !important;
 }
     #slider.row img{
         max-height:223px;
-        width:100%;
+        min-height:223px;
+        height:223px;
+        width:1140px;
     }
     #slider .column{
-        padding:0px !important;   
+        padding:0px !important;
+        height:223px !important;   
     }
     /* Arrows */
     #slider .slick-prev, #slider .slick-next{
@@ -268,6 +272,28 @@ small, .small{
     .slick-dots li button:before{
         font-size: 12px !important;
     }
+    .slick-slide{
+        text-align:center;
+    }
+
+/* FOOTER SLIDER */
+#footer .slick-slider{
+    height: 90px;      /* equals max image height */
+    white-space: nowrap;
+    text-align: center; 
+    margin: 1em 0;
+}
+    #footer .slick-slider img{
+        max-height:90px;
+        max-width:120px;
+    }
+
+/* SPLASH BOX */
+#splashWrapper{
+    padding:15px 30px;
+    text-align:right;
+    font-size:18px;
+}
 
 #content ul, #content ol{
     position:relative;

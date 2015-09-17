@@ -53,10 +53,16 @@
         <position>top_right</position>
         <position>bottom_left</position>
         <position>bottom_right</position>
+        <position>splash</position>
   </positions>
   <config>
     <fields name="params">
       <fieldset name="advanced">
+
+        <field name="group_logo" type="list" label="Group logo" description="Select group logo">
+          <option value="driven-by-excellerate">Driven by Excellerate</option>
+          <option value="excellerate-holdings">Excellerate</option>
+        </field>
 
         <field name="logo_a" type="list" label="Main logo" description="Select main logo">
           <option value="enforce">Enforce</option>
@@ -151,7 +157,15 @@
           <option value="purple">Navy</option>
           <option value="orange">Orange</option>
           <option value="red">Red</option>
-          
+        </field>
+
+        <field name="branding"
+          type="radio"
+          label="Branding"
+          description="Colour style"
+        >
+          <option value="yes">Show</option>
+          <option value="no">Hide</option>
         </field>
 
         <field name="analytics"  type="string" default="" label="Google Analytics Code" description="Your analytics tracking ID" filter="raw" />
