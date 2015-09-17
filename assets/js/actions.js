@@ -5,6 +5,9 @@ jQuery(document).ready(function(){
         $('.ui.sidebar').sidebar('toggle');
     });
 
+    // Accordian
+    $('.ui.accordion').accordion();
+
     // Video
     $('.ui.embed').embed();
 

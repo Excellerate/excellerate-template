@@ -1,9 +1,5 @@
 <?php
 
-    /**
-     * Add Semantic UI and custom styles
-     */
-
     // Set ENV variable
     $env = getenv('ENV');
 
@@ -24,7 +20,7 @@
 
     // Set logo width and height
     if($logoA and $logoB and $logoC){
-        $logoWidth = "width=150px";
+        $logoWidth = "width=151px";
     }
     else if ($logoA and $logoB){
         $logoWidth = "width=226px";
@@ -110,6 +106,10 @@
 
         <!-- Joomla Head -->
         <jdoc:include type="head" />
+
+        <!--[if IE]>
+        <link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/ie.css" />
+        <![endif]-->
 
         <!-- Icons -->
         <link rel="shortcut icon" href="<?= $template; ?>/assets/img/groupLogos/<?= $logoA; ?>.ico" type="image/x-icon">
