@@ -274,10 +274,8 @@ small, .small{
 
 /* FOOTER SLIDER */
 #footer .slick-slider{
-    height: 90px;      /* equals max image height */
     white-space: nowrap;
     text-align: center; 
-    margin: 1em 0;
 }
     #footer .slick-slider img{
         max-height:90px;
@@ -322,6 +320,11 @@ small, .small{
     #top .segment, #bottom .segment{
         min-height:350px !important;
         min-height:220px !important;
+    }
+
+    #footer{
+        margin:30px 0px 0px 0px !important;
+        padding:30px 0px 0px 0px !important;
     }
 
     #footer ul, #footer ol{

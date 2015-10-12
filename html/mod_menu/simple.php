@@ -82,7 +82,7 @@
                             $externalIcon = $subItem->type == 'url' ? '&nbsp;<i class="angle double right icon"></i>' : '';
                             
                             // Second level link
-                            print '<a href="'.$subItem->flink.'" class="'.$active.'sub item'.( count($subItem->subMenu) ? ' strong' : null ).'">'.$subItem->title.$externalIcon.'</a>';
+                            print '<a href="'.$subItem->flink.'" '.($externalIcon ? "target=\"_blank\"" : null).' class="'.$active.'sub item'.( count($subItem->subMenu) ? ' strong' : null ).'">'.$subItem->title.$externalIcon.'</a>';
 
                             // Check for third level
                             if( count($subItem->subMenu) ){
