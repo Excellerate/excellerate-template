@@ -294,6 +294,7 @@ small, .small{
     left:25px;
     margin-left:-10px;
     padding-left:0px;
+    padding-right:25px;
     float:clear;
 }
 #content ul{
