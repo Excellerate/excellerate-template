@@ -67,15 +67,16 @@
         <field name="logo_a" type="list" label="Main logo" description="Select main logo">
           <option value="enforce">Enforce</option>
           <option value="eradico">Eradico</option>
-          <option value="eradicoMono">Eradico (monotone)</option>
+          <option value="eradicomono">Eradico (monotone)</option>
           <option value="excellerate-brand-management">Excellerate Brand Management</option>
           <option value="excellerate-facility-management">Excellerate Facility Management</option>
           <option value="excellerate-holdings">Excellerate Holdings</option>
           <option value="excellerate-utilities-management">Excellerate Utilities Management</option>
           <option value="first">First Technical</option>
           <option value="fresh">Fresh Cafe</option>
+          <option value="freshmono">Fresh Cafe (monotone)</option>
           <option value="interpark">Interpark</option>
-          <option value="interparkMono">Interpark (Monotone)</option>
+          <option value="interparkmono">Interpark (Monotone)</option>
           <option value="jhi-advisory">JHI Advisory</option>
           <option value="jhi-cres">JHI Cres</option>
           <option value="jhi-projects">JHI Projects</option>
@@ -84,7 +85,7 @@
           <option value="jhi-structures">JHI Structures</option>
           <option value="jhi">JHI</option>
           <option value="katanga">Katanga</option>
-          <option value="katangaMono">Katanga (monotone)</option>
+          <option value="katangamono">Katanga (monotone)</option>
           <option value="Spark">Spark</option>
           <option value="sterikleen">Sterikleen</option>
           <option value="sterikleenMono">Sterikleen (monotone)</option>

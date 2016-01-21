@@ -24,10 +24,13 @@
 
     print JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above'));
 
+    // Find image float, default to left
+    $floated = ! empty( $images->float_fulltext ) ? $images->float_fulltext : 'right';
+
     // IMAGE (Left floated) //
     if( ! empty( $images->image_fulltext ) ){
-        print '<a href="" class="ui left floated small image">';
-            print '<img class="ui small image" src="'.$images->image_fulltext.'" alt="'.$images->image_fulltext_alt.'" title="'.$images->image_fulltext_caption.'">';
+        print '<a href="" class="ui '.$floated.' floated image">';
+            print '<img class="ui image" src="'.$images->image_fulltext.'" alt="'.$images->image_fulltext_alt.'" title="'.$images->image_fulltext_caption.'">';
         print '</a>';
     }
 
