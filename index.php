@@ -17,6 +17,8 @@
     $style = $this->params->get('style', 'white');
     $branding = $this->params->get('branding', 'yes');
     $analytics = $this->params->get('analytics', false);
+    $subsites = $this->params->get('subsites', false);
+    $whiteSpace = $this->params->get('whiteSpace', 0);
 
     // Set logo width and height
     if($logoA and $logoB and $logoC){
@@ -142,9 +144,10 @@
 
         <!-- Mobile Menu Push -->
         <div class="pusher">
-            <div id="main" class="ui main container doubling grid">
+            <div id="main" class="ui main container doubling grid" style="padding-top:<?= $whiteSpace ? 100 : 0; ?>px;">
 
                 <!-- BY EXCELLERATE ROW -->
+                <?php if( ! $subsites) : ?>
                 <div id="byExcellerate" class="two column row">
                     <div class="left floated left aligned column">
                         <a href="http://epsgroup.co.za"><img class="ui logo image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" ></a>
@@ -159,6 +162,18 @@
                         <?php endif; ?>
                     </div>
                 </div>
+                <?php endif; ?>
+
+                <!-- SUB SITES ROW -->
+                <?php if($subsites) : ?>
+                <div id="byExcellerate" class="left floated left aligned eight wide column">
+                    <a href="http://epsgroup.co.za"><img class="ui logo image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" ></a>
+                </div>
+                <div id="subsites" class="right floated right aligned eight wide computer only column">
+                    <!--<a id="mobileMenuTrigger"><i class="ui content icon"></i>Menu</a>-->
+                    <jdoc:include type="modules" name="subsites" />
+                </div>
+                <?php endif; ?>
 
                 <!-- BRANDING ROW -->
                 <?php if($branding == 'yes') : ?>
@@ -249,7 +264,7 @@
                 <!-- FOOTER ROW -->
                 <div id="copyright" class="grey two column row">
                     <div class="column">
-                        <p class="copyright">Copyright &copy; 2015 <?= $company; ?></p>
+                        <p class="copyright">Copyright &copy; 2016 <?= $company; ?></p>
                     </div>
                     <div class="right floated right aligned column">
                         <?php include("parts/social.php"); ?>

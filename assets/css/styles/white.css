@@ -12,6 +12,10 @@
     color: rgba(255,255,255,1);
 }
 
+table i{
+    color:#000000;
+}
+
 /* HTML */
 a{
     color:#FFFFFF;

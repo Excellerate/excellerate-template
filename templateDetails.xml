@@ -54,6 +54,7 @@
         <position>bottom_left</position>
         <position>bottom_right</position>
         <position>splash</position>
+        <position>subsites</position>
   </positions>
   <config>
     <fields name="params">
@@ -163,11 +164,22 @@
         <field name="branding"
           type="radio"
           label="Branding"
-          description="Colour style"
+          description="Top colour bar"
         >
           <option value="yes">Show</option>
           <option value="no">Hide</option>
         </field>
+
+        <field name="subsites"
+          type="radio"
+          label="Show subsites position"
+          description="Removes the telephone number and loads the subsites module position"
+        >
+          <option value="no">Hide &amp; show number</option>
+          <option value="yes">Show &amp; hide number</option>
+        </field>
+
+        <field name="whiteSpace" type="checkbox" label="Add top white space" description="Increase white space at the top of the page" value="78" />
 
         <field name="analytics"  type="string" default="" label="Google Analytics Code" description="Your analytics tracking ID" filter="raw" />
 
