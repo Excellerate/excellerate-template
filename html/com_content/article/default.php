@@ -19,6 +19,9 @@
     // Fix editor replaces <i> with <em>
     $text = preg_replace("/\<em class=\"(.*)\"\>(.*?)\<\/em\>/", "<i class=\"$1\"></i>", $this->item->text);
 
+    // Convert and to "&"
+    $title[0] = preg_replace("/ and|AND|And /", " &amp; ", $title[0]);
+
     // HEADING //
     print '<h1 class="ui header">' . trim($title[0]) . (isset($title[1]) ? '<div class="ui sub header">'.$title[1].'</div>' : null) . '</h1>';
 
