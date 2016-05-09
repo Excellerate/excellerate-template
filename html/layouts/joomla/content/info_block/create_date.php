@@ -10,9 +10,12 @@
 defined('JPATH_BASE') or die;
 
 ?>
+
+<?php if( $displayData['item']->created !== '0000-00-00 00:00:00') : ?>
 <span class="create">
 		<span class="icon-calendar"></span>
 		<time datetime="<?php echo JHtml::_('date', $displayData['item']->created, 'c'); ?>" itemprop="dateCreated">
 			<?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', JHtml::_('date', $displayData['item']->created, JText::_('DATE_FORMAT_LC3'))); ?>
 		</time>
 </span>
+<?php endif; ?>
