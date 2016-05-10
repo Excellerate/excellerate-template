@@ -278,7 +278,7 @@
                     <a class="login" href="<?= JUri::base(); ?>administrator/index.php">Admin Login</a>
                 </div>
                 <div class="right floated right aligned column">
-                    <a href="http://codechap.com">codechap</a> <?= $env ? ' | ' . ucFirst($env) . ' Server' : null; ?>
+                    <a href="http://codechap.com">CodeChap</a> <?= $env ? ' | ' . ucFirst($env) . ' Server' : null; ?>
                 </div>
             </div>
 
