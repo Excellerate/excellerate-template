@@ -58,9 +58,12 @@
 
                 // Top level
                 print '<div class="ui ' . ( count($item->subMenu) ? 'simple dropdown ' : null ) . 'item">';
+
+                    // Top level href
+                    $topHref = ($item->type == 'alias' or $item->type == 'heading') ? false : 'href="'.$item->flink.'"';
                 
                     // Top level link
-                    print '<a class="'.$active.'" href="'.$item->flink.'">'.$item->title . ( count($item->subMenu) ? '&nbsp;&nbsp;&nbsp;<i class="ui dropdown icon"></i>' : null ).'</a>';
+                    print '<a class="'.$active.'" '.$topHref.'>'.$item->title . ( count($item->subMenu) ? '&nbsp;&nbsp;&nbsp;<i class="ui dropdown icon"></i>' : null ).'</a>';
 
                     // Check for second dropdown level
                     if( count($item->subMenu) ){
