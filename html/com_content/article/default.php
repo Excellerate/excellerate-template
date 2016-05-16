@@ -32,7 +32,7 @@
 
     // IMAGE (Left floated) //
     if( ! empty( $images->image_fulltext ) ){
-        print '<a href="" class="ui '.$floated.' floated image">';
+        print '<a href="#" class="ui '.$floated.' floated image" style="width:100%;">';
             print '<img class="ui image" src="'.$images->image_fulltext.'" alt="'.$images->image_fulltext_alt.'" title="'.$images->image_fulltext_caption.'">';
         print '</a>';
     }
