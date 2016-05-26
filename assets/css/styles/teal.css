@@ -12,17 +12,10 @@
     color: rgba(255,255,255,1);
 }
 
-table i{
-    color:#00A0AF;
-}
-
 /* HTML */
-a{
+#content a:hover{
     color:#00A0AF;
 }
-    a:hover{
-        color:#00A0AF;
-    }
 
 #menu .active, #footer li a:hover{
     color:#00A0AF !important;

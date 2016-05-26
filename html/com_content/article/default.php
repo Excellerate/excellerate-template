@@ -1,10 +1,12 @@
 <?php
 
     // Create shortcuts to some parameters.
-    $params  = $this->item->params;
-    $images  = json_decode($this->item->images);
-    $urls    = json_decode($this->item->urls);
-    $info    = $params->get('info_block_position', 0);
+    $params     = $this->item->params;
+    $metadata   = $this->item->metadata;
+    $images     = json_decode($this->item->images);
+    $urls       = json_decode($this->item->urls);
+    $info       = $params->get('info_block_position', 0);
+    $reference  = $metadata->get('xreference', 0);
 
     // Break up the title
     if(preg_match("/ - /", $this->item->title)){
@@ -23,7 +25,9 @@
     $title[0] = preg_replace("/ and|AND|And /", " &amp; ", $title[0]);
 
     // HEADING //
-    print '<h1 class="ui header">' . trim($title[0]) . (isset($title[1]) ? '<div class="ui sub header">'.$title[1].'</div>' : null) . '</h1>';
+    if ($this->params->get('show_page_heading')){
+        print '<h1 class="ui header">' . trim($title[0]) . (isset($title[1]) ? '<div class="ui sub header">'.$title[1].'</div>' : null) . '</h1>';
+    }
 
     print JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above'));
 
@@ -38,8 +42,11 @@
     }
 
     // TEXT //
-    print '<div>' . $text . '</div>';
+    print '<article>' . $text . '</article>';
+
+    // REFERENCE //
+    if($reference){
+        print '<a href="'.$reference.'" class="reference"><i class="ui external link icon"></i>'.(preg_replace("/http:\/\//", "", $reference)).'</a>';
+    }
 
 ?>
-
-<?php //print "<pre>"; print_r($images); print "</pre>"; ?>

@@ -1,7 +1,7 @@
 /* SEMANTIC COLORS */
-.ui.grid>.white.column, .ui.grid>.orange.row, .ui.grid>.row>.white.column{
-    background-color: #FFFFFF !important;
-    color: #222;
+.ui.grid>.white.column, .ui.grid>.white.row, .ui.grid>.row>.white.column{
+    background-color: #767676 !important;
+    color: white;
 }
 .ui.button{
     background: #333;
@@ -12,17 +12,10 @@
     color: rgba(255,255,255,1);
 }
 
-table i{
-    color:#000000;
-}
-
 /* HTML */
-a{
+#content a:hover{
     color:#FFFFFF;
 }
-    a:hover{
-        color:#FFFFFF;
-    }
 
 #menu .active, #footer li a:hover{
     color:#FFFFFF !important;

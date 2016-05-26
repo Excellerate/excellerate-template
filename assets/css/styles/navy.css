@@ -1,5 +1,5 @@
 /* SEMANTIC COLORS */
-.ui.grid>.purple.column, .ui.grid>.purple.row, .ui.grid>.row>.purple.column{
+.ui.grid>.navy.column, .ui.grid>.navy.row, .ui.grid>.row>.navy.column{
     background-color: #003D62 !important;
     color: #FFF;
 }
@@ -12,17 +12,10 @@
     color: rgba(255,255,255,1);
 }
 
-table i{
-    color:#003D62;
-}
-
 /* HTML */
-a{
+#content a:hover{
     color:#003D62;
 }
-    a:hover{
-        color:#003D62;
-    }
 
 #menu .active, #footer li a:hover{
     color:#003D62 !important;

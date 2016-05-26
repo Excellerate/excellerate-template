@@ -62,7 +62,8 @@
 
         <field name="group_logo" type="list" label="Group logo" description="Select group logo">
           <option value="driven-by-excellerate">Driven by Excellerate</option>
-          <option value="excellerate-holdings">Excellerate</option>
+          <option value="excellerate-holdings">Excellerate Holdings</option>
+          <option value="excellerate">Excellerate</option>
         </field>
 
         <field name="logo_a" type="list" label="Main logo" description="Select main logo">
@@ -141,6 +142,30 @@
           <option value="syenap">Syenap</option>
         </field>
 
+        <field name="favicon" type="list" label="Favicon" description="The little logo in the url window">
+          <option value="default">Default</option>
+          <option value="enforce">Enforce</option>
+          <option value="eradico">Eradico</option>
+          <option value="excellerate-brand-management">Excellerate Brand Management</option>
+          <option value="excellerate-facility-management">Excellerate Facility Management</option>
+          <option value="excellerate-holdings">Excellerate Holdings</option>
+          <option value="excellerate-utilities-management">Excellerate Utilities Management</option>
+          <option value="first">First Technical</option>
+          <option value="fresh">Fresh Cafe</option>
+          <option value="interpark">Interpark</option>
+          <option value="jhi-advisory">JHI Advisory</option>
+          <option value="jhi-cres">JHI Cres</option>
+          <option value="jhi-projects">JHI Projects</option>
+          <option value="jhi-projects">JHI Projects</option>
+          <option value="jhi-retail">JHI Retail</option>
+          <option value="jhi-structures">JHI Structures</option>
+          <option value="jhi">JHI</option>
+          <option value="katanga">Katanga</option>
+          <option value="Spark">Spark</option>
+          <option value="sterikleen">Sterikleen</option>
+          <option value="syenap">Syenap</option>
+        </field>
+
         <field name="company"  type="text" default="" label="Full company name" description="Enter full name of the group company" filter="string" />
 
         <field name="siteSlogan"  type="textarea" default="" label="Company Slogan" description="Holding company slogan" filter="raw" />
@@ -156,7 +181,7 @@
           <option value="teal">Aqua</option>
           <option value="blue">Blue</option>
           <option value="green">Green</option>
-          <option value="purple">Navy</option>
+          <option value="navy">Navy</option>
           <option value="orange">Orange</option>
           <option value="red">Red</option>
         </field>

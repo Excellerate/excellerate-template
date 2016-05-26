@@ -11,6 +11,7 @@
     $logoA = strtolower($this->params->get('logo_a'));
     $logoB = strtolower($this->params->get('logo_b'));
     $logoC = strtolower($this->params->get('logo_c'));
+    $favicon = strtolower($this->params->get('favicon', 'default'));
     $company = $this->params->get('company');
     $slogan = $this->params->get('siteSlogan');
     $number = $this->params->get('siteNumber');
@@ -45,6 +46,9 @@
     }
     if($active->params->get('show_page_heading')){
         $showPageHeading = '<h1 class="ui header">'.$active->params->get('page_heading', $active->title).'</h1>';
+    }
+    if($pageClass = $active->params->get('pageclass_sfx', false)){
+        $style = $pageClass; // Menu page overide
     }
 
     // Gather Menu
@@ -114,14 +118,14 @@
         <![endif]-->
 
         <!-- Icons -->
-        <link rel="shortcut icon" href="<?= $template; ?>/assets/img/groupLogos/<?= preg_replace('/mono/', '', $logoA); ?>.ico" type="image/x-icon">
-        <link rel="icon" href="<?= $template; ?>/assets/img/groupLogos/<?= preg_replace('/mono/', '', $logoA); ?>.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="<?= $template; ?>/assets/img/groupLogos/<?= $favicon; ?>.ico" type="image/x-icon">
+        <link rel="icon" href="<?= $template; ?>/assets/img/groupLogos/<?= $favicon; ?>.ico" type="image/x-icon">
 
         <!-- Excellerate Font -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
-        <!-- Analytics -->
         <?php if( ($env == false or $env == 'production') and $analytics ) : ?>
+        <!-- Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -130,9 +134,8 @@
             ga('create', '<?= $analytics; ?>', 'auto');
             ga('send', 'pageview');
         </script>
-        <?php endif; ?>
         <!--End Analytics -->
-
+        <?php endif; ?>
     </head>
 
     <body>
@@ -285,7 +288,5 @@
         </div>
 
         <jdoc:include type="modules" name="debug" style="none" />
-        
     </body>
-
 </html>
