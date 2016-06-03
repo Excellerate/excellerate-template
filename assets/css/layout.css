@@ -125,6 +125,14 @@ small, .small{
     max-width:1140px !important;
 }
 
+#content, #menu{
+    padding-left:10px;
+    padding-right:10px;
+}
+#menu{
+    padding-right:0px;
+}
+
 #bottom a{
     text-decoration:underline !important;
 }
@@ -135,7 +143,11 @@ small, .small{
 }
     #byExcellerate .logo{
         position:absolute;
-        top:25px;
+        top:60px;
+        left:30px;
+    }
+    #byExcellerate .toTop.logo{
+        top:-16px;
     }
 
 /* Right side driven by logo when the col layout is used */

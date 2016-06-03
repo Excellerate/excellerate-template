@@ -3,6 +3,9 @@
     // Set ENV variable
     $env = getenv('ENV');
 
+    // Jquery please
+    //JHtml::_('jquery.framework');
+
     // Set template
     $template = JUri::base() . 'templates/' . $this->template;
 
@@ -16,10 +19,16 @@
     $slogan = $this->params->get('siteSlogan');
     $number = $this->params->get('siteNumber');
     $style = $this->params->get('style', 'white');
-    $branding = $this->params->get('branding', 'yes');
+    $branding = $this->params->get('branding') == 'yes' ? true : false;
+    $subsites = $this->params->get('subsites') == 'yes' ? true : false;
     $analytics = $this->params->get('analytics', false);
-    $subsites = $this->params->get('subsites', false);
-    $whiteSpace = $this->params->get('whiteSpace', 0);
+    
+    if($subsites){
+        $whiteSpace = 30;
+    }
+    else{
+        $whiteSpace = 100;
+    }
 
     // Set logo width and height
     if($logoA and $logoB and $logoC){
@@ -147,7 +156,7 @@
 
         <!-- Mobile Menu Push -->
         <div class="pusher">
-            <div id="main" class="ui main container doubling grid" style="padding-top:<?= $whiteSpace ? 100 : 0; ?>px;">
+            <div id="main" class="ui main container doubling grid" style="padding-top:<?= $whiteSpace; ?>px;">
 
                 <!-- BY EXCELLERATE ROW -->
                 <?php if( ! $subsites) : ?>
@@ -168,18 +177,40 @@
                 <?php endif; ?>
 
                 <!-- SUB SITES ROW -->
+                <?php
+                    if($subsites){
+                        $toTop = false;
+                        switch(strtolower($active->title)){
+                            case 'excellerate facility management' :        $groupLogo = 'groupLogos/excellerate-facility-management'; break;
+                            case 'excellerate brand management' :           $groupLogo = 'groupLogos/excellerate-brand-management'; break;
+                            case 'excellerate utilities management' :       $groupLogo = 'groupLogos/excellerate-utilities-management'; break;
+                            case 'jhi' :                                    $groupLogo = 'groupLogos/jhi'; $toTop = true; break;
+                            case 'jhi retail' :                             $groupLogo = 'groupLogos/jhi-retail'; $toTop = true; break;
+                            case 'jhi advisory' :                           $groupLogo = 'groupLogos/jhi-advisory'; $toTop = true; break;
+                            case 'jhi cres' :                               $groupLogo = 'groupLogos/jhi-cres'; $toTop = true; break;
+                            case 'enforce security' :                       $groupLogo = 'groupLogos/enforce'; break;
+                            case 'interpark' :                              $groupLogo = 'groupLogos/interpark'; break;
+                            case 'spark' :                                  $groupLogo = 'groupLogos/spark'; break;
+                            case 'sterikleen' :                             $groupLogo = 'groupLogos/sterikleen'; break;
+                            case 'eradico' :                                $groupLogo = 'groupLogos/eradico'; break;
+                            case 'katanga' :                                $groupLogo = 'groupLogos/katanga'; break;
+                            case 'chattels' :                               $groupLogo = 'groupLogos/chattels'; break;
+                            case 'fresh' :                                  $groupLogo = 'groupLogos/fresh'; break;
+                            case 'first technical' :                        $groupLogo = 'groupLogos/first'; break;
+                        }
+                    }
+                ?>
                 <?php if($subsites) : ?>
                 <div id="byExcellerate" class="left floated left aligned eight wide column">
-                    <a href="http://epsgroup.co.za"><img class="ui logo image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" ></a>
+                    <a href="http://epsgroup.co.za"><img class="ui logo <?= $toTop ? 'toTop' : null; ?> image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" ></a>
                 </div>
                 <div id="subsites" class="right floated right aligned eight wide computer only column">
-                    <!--<a id="mobileMenuTrigger"><i class="ui content icon"></i>Menu</a>-->
                     <jdoc:include type="modules" name="subsites" />
                 </div>
                 <?php endif; ?>
-
+                
                 <!-- BRANDING ROW -->
-                <?php if($branding == 'yes') : ?>
+                <?php if($branding) : ?>
                 <div id="brand" class="two column <?= $style; ?> row">
                     <div class="left floated left aligned column">
                         <a href="<?=JURI::base();?>"><img <?= $logoWidth; ?> class="ui image logo" alt="<?=$config->get('sitename');?> Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logoA; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logoA; ?>.svg"></a>

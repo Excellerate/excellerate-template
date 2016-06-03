@@ -1,14 +1,14 @@
 jQuery(document).ready(function(){
 
-    // Activate mobile menu
-    $("#mobileMenuTrigger").click(function(){
-        $('.ui.sidebar').sidebar('toggle');
-    });
+  // Activate mobile menu
+  jQuery("#mobileMenuTrigger").click(function(){
+      jQuery('.ui.sidebar').sidebar('toggle');
+  });
 
-    // Accordian
-    $('.ui.accordion').accordion();
+  // Accordian
+  jQuery('.ui.accordion').accordion();
 
-    // Video
-    $('.ui.embed').embed();
+  // Video
+  jQuery('.ui.embed').embed();
 
 });
