@@ -11,10 +11,6 @@
 
 ?>
 
-<div id="drivenLogoWrapper"> 
-  <a href="http://www.epsgroup.co.za/index.php"><img id="drivenLogo" onerror="this.onerror=null; this.src='/templates/excellerate/assets/img/driven-by-excellerate.png'" src="templates/excellerate/assets/img/driven-by-excellerate.svg"></a>
-</div>
-
 <table>
 <?php
   for ($i=0; $i < $rows; $i++) {

@@ -43,7 +43,7 @@
 
     // Gather Config
     $config = JFactory::getConfig();
-    $config->set('logo', 'enforce'); // Set logo to use
+    $config->set('logo', false); // Set logo to use
 
     // Home page site name only
     $app = JFactory::getApplication();
@@ -158,7 +158,7 @@
         <div class="pusher">
             <div id="main" class="ui main container doubling grid" style="padding-top:<?= $whiteSpace; ?>px;">
 
-                <!-- BY EXCELLERATE ROW -->
+                <!-- BY EXCELLERATE ROW (No Subsites) -->
                 <?php if( ! $subsites) : ?>
                 <div id="byExcellerate" class="two column row">
                     <div class="left floated left aligned column">
@@ -181,30 +181,35 @@
                     if($subsites){
                         $toTop = false;
                         switch(strtolower($active->title)){
-                            case 'excellerate facility management' :        $groupLogo = 'groupLogos/excellerate-facility-management'; break;
-                            case 'excellerate brand management' :           $groupLogo = 'groupLogos/excellerate-brand-management'; break;
-                            case 'excellerate utilities management' :       $groupLogo = 'groupLogos/excellerate-utilities-management'; break;
-                            case 'jhi' :                                    $groupLogo = 'groupLogos/jhi'; $toTop = true; break;
-                            case 'jhi retail' :                             $groupLogo = 'groupLogos/jhi-retail'; $toTop = true; break;
-                            case 'jhi advisory' :                           $groupLogo = 'groupLogos/jhi-advisory'; $toTop = true; break;
-                            case 'jhi cres' :                               $groupLogo = 'groupLogos/jhi-cres'; $toTop = true; break;
-                            case 'enforce security' :                       $groupLogo = 'groupLogos/enforce'; break;
-                            case 'interpark' :                              $groupLogo = 'groupLogos/interpark'; break;
-                            case 'spark' :                                  $groupLogo = 'groupLogos/spark'; break;
-                            case 'sterikleen' :                             $groupLogo = 'groupLogos/sterikleen'; break;
-                            case 'eradico' :                                $groupLogo = 'groupLogos/eradico'; break;
-                            case 'katanga' :                                $groupLogo = 'groupLogos/katanga'; break;
-                            case 'chattels' :                               $groupLogo = 'groupLogos/chattels'; break;
-                            case 'fresh' :                                  $groupLogo = 'groupLogos/fresh'; break;
-                            case 'first technical' :                        $groupLogo = 'groupLogos/first'; break;
+                            case 'excellerate facility management' :        $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-facility-management'; break;
+                            case 'excellerate brand management' :           $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-brand-management'; break;
+                            case 'excellerate utilities management' :       $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-utilities-management'; break;
+                            case 'jhi' :                                    $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi'; $toTop = true; break;
+                            case 'jhi retail' :                             $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-retail'; $toTop = true; break;
+                            case 'jhi advisory' :                           $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-advisory'; $toTop = true; break;
+                            case 'jhi cres' :                               $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-cres'; $toTop = true; break;
+                            case 'enforce security' :                       $hideDrivenBy = true; $groupLogo = 'groupLogos/enforce-dark'; break;
+                            case 'interpark' :                              $hideDrivenBy = true; $groupLogo = 'groupLogos/interpark'; break;
+                            case 'spark' :                                  $hideDrivenBy = true; $groupLogo = 'groupLogos/spark'; break;
+                            case 'sterikleen' :                             $hideDrivenBy = true; $groupLogo = 'groupLogos/sterikleen'; break;
+                            case 'eradico' :                                $hideDrivenBy = true; $groupLogo = 'groupLogos/eradico'; break;
+                            case 'katanga' :                                $hideDrivenBy = true; $groupLogo = 'groupLogos/katanga'; break;
+                            case 'chattels' :                               $hideDrivenBy = true; $groupLogo = 'excellerate'; break; // No logo as yet
+                            case 'fresh' :                                  $hideDrivenBy = true; $groupLogo = 'groupLogos/fresh'; break;
+                            case 'first technical' :                        $hideDrivenBy = true; $groupLogo = 'groupLogos/first'; break;
                         }
                     }
                 ?>
                 <?php if($subsites) : ?>
                 <div id="byExcellerate" class="left floated left aligned eight wide column">
-                    <a href="http://epsgroup.co.za"><img class="ui logo <?= $toTop ? 'toTop' : null; ?> image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" ></a>
+                    <img class="ui logo <?= $toTop ? 'toTop' : null; ?> image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" >
                 </div>
                 <div id="subsites" class="right floated right aligned eight wide computer only column">
+                    <?php if( ! isset($hideDrivenBy)) : ?>
+                    <div id="drivenLogoWrapper"> 
+                        <a href="http://www.epsgroup.co.za/index.php"><img id="drivenLogo" onerror="this.onerror=null; this.src='/templates/excellerate/assets/img/driven-by-excellerate.png'" src="templates/excellerate/assets/img/driven-by-excellerate.svg"></a>
+                    </div>
+                    <?php endif; ?>
                     <jdoc:include type="modules" name="subsites" />
                 </div>
                 <?php endif; ?>
@@ -246,7 +251,15 @@
                 <!-- MENU ROW -->
                 <div id="menu" class="computer only row">
                     <div class="column">
+                        <?php if( ! isset($hideDrivenBy)) : ?>
                         <jdoc:include type="modules" name="menu" />
+                        <?php else: ?>
+                        <nav>
+                            <div class="ui stackable menu">
+                                <a class="ui item" href="<?= \JUri::base(); ?>">HOME</a>
+                            </div>
+                        </nav>
+                        <?php endif; ?>
                     </div>
                 </div>
 
@@ -295,7 +308,7 @@
                 </div>
                 <?php endif; ?>
 
-                <!-- FOOTER ROW -->
+                <!-- COPYRIGHT ROW -->
                 <div id="copyright" class="grey two column row">
                     <div class="column">
                         <p class="copyright">Copyright &copy; 2016 <?= $company; ?></p>
