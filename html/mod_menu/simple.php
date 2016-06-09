@@ -56,8 +56,13 @@
                     $active = false;
                 }
 
+                // Include menu anchor css
+                $menuAnchorCss = $item->params->get('menu-anchor_css');
+
+                $topHrefClass = implode(" ", array_filter(array($active, $menuAnchorCss)));
+
                 // Top level
-                print '<div class="ui ' . ( count($item->subMenu) ? 'simple dropdown ' : null ) . 'item">';
+                    print '<a class="'.$topHrefClass.'" '.$topHref.'>'.$item->title . ( count($item->subMenu) ? '&nbsp;&nbsp;&nbsp;<i class="ui dropdown icon"></i>' : null ).'</a>';
 
                     // Top level href
                     $topHref = ($item->type == 'alias' or $item->type == 'heading') ? false : 'href="'.$item->flink.'"';

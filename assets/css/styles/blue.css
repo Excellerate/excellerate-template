@@ -21,6 +21,11 @@
     color:#00539B !important;
 }
 
+#menu.row .ui.menu a.strong{
+    color:#00539B !important;
+    font-weight:800 !important;
+}
+
 /* SLICK SLIDER */
 .slick-dots li button:before{
     color: #00539B;
