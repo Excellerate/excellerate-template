@@ -3,11 +3,14 @@
   // Set ENV variable
   $env = getenv('ENV');
 
+  // Find php version
+  $phpver = substr(filter_var(PHP_VERSION, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION), 0, 3);
+
   // Mobile detection class from Piwik
   $dd = new \DeviceDetector\DeviceDetector($_SERVER['HTTP_USER_AGENT']);
   $dd->discardBotInformation();
   $dd->parse();
-  $isMobile = $dd->isMobile();
+  define('IS_MOBILE', $dd->isMobile());
 
   // Jquery please
   //JHtml::_('jquery.framework');
@@ -112,7 +115,7 @@
   $footerC = $this->countModules('footer_c');
   $footerD = $this->countModules('footer_d');
   $footerE = $this->countModules('footer_E');
-  $splash = ($this->countModules('splash') and $isMobile == false) ? true : false;
+  $splash = ($this->countModules('splash') and IS_MOBILE == false) ? true : false;
 
   // Work subsites row
   if($subsites){
