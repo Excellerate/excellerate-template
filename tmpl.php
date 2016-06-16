@@ -26,7 +26,7 @@
   $favicon = strtolower($this->params->get('favicon', 'default'));
   $company = $this->params->get('company');
   $slogan = $this->params->get('siteSlogan');
-  $number = $this->params->get('siteNumber');
+  $number = (IS_MOBILE == false and $this->params->get('siteNumber')) ? $this->params->get('siteNumber') : false;
   $style = $this->params->get('style', 'white');
   $branding = $this->params->get('branding') == 'yes' ? true : false;
   $subsites = $this->params->get('subsites') == 'yes' ? true : false;

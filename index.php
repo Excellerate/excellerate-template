@@ -60,11 +60,11 @@
                         <a id="numberLeft" href="tel:<?= preg_replace("/[^0-9]/","",$number) ;?>"><?= $number; ?></a>
                     <?php endif; ?>
                 </div>
+                <?php if($number) : ?>
                 <div class="right floated right aligned column">
-                    <?php if($number) : ?>
-                        <a id="numberRight" href="tel:<?= preg_replace("/[^0-9]/","",$number) ;?>"><?= $number; ?></a>
-                    <?php endif; ?>
+                    <a id="numberRight" href="tel:<?= preg_replace("/[^0-9]/","",$number) ;?>"><?= $number; ?></a>
                 </div>
+                <?php endif; ?>
             </div>
             <?php endif; ?>
 

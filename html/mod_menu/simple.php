@@ -130,4 +130,11 @@
       }
     }
   }
+
+  $app = JFactory::getApplication('site');
+  $t = $app->getTemplate(true);
+  $number = $t->params->get('siteNumber', false);
+  if(IS_MOBILE and $number){
+    print '<a class="item" href="tel:'.preg_replace("/[^0-9]/","",$number).'">Call: '.$number.'</a>';
+  }
 ?>
