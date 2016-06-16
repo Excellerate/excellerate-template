@@ -7,7 +7,7 @@
     $rows = count(current( $split ));
 ?>
 
-<table>
+<table class="ui very basic table">
 <?php
     for ($i=0; $i < $rows; $i++) { 
         print implode(
