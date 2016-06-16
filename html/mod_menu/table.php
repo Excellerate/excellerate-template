@@ -1,16 +1,10 @@
 <?php
 
-    // Load vendors
-    include 'vendor/autoload.php';
-
     // Split the menu into two cols
     $split = array_chunk($list, ceil(count($list) / 2));
 
     // Count the number of rows required
     $rows = count(current( $split ));
-
-    //print "<pre>"; print_r($split); print "</pre>"; die();
-
 ?>
 
 <table>

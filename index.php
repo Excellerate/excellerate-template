@@ -1,114 +1,4 @@
-<?php
-
-    // Set ENV variable
-    $env = getenv('ENV');
-
-    // Jquery please
-    //JHtml::_('jquery.framework');
-
-    // Set template
-    $template = JUri::base() . 'templates/' . $this->template;
-
-    // Template params
-    $groupLogo = strtolower($this->params->get('group_logo', 'driven-by-excellerate'));
-    $logoA = strtolower($this->params->get('logo_a'));
-    $logoB = strtolower($this->params->get('logo_b'));
-    $logoC = strtolower($this->params->get('logo_c'));
-    $favicon = strtolower($this->params->get('favicon', 'default'));
-    $company = $this->params->get('company');
-    $slogan = $this->params->get('siteSlogan');
-    $number = $this->params->get('siteNumber');
-    $style = $this->params->get('style', 'white');
-    $branding = $this->params->get('branding') == 'yes' ? true : false;
-    $subsites = $this->params->get('subsites') == 'yes' ? true : false;
-    $analytics = $this->params->get('analytics', false);
-    
-    if($subsites){
-        $whiteSpace = 30;
-    }
-    else{
-        $whiteSpace = 100;
-    }
-
-    // Set logo width and height
-    if($logoA and $logoB and $logoC){
-        $logoWidth = "width=151px";
-    }
-    else if ($logoA and $logoB){
-        $logoWidth = "width=226px";
-    }
-    else{
-        $logoWidth = false;
-    }
-
-    // Gather Config
-    $config = JFactory::getConfig();
-    $config->set('logo', false); // Set logo to use
-
-    // Home page site name only
-    $app = JFactory::getApplication();
-    $menu = $app->getMenu();
-    $active = $menu->getActive();
-    $showPageHeading = false;
-    if ($active == $menu->getDefault()) {
-        $this->setTitle($app->getCfg( 'sitename' ) );
-    }
-    if($active->params->get('show_page_heading')){
-        $showPageHeading = '<h1 class="ui header">'.$active->params->get('page_heading', $active->title).'</h1>';
-    }
-    if($pageClass = $active->params->get('pageclass_sfx', false)){
-        $style = $pageClass; // Menu page overide
-    }
-
-    // Gather Menu
-    $menu = JFactory::getApplication()->getMenu();
-    $defaultPage = $menu->getActive() == $menu->getDefault() ? true : false; // Check default home page
-    
-    // Document style sheets and js
-    $doc = JFactory::getDocument();
-    $doc->addStyleSheet(JUri::base() . 'templates/' . $this->template . '/assets/css/semantic.min.css', $type = 'text/css');
-    $doc->addStyleSheet(JUri::base() . 'templates/' . $this->template . '/assets/css/layout.css', $type = 'text/css');
-    $doc->addStyleSheet(JUri::base() . 'templates/' . $this->template . '/assets/css/styles/'.$style.'.css', $type = 'text/css');
-    $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/jquery.min.js', 'text/javascript');
-    $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/semantic.min.js', 'text/javascript');
-    $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/actions.js', 'text/javascript');
-
-    // Check modules
-    $slider = $this->countModules('slider');
-    $left = $this->countModules('left');
-    $right = $this->countModules('right');
-    $topLeft = $this->countModules('top_left');
-    $bottomLeft = $this->countModules('bottom_left');
-    $topRight = $this->countModules('top_right');
-    $bottomRight = $this->countModules('bottom_right');
-    $newsFlashA = $this->countModules('newsflash_a');
-    $newsFlashB = $this->countModules('newsflash_b');
-    $newsFlashC = $this->countModules('newsflash_c');
-    $newsFlashD = $this->countModules('newsflash_d');
-    $newsFlashE = $this->countModules('newsflash_e');
-    $topA = $this->countModules('top_a');
-    $topB = $this->countModules('top_b');
-    $topC = $this->countModules('top_c');
-    $topD = $this->countModules('top_d');
-    $topE = $this->countModules('top_e');
-    $bottomA = $this->countModules('bottom_a');
-    $bottomB = $this->countModules('bottom_b');
-    $bottomC = $this->countModules('bottom_c');
-    $bottomD = $this->countModules('bottom_d');
-    $bottomE = $this->countModules('bottom_e');
-    $bottomF = $this->countModules('bottom_f');
-    $bottomG = $this->countModules('bottom_g');
-    $bottomH = $this->countModules('bottom_h');
-    $bottomI = $this->countModules('bottom_i');
-    $bottomJ = $this->countModules('bottom_j');
-    $footerA = $this->countModules('footer_a');
-    $footerB = $this->countModules('footer_b');
-    $footerC = $this->countModules('footer_c');
-    $footerD = $this->countModules('footer_d');
-    $footerE = $this->countModules('footer_E');
-    $splash = $this->countModules('splash');
-
-?>
+<?php include 'template.php'; ?>
 
 <!DOCTYPE html>
 <html>
@@ -177,41 +67,23 @@
                 <?php endif; ?>
 
                 <!-- SUB SITES ROW -->
-                <?php
-                    if($subsites){
-                        $toTop = false;
-                        switch(strtolower($active->title)){
-                            case 'excellerate facility management' :        $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-facility-management'; break;
-                            case 'excellerate brand management' :           $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-brand-management'; break;
-                            case 'excellerate utilities management' :       $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-utilities-management'; break;
-                            case 'jhi' :                                    $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi'; $toTop = true; break;
-                            case 'jhi retail' :                             $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-retail'; $toTop = true; break;
-                            case 'jhi advisory' :                           $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-advisory'; $toTop = true; break;
-                            case 'jhi cres' :                               $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-cres'; $toTop = true; break;
-                            case 'enforce security' :                       $hideDrivenBy = true; $groupLogo = 'groupLogos/enforce-dark'; break;
-                            case 'interpark' :                              $hideDrivenBy = true; $groupLogo = 'groupLogos/interpark'; break;
-                            case 'spark' :                                  $hideDrivenBy = true; $groupLogo = 'groupLogos/spark'; break;
-                            case 'sterikleen' :                             $hideDrivenBy = true; $groupLogo = 'groupLogos/sterikleen'; break;
-                            case 'eradico' :                                $hideDrivenBy = true; $groupLogo = 'groupLogos/eradico'; break;
-                            case 'katanga' :                                $hideDrivenBy = true; $groupLogo = 'groupLogos/katanga'; break;
-                            case 'chattels' :                               $hideDrivenBy = true; $groupLogo = 'excellerate'; break; // No logo as yet
-                            case 'fresh' :                                  $hideDrivenBy = true; $groupLogo = 'groupLogos/fresh'; break;
-                            case 'first technical' :                        $hideDrivenBy = true; $groupLogo = 'groupLogos/first'; break;
-                        }
-                    }
-                ?>
                 <?php if($subsites) : ?>
-                <div id="byExcellerate" class="left floated left aligned eight wide column">
-                    <img class="ui logo <?= $toTop ? 'toTop' : null; ?> image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" >
-                </div>
-                <div id="subsites" class="right floated right aligned eight wide computer only column">
-                    <?php if( ! isset($hideDrivenBy)) : ?>
-                    <div id="drivenLogoWrapper"> 
-                        <a href="http://www.epsgroup.co.za/index.php"><img id="drivenLogo" onerror="this.onerror=null; this.src='/templates/excellerate/assets/img/driven-by-excellerate.png'" src="templates/excellerate/assets/img/driven-by-excellerate.svg"></a>
+                    <div id="byExcellerate" class="left floated left aligned eight wide column">
+                        <img class="ui logo <?= $toTop ? 'toTop' : null; ?> image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" >
+                    </div>
+                    <div id="subsites" class="right floated right aligned eight wide computer only column">
+                        <?php if( ! isset($hideDrivenBy)) : ?>
+                        <div id="drivenLogoWrapper"> 
+                            <a href="http://www.epsgroup.co.za/index.php"><img id="drivenLogo" onerror="this.onerror=null; this.src='/templates/excellerate/assets/img/driven-by-excellerate.png'" src="templates/excellerate/assets/img/driven-by-excellerate.svg"></a>
+                        </div>
+                        <?php endif; ?>
+                        <jdoc:include type="modules" name="subsites" />
+                    </div>
+                    <?php if($isMobile) : ?>
+                    <div id="subsites" class="sixteen wide mobile only column">
+                        <jdoc:include type="modules" name="subsites" />
                     </div>
                     <?php endif; ?>
-                    <jdoc:include type="modules" name="subsites" />
-                </div>
                 <?php endif; ?>
                 
                 <!-- BRANDING ROW -->
@@ -249,7 +121,7 @@
                 <?php endif; ?>
 
                 <!-- MENU ROW -->
-                <div id="menu" class="computer only row">
+                <div id="menu" class="row">
                     <div class="column">
                         <?php if( ! isset($hideDrivenBy)) : ?>
                         <jdoc:include type="modules" name="menu" />
@@ -321,11 +193,11 @@
 
             <!-- FINISH ROW -->
             <div id="end" class="ui two column container grid">
-                <div class="left floated left aligned column">
+                <div class="left floated left aligned six wide column">
                     <a class="login" href="<?= JUri::base(); ?>administrator/index.php">Admin Login</a>
                 </div>
-                <div class="right floated right aligned column">
-                    <a href="http://codechap.com">CodeChap</a> <?= $env ? ' | ' . ucFirst($env) . ' Server' : null; ?>
+                <div class="right floated right aligned ten wide column">
+                    <a href="http://codechap.com">CodeChap</a> | <?= 'PHP '.phpversion();?> <?= $env ? ' | ' . ucFirst($env) . ' Server' : null; ?>
                 </div>
             </div>
 

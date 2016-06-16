@@ -1,8 +1,5 @@
 <?php
 
-    // Load vendors
-    include 'vendor/autoload.php';
-
     // Split the menu into two cols
     $split = array_chunk($list, ceil(count($list) / 3));
 
@@ -11,7 +8,7 @@
 
 ?>
 
-<table>
+<table class="ui very basic compact table">
 <?php
   for ($i=0; $i < $rows; $i++) {
 

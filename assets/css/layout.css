@@ -57,10 +57,6 @@ figure{
     margin:0px;
 }
 
-table tr td{
-    vertical-align:top;
-}
-
 /* IMAGE HELPERS */
 .left.floated.image{
     float:left;
@@ -200,16 +196,15 @@ small, .small{
 #subsites{
     margin-top: 8px;
     font-size: 11px !important;
-    line-height: 20px;
+    line-height: 20px !important;
 }
-    #subsites > table{
-        float:right;
-        text-align:left;
-        width:100%;
+    #subsites .ui.compact.table td{
+        padding: .1em 0em;
     }
-    #subsites table tr{
-        border-bottom:1px solid #ccc;
+    #subsites *{
+        font-weight:normal !important;
     }
+
 
 #brand{
     height:107px;
@@ -259,10 +254,12 @@ small, .small{
         min-height:223px;
         height:223px;
         width:1140px;
+
     }
     #slider .column{
         padding:0px !important;
-        height:223px !important;   
+        height:223px !important;
+        overflow:hidden;   
     }
     /* Arrows */
     #slider .slick-prev, #slider .slick-next{
@@ -511,12 +508,12 @@ small, .small{
     /* Mobile */
     @media only screen and (max-width: 767px) {
         #slider.row img{
-            min-width:800px !important;
+            min-width:775px !important;
             overflow:hidden;
             left:-33%;
         }
         #slider.row{
-            max-height:156px;
+
         }
     }
     /* Mobile Portrait */

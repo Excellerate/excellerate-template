@@ -1,10 +1,5 @@
 <?php
 
-    // Load vendors
-    include 'vendor/autoload.php';
-
-    //print "<pre>"; print_r($list); print "</pre>"; die();
-
     // Regroup the menu
     foreach($list as $i => &$item){
 
@@ -59,16 +54,14 @@
                 // Include menu anchor css
                 $menuAnchorCss = $item->params->get('menu-anchor_css');
 
-                $topHrefClass = implode(" ", array_filter(array($active, $menuAnchorCss)));
-
                 // Top level
-                    print '<a class="'.$topHrefClass.'" '.$topHref.'>'.$item->title . ( count($item->subMenu) ? '&nbsp;&nbsp;&nbsp;<i class="ui dropdown icon"></i>' : null ).'</a>';
+                print '<div class="ui ' . ( count($item->subMenu) ? 'simple dropdown ' : null ) . 'item">';
 
                     // Top level href
                     $topHref = ($item->type == 'alias' or $item->type == 'heading') ? false : 'href="'.$item->flink.'"';
                 
                     // Top level link
-                    print '<a class="'.$active.'" '.$topHref.'>'.$item->title . ( count($item->subMenu) ? '&nbsp;&nbsp;&nbsp;<i class="ui dropdown icon"></i>' : null ).'</a>';
+                    print '<a class="'.$active.' '.$menuAnchorCss.'" '.$topHref.'>'.$item->title . ( count($item->subMenu) ? '&nbsp;&nbsp;&nbsp;<i class="ui dropdown icon"></i>' : null ).'</a>';
 
                     // Check for second dropdown level
                     if( count($item->subMenu) ){
