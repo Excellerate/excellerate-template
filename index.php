@@ -208,8 +208,10 @@
             </div>
         </div>
 
+        <?php if(IS_MOBILE) : ?>
         <div id="sidebarButton" class="ui fixed black icon button"><i class="ui bars icon"></i></div>
-        
+        <?php endif; ?>
+
         <jdoc:include type="modules" name="debug" style="none" />
     </body>
 </html>
