@@ -46,13 +46,13 @@
 
   // Set logo width and height
   if($logoA and $logoB and $logoC){
-      $logoWidth = "width=151px";
+    $logoWidth = "width=151px";
   }
   else if ($logoA and $logoB){
-      $logoWidth = "width=226px";
+    $logoWidth = "width=226px";
   }
   else{
-      $logoWidth = false;
+    $logoWidth = false;
   }
 
   // Gather Config
@@ -65,13 +65,13 @@
   $active = $menu->getActive();
   $showPageHeading = false;
   if ($active == $menu->getDefault()) {
-      $this->setTitle($app->getCfg( 'sitename' ) );
+    $this->setTitle($app->getCfg( 'sitename' ) );
   }
   if($active->params->get('show_page_heading')){
-      $showPageHeading = '<h1 class="ui header">'.$active->params->get('page_heading', $active->title).'</h1>';
+    $showPageHeading = '<h1 class="ui header">'.$active->params->get('page_heading', $active->title).'</h1>';
   }
   if($pageClass = $active->params->get('pageclass_sfx', false)){
-      $style = $pageClass; // Menu page overide
+     $style = $pageClass; // Menu page overide
   }
 
   // Gather Menu
@@ -124,25 +124,24 @@
 
   // Work subsites row
   if($subsites){
-      $toTop = false;
-      switch(strtolower($active->title)){
-          case 'excellerate facility management' :        $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-facility-management'; break;
-          case 'excellerate brand management' :           $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-brand-management'; break;
-          case 'excellerate utilities management' :       $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-utilities-management'; break;
-          case 'jhi' :                                    $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi'; $toTop = true; break;
-          case 'jhi retail' :                             $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-retail'; $toTop = true; break;
-          case 'jhi advisory' :                           $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-advisory'; $toTop = true; break;
-          case 'jhi cres' :                               $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-cres'; $toTop = true; break;
-          case 'enforce security' :                       $hideDrivenBy = true; $groupLogo = 'groupLogos/enforce-dark'; break;
-          case 'interpark' :                              $hideDrivenBy = true; $groupLogo = 'groupLogos/interpark'; break;
-          case 'spark' :                                  $hideDrivenBy = true; $groupLogo = 'groupLogos/spark'; break;
-          case 'sterikleen' :                             $hideDrivenBy = true; $groupLogo = 'groupLogos/sterikleen'; break;
-          case 'eradico' :                                $hideDrivenBy = true; $groupLogo = 'groupLogos/eradico'; break;
-          case 'katanga' :                                $hideDrivenBy = true; $groupLogo = 'groupLogos/katanga'; break;
-          case 'chattels' :                               $hideDrivenBy = true; $groupLogo = 'excellerate'; break; // No logo as yet
-          case 'fresh' :                                  $hideDrivenBy = true; $groupLogo = 'groupLogos/fresh'; break;
-          case 'first technical' :                        $hideDrivenBy = true; $groupLogo = 'groupLogos/first'; break;
-      }
+    $toTop = false;
+    switch(strtolower($active->title)){
+      case 'excellerate facility management' :        $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-facility-management'; break;
+      case 'excellerate brand management' :           $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-brand-management'; break;
+      case 'excellerate utilities management' :       $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-utilities-management'; break;
+      case 'jhi' :                                    $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi'; $toTop = true; break;
+      case 'jhi retail' :                             $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-retail'; $toTop = true; break;
+      case 'jhi advisory' :                           $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-advisory'; $toTop = true; break;
+      case 'jhi cres' :                               $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-cres'; $toTop = true; break;
+      case 'enforce security' :                       $hideDrivenBy = true; $groupLogo = 'groupLogos/enforce-dark'; break;
+      case 'interpark' :                              $hideDrivenBy = true; $groupLogo = 'groupLogos/interpark'; break;
+      case 'spark' :                                  $hideDrivenBy = true; $groupLogo = 'groupLogos/spark'; break;
+      case 'sterikleen' :                             $hideDrivenBy = true; $groupLogo = 'groupLogos/sterikleen'; break;
+      case 'eradico' :                                $hideDrivenBy = true; $groupLogo = 'groupLogos/eradico'; break;
+      case 'katanga' :                                $hideDrivenBy = true; $groupLogo = 'groupLogos/katanga'; break;
+      case 'chattels' :                               $hideDrivenBy = true; $groupLogo = 'excellerate'; break; // No logo as yet
+      case 'fresh' :                                  $hideDrivenBy = true; $groupLogo = 'groupLogos/fresh'; break;
+      case 'first technical' :                        $hideDrivenBy = true; $groupLogo = 'groupLogos/first'; break;
+    }
   }
-
 ?>

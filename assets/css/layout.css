@@ -442,6 +442,7 @@ small, .small{
   position:absolute;
   right:24px;
   top:12px;
+  z-index:1;
 }
   #sidebarButton:hover{
     text-decoration:none;
