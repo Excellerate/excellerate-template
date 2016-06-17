@@ -67,10 +67,10 @@
   if ($active == $menu->getDefault()) {
     $this->setTitle($app->getCfg( 'sitename' ) );
   }
-  if($active->params->get('show_page_heading')){
+  if($active and $active->params->get('show_page_heading')){
     $showPageHeading = '<h1 class="ui header">'.$active->params->get('page_heading', $active->title).'</h1>';
   }
-  if($pageClass = $active->params->get('pageclass_sfx', false)){
+  if($active and $pageClass = $active->params->get('pageclass_sfx', false)){
      $style = $pageClass; // Menu page overide
   }
 
