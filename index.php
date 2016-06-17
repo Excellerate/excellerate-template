@@ -45,7 +45,6 @@
                 <jdoc:include type="modules" name="menu" />
             </div>
         </div>
-        <div id="sidebarButton" class="ui fixed black icon button"><i class="ui bars icon"></i></div>
         <?php endif; ?>
 
         <!-- Mobile Menu Push -->
@@ -209,6 +208,8 @@
             </div>
         </div>
 
+        <div id="sidebarButton" class="ui fixed black icon button"><i class="ui bars icon"></i></div>
+        
         <jdoc:include type="modules" name="debug" style="none" />
     </body>
 </html>
