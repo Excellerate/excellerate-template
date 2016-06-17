@@ -23,7 +23,7 @@
 ?>
 
 <?php if($show) : ?>
-<div class="ui <?=$total; ?> column stackable grid">
+<div class="ui <?=$total; ?> column stackable padded grid">
     <?php if($footerA) : ?><div class="column"><jdoc:include type="modules" name="footer_a" style="flat" /></div><?php endif; ?>
     <?php if($footerB) : ?><div class="column"><jdoc:include type="modules" name="footer_b" style="flat" /></div><?php endif; ?>
     <?php if($footerC) : ?><div class="column"><jdoc:include type="modules" name="footer_c" style="flat" /></div><?php endif; ?>

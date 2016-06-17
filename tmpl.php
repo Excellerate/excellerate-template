@@ -32,7 +32,7 @@
   $subsites = $this->params->get('subsites') == 'yes' ? true : false;
   $analytics = $this->params->get('analytics', false);
   
-  if( ! IS_MOBILE){
+  if( ! IS_MOBILE and $branding == false){
     if($subsites){
       $whiteSpace = 30;
     }
