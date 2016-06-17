@@ -32,11 +32,16 @@
   $subsites = $this->params->get('subsites') == 'yes' ? true : false;
   $analytics = $this->params->get('analytics', false);
   
-  if($subsites){
+  if( ! IS_MOBILE){
+    if($subsites){
       $whiteSpace = 30;
+    }
+    else{
+      $whiteSpace = 100;
+    }
   }
   else{
-      $whiteSpace = 100;
+    $whiteSpace = 0;
   }
 
   // Set logo width and height
