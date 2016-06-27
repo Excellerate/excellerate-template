@@ -123,7 +123,7 @@
   $splash = ($this->countModules('splash') and IS_MOBILE == false) ? true : false;
 
   // Work subsites row
-  if($subsites){
+  if($subsites and isset($ative)){
     $toTop = false;
     switch(strtolower($active->title)){
       case 'excellerate facility management' :        $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-facility-management'; break;
