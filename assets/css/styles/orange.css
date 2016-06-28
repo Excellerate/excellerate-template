@@ -9,16 +9,16 @@
 }
 .ui.button:hover{
     background: #F47721;
-    color: rgba(255,255,255,1);
+    color: rgba(255,255,255,09) !important;
 }
 
 /* HTML */
-#content a:hover{
-    color:#F47721 !important;
+a:hover{
+  color:#F47721 !important;  
 }
 
 #menu .active, #footer li a:hover{
-    color:#F47721 !important;
+  color:#F47721 !important;
 }
 
 /* SLICK SLIDER */

@@ -9,12 +9,12 @@
 }
 .ui.button:hover{
     background: #003D62;
-    color: rgba(255,255,255,1);
+    color: rgba(255,255,255,09) !important;
 }
 
 /* HTML */
 #content a:hover{
-    color:#003D62;
+    color:#003D62 !important;
 }
 
 #menu .active, #footer li a:hover{

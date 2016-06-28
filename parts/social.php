@@ -1,4 +1,3 @@
-
 <?php if ($facebook = $this->params->get('facebook', false)) : ?>
     <a href="<?= $facebook; ?>" class="socialLink"><i class="big square facebook icon"></i></a>
 <?php endif; ?>

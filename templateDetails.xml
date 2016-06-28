@@ -205,6 +205,7 @@
         </field>
 
         <field name="analytics"  type="string" default="" label="Google Analytics Code" description="Your analytics tracking ID" filter="raw" />
+        <field name="addthis"  type="string" default="" label="Addthis Code" description="Your addthis tracking ID" filter="raw" />
 
       </fieldset>
 

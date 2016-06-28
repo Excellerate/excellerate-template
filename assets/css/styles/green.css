@@ -14,7 +14,7 @@
 
 /* HTML */
 #content a:hover{
-    color:#B2BB1E;
+    color:#B2BB1E !important;
 }
 
 #menu .active, #footer li a:hover{

@@ -537,6 +537,12 @@ small, .small{
   border-bottom:1px solid #f0f0f0;   
 }
 
+/* BLOG */
+.ui.blog .header i{
+  font-size:12px;
+  line-height:11px;
+}
+
 /* PAGES */
 #map-canvas{
   height:800px;
