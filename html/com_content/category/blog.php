@@ -14,6 +14,7 @@
     <!-- ARTICLES -->
     <?php if ( ! empty($this->intro_items)) : ?>
         <div class="ui sixteen wide column">
+            <h3>Previous Posts</h3>
             <table class="ui very basic table">
             <?php foreach ($this->intro_items as $key => &$item) : ?>
                 <?php $this->item = & $item; print $this->loadTemplate('item'); ?>
@@ -22,4 +23,8 @@
         </div>
     <?php endif; ?> 
 
+</div>
+
+<div class="pagination">
+    <?php echo $this->pagination->getPagesLinks(); ?>
 </div>

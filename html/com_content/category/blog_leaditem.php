@@ -27,9 +27,13 @@
   </div>
 </h1>
 
+<?php if($images->image_intro) : ?>
 <img class="ui medium bordered right floated image" src="<?= $images->image_intro; ?>" />
+<?php endif; ?>
 
-<p><?= $text; ?></p>
+<article>
+  <?= $text; ?>
+<article>
 
 <div class="addthis_sharing_toolbox"></div>
 

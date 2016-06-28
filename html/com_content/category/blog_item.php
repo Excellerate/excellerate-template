@@ -12,20 +12,20 @@ $title = $item->title;
 $date = date('l, j F Y', strtotime($item->publish_up));
 $text = Excellerate::truncate( ($item->fulltext) ? $item->fulltext : $item->introtext, 200);
 
-
 ?>
 
 <tr>
-  <td class="four wide top aligned cell">
-    <img class="ui fluid bordered image" src="<?= $images->image_intro; ?>" />
-  </td>
-  <td class="twelve wide top aligned cell">
+  <td class="twelve wide top aligned cell" <?= $images->image_intro == false ? 'colspan=2' : null; ?> >
     <h4 class="ui blog header">
-      <?= $item->id; ?>
       <?= $title; ?>
       <div class="ui sub header"><i class="ui tiny calendar icon"></i><?= $date; ?></div>
     </h4>
     <p><?= $text; ?></p>
-    <a href="<?= 't'; ?>" class="ui right labeled mini icon button"><i class="ui right arrow icon"></i>Read More</a>
+    <a href="<?= JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catid, $item->language)); ?>" class="ui right labeled mini icon button"><i class="ui right arrow icon"></i>Read More</a>
   </td>
+  <?php if($images->image_intro) : ?>
+  <td class="four wide top center aligned cell">
+    <img class="ui fluid bordered image" src="<?= $images->image_intro; ?>" alt="<?= $images->image_intro_alt; ?>"/>
+  </td>
+  <?php endif;?>
 </tr>

@@ -18,6 +18,29 @@
         );
     }
 
+    // JUST HACKING THIS IN FOR NOW (@todo Create blog view under articles) //
+    if(in_array($this->item->category_title, array('blog', 'Myth-Busting Mondays', 'Tuesday Tips', 'Your World Wednesday'))){
+
+        // Find blog like things
+        $title = $this->item->title;
+        $date = date('l, j F Y', strtotime($this->item->publish_up));
+        $author = $this->item->author;
+
+        ?>
+        <h1 class="ui blog header">
+          <?= $title; ?>
+          <div class="ui sub header">
+            <i class="ui calendar icon"></i><?= $date; ?> | By <?= $author; ?>
+          </div>
+        </h1>
+        <?php
+    }
+
+    // Find image properties
+    $image = $images->image_fulltext ? : $images->image_intro;
+    $alt = $images->image_fulltext_alt ? : $images->image_intro_alt;
+    $caption = $images->image_fulltext_caption ? : $images->image_intro_caption;
+
     // Fix editor replaces <i> with <em>
     $text = preg_replace("/\<em class=\"(.*)\"\>(.*?)\<\/em\>/", "<i class=\"$1\"></i>", $this->item->text);
 
@@ -29,16 +52,17 @@
         print '<h1 class="ui header">' . trim($title[0]) . (isset($title[1]) ? '<div class="ui sub header">'.$title[1].'</div>' : null) . '</h1>';
     }
 
+    // Info block //
     print JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above'));
 
     // Find image float, default to left
     $floated = ! empty( $images->float_fulltext ) ? $images->float_fulltext : 'right';
 
     // IMAGE (Left floated) //
-    if( ! empty( $images->image_fulltext ) ){
-        print '<a href="#" class="ui '.$floated.' floated image" '.($floated=='none' ? 'style="width:100%;"' : null).'>';
-            print '<img class="ui image" src="'.$images->image_fulltext.'" alt="'.$images->image_fulltext_alt.'" title="'.$images->image_fulltext_caption.'">';
-        print '</a>';
+    if( ! empty( $image ) ){
+        //print '<a href="#" class="ui '.$floated.' floated image" '.($floated=='none' ? 'style="width:100%;"' : null).'>';
+            print '<img class="ui medium right floated image" src="'.$image.'" alt="'.$alt.'" title="'.$caption.'">';
+        //print '</a>';
     }
 
     // TEXT //

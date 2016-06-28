@@ -543,6 +543,13 @@ small, .small{
   line-height:11px;
 }
 
+/* PAGINATION */
+.pagination{
+  margin-top:15px;
+  margin-bottom:15px;
+  text-align:center;
+}
+
 /* PAGES */
 #map-canvas{
   height:800px;
