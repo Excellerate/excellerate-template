@@ -31,6 +31,7 @@
   $branding = $this->params->get('branding') == 'yes' ? true : false;
   $subsites = $this->params->get('subsites') == 'yes' ? true : false;
   $analytics = $this->params->get('analytics', false);
+  $addthiscode = $this->params->get('addthiscode', false);
   
   if( ! IS_MOBILE and $branding == false){
     if($subsites){
