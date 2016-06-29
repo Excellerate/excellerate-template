@@ -92,6 +92,7 @@
           <option value="sterikleen">Sterikleen</option>
           <option value="sterikleenMono">Sterikleen (monotone)</option>
           <option value="syenap">Syenap</option>
+          <option value="profica">Profica</option>
         </field>
 
         <field name="logo_b" type="list" label="Second logo" description="Select second logo">
@@ -116,6 +117,7 @@
           <option value="Spark">Spark</option>
           <option value="sterikleen">Sterikleen</option>
           <option value="syenap">Syenap</option>
+          <option value="profica">Profica</option>
         </field>
 
         <field name="logo_c" type="list" label="Third logo" description="Select third logo">
@@ -140,6 +142,7 @@
           <option value="Spark">Spark</option>
           <option value="sterikleen">Sterikleen</option>
           <option value="syenap">Syenap</option>
+          <option value="profica">Profica</option>
         </field>
 
         <field name="favicon" type="list" label="Favicon" description="The little logo in the url window">
@@ -164,6 +167,7 @@
           <option value="Spark">Spark</option>
           <option value="sterikleen">Sterikleen</option>
           <option value="syenap">Syenap</option>
+          <option value="profica">Profica</option>
         </field>
 
         <field name="company"  type="text" default="" label="Full company name" description="Enter full name of the group company" filter="string" />
