@@ -35,10 +35,10 @@
         </script>
         <?php endif; ?>
 
-        <?php //if( ($env == false or $env == 'production') and $addthis ) : ?>
+        <?php if( ($env == false or $env == 'production') and $addthiscode ) : ?>
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?= $addthiscode; ?>"></script>
-        <?php //endif; ?>
+        <?php endif; ?>
 
     </head>
 
@@ -78,7 +78,7 @@
                 <!-- SUB SITES ROW -->
                 <?php if($subsites) : ?>
                     <div id="byExcellerate" class="left floated left aligned eight wide column">
-                        <img class="ui logo <?= isset($toTop) ? 'toTop' : null; ?> image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" >
+                        <img class="ui logo <?= $toTop ? 'toTop' : null; ?> image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" >
                     </div>
                     <div id="subsites" class="right floated right aligned eight wide computer only column">
                         <?php if( ! isset($hideDrivenBy)) : ?>
@@ -133,7 +133,7 @@
                 <?php if( ! IS_MOBILE) : ?>
                 <div id="menu" class="row">
                     <div class="column">
-                        <?php if( ! isset($hideDrivenBy)) : ?>
+                        <?php if($hideDrivenBy == false) : ?>
                         <nav>
                             <div class="ui stackable menu">
                                 <jdoc:include type="modules" name="menu" />

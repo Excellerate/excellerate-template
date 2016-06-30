@@ -32,6 +32,8 @@
   $subsites = $this->params->get('subsites') == 'yes' ? true : false;
   $analytics = $this->params->get('analytics', false);
   $addthiscode = $this->params->get('addthiscode', false);
+  $hideDrivenBy = false;
+  $toTop = false;
   
   if( ! IS_MOBILE and $branding == false){
     if($subsites){
@@ -124,7 +126,7 @@
   $splash = ($this->countModules('splash') and IS_MOBILE == false) ? true : false;
 
   // Work subsites row
-  if($subsites and isset($ative)){
+  if($subsites and isset($active)){
     $toTop = false;
     switch(strtolower($active->title)){
       case 'excellerate facility management' :        $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-facility-management'; break;
@@ -143,6 +145,7 @@
       case 'chattels' :                               $hideDrivenBy = true; $groupLogo = 'excellerate'; break; // No logo as yet
       case 'fresh' :                                  $hideDrivenBy = true; $groupLogo = 'groupLogos/fresh'; break;
       case 'first technical' :                        $hideDrivenBy = true; $groupLogo = 'groupLogos/first'; break;
+      case 'profica' :                                $hideDrivenBy = true; $groupLogo = 'groupLogos/profica'; break;
     }
   }
 ?>
