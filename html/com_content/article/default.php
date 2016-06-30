@@ -73,5 +73,5 @@
         print '<a href="'.$reference.'" class="reference"><i class="ui external link icon"></i>'.(preg_replace("/http:\/\//", "", $reference)).'</a>';
     }
 ?>
-
+<br>
 <div class="addthis_sharing_toolbox"></div>
