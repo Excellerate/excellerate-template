@@ -35,6 +35,9 @@
                 <div class="column">
                     <jdoc:include type="message" />
                     <jdoc:include type="component" />
+                    <?php if ($underContent) : ?>
+                        <jdoc:include type="modules" name="under_content" style="block" />
+                    <?php endif; ?>
                 </div>
             </div>
             
