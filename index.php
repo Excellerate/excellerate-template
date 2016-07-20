@@ -81,7 +81,7 @@
                         <img class="ui logo <?= $toTop ? 'toTop' : null; ?> image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" >
                     </div>
                     <div id="subsites" class="right floated right aligned eight wide computer only column">
-                        <?php if( ! isset($hideDrivenBy)) : ?>
+                        <?php if($hideDrivenBy == false) : ?>
                         <div id="drivenLogoWrapper"> 
                             <a href="http://www.epsgroup.co.za/index.php"><img id="drivenLogo" onerror="this.onerror=null; this.src='/templates/excellerate/assets/img/driven-by-excellerate.png'" src="templates/excellerate/assets/img/driven-by-excellerate.svg"></a>
                         </div>
