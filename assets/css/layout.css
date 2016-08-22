@@ -262,12 +262,23 @@ small, .small{
   height:223px !important;
   padding:0px !important;
 }
+@media only screen and (max-width: 1280px) {
+  #slider.row{
+    height:188px !important;
+  }
+}
+@media only screen and (max-width: 1280px) {
+    #slider.row{
+    height:147px !important;
+  }
+}
   #slider.row img{
+    /*
     max-height:223px;
     min-height:223px;
     height:223px;
     width:1140px;
-
+    */
   }
   #slider .column{
     padding:0px !important;

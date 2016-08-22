@@ -37,4 +37,4 @@
 
 <div class="addthis_sharing_toolbox"></div>
 
-<div class="ui divider"></div>
+<br>
