@@ -1,7 +1,7 @@
 /* SEMANTIC COLORS */
 .ui.grid>.red.column, .ui.grid>.red.row, .ui.grid>.row>.red.column{
-    background-color: #E23D40 !important;
-    color: #FFF;
+    background-color: #E8E8E8 !important;
+    color: rgba(0, 0, 0, .87)
 }
 .ui.button{
     background: #E23D40;

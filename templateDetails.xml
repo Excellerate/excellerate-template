@@ -55,6 +55,7 @@
         <position>bottom_right</position>
         <position>splash</position>
         <position>subsites</position>
+        <position>under_content</position>
   </positions>
   <config>
     <fields name="params">

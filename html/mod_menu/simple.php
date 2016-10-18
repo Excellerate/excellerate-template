@@ -48,7 +48,7 @@
       print '<div class="ui ' . ( count($item->subMenu) ? ' simple dropdown ' : null ) . 'item">';
 
         // Top level href
-        $topHref = ($item->type == 'alias' or $item->type == 'heading') ? false : 'href="'.$item->flink.'"';
+        $topHref = ($item->type == 'heading') ? false : 'href="'.$item->flink.'"';
       
         // Top level link
         print '<a class="'.$active.' '.$menuAnchorCss.'" '.$topHref.'>'.$item->title . ( count($item->subMenu) ? '&nbsp;&nbsp;&nbsp;<i class="ui dropdown icon"></i>' : null ).'</a>';
@@ -105,7 +105,7 @@
     else{
       
       // One
-      $topHref = ($item->type == 'alias' or $item->type == 'heading') ? false : true;
+      $topHref = ($item->type == 'heading') ? false : true;
       
       if($topHref){
         print '<a href="'.$item->flink.'" class="item">'.$item->title.'</a>';

@@ -19,18 +19,21 @@
     }
 
     // JUST HACKING THIS IN FOR NOW (@todo Create blog view under articles) //
-    if(in_array($this->item->category_title, array('blog', 'Myth-Busting Mondays', 'Tuesday Tips', 'Your World Wednesday'))){
+    if(
+        in_array($this->item->category_title, array('blog', 'Myth-Busting Mondays', 'Tuesday Tips', 'Your World Wednesday'))
+        or $params->get('show_title') == true
+    ){
 
         // Find blog like things
         $title = $this->item->title;
-        $date = date('l, j F Y', strtotime($this->item->publish_up));
-        $author = $this->item->author;
+        $date = $params->get('show_create_date') ? '<i class="ui calendar icon"></i>' . date('l, j F Y', strtotime($this->item->publish_up)) : false;
+        $author = $params->get('show_author') ? 'By ' . $this->item->author : false;
 
         ?>
         <h1 class="ui blog header">
           <?= $title; ?>
           <div class="ui sub header">
-            <i class="ui calendar icon"></i><?= $date; ?> | By <?= $author; ?>
+            <?php print implode(' | ', array_filter(array($date, $author))); ?>
           </div>
         </h1>
         <?php
@@ -72,5 +75,6 @@
     if($reference){
         print '<a href="'.$reference.'" class="reference"><i class="ui external link icon"></i>'.(preg_replace("/http:\/\//", "", $reference)).'</a>';
     }
-
 ?>
+<br>
+<div class="addthis_sharing_toolbox"></div>

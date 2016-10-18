@@ -123,7 +123,9 @@
   $footerC = $this->countModules('footer_c');
   $footerD = $this->countModules('footer_d');
   $footerE = $this->countModules('footer_E');
+  $underContent = $this->countModules('under_content');
   $splash = ($this->countModules('splash') and IS_MOBILE == false) ? true : false;
+
 
   // Work subsites row
   if($subsites and isset($active)){
