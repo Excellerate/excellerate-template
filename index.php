@@ -78,7 +78,7 @@
                 <!-- SUB SITES ROW -->
                 <?php if($subsites) : ?>
                     <div id="byExcellerate" class="left floated left aligned eight wide column">
-                        <img class="ui logo <?= $toTop ? 'toTop' : null; ?> image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" >
+                        <a href="<?=JURI::base();?>"><img class="ui logo <?= $toTop ? 'toTop' : null; ?> image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" ></a>
                     </div>
                     <div id="subsites" class="right floated right aligned eight wide computer only column">
                         <jdoc:include type="modules" name="subsites" />
