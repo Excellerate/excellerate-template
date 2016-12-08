@@ -64,7 +64,7 @@
         <field name="group_logo" type="list" label="Group logo" description="Select group logo">
           <option value="driven-by-excellerate">Driven by Excellerate</option>
           <option value="excellerate-holdings">Excellerate Holdings</option>
-          <option value="excellerate">Excellerate</option>
+          <option value="excellerate-services">Excellerate Services</option>
         </field>
 
         <field name="logo_a" type="list" label="Main logo" description="Select main logo">
