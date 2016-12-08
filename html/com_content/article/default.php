@@ -33,7 +33,7 @@
         <h1 class="ui blog header">
           <?= $title; ?>
           <div class="ui sub header">
-            <?= implode(' | ', array_filter(array($date, $author))); ?>
+            <?php print implode(' | ', array_filter(array($date, $author))); ?>
           </div>
         </h1>
         <?php
