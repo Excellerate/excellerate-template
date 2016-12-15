@@ -28,3 +28,11 @@ a:hover{
 .slick-dots li.slick-active button:before{
     color: #F47721;
 }
+
+/* LEFT SIDE COLORS */
+#leftside a{
+    color:#F47721 !important;
+}
+#leftside a:hover{
+    color:#333 !important;
+}
