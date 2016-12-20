@@ -18,7 +18,7 @@
                 print '<div class="twelve wide column">';
             }
             else if( ! $left and ! $right ){
-                print '<div>';
+                print '<div class="sixteen wide column">';
             }  
             ?>
             
