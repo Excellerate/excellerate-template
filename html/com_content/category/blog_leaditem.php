@@ -27,7 +27,7 @@
 </h1>
 
 <?php if($images->image_intro) : ?>
-<img class="ui medium bordered right floated image" src="<?= $images->image_intro; ?>" />
+<img class="ui medium bordered right floated image" src="<?= $images->image_intro; ?>" alt="<?= $images->image_fulltext_alt; ?>" />
 <?php endif; ?>
 
 <article>
