@@ -15,6 +15,9 @@
 
   // Find images
   $images = json_decode($item->images);
+
+  // Find alt text
+  $alt = $images->image_fulltext_alt ? : $images->image_intro_alt;
 ?>
 
 <h1 class="ui blog header">
@@ -27,7 +30,7 @@
 </h1>
 
 <?php if($images->image_intro) : ?>
-<img class="ui medium bordered right floated image" src="<?= $images->image_intro; ?>" alt="<?= $images->image_fulltext_alt; ?>" />
+<img class="ui medium bordered right floated image" src="<?= $images->image_intro; ?>" alt="<?= $alt; ?>" />
 <?php endif; ?>
 
 <article>
