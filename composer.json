@@ -1,0 +1,8 @@
+{
+  "name": "excellerate/theme",
+  "type": "joomla-template",
+  "description": "Excellerate services theme",
+  "require": {
+    "composer/installers": "*"
+  }
+}
