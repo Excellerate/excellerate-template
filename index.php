@@ -193,7 +193,7 @@
                 <!-- COPYRIGHT ROW -->
                 <div id="copyright" class="grey two column row">
                     <div class="column">
-                        <p class="copyright">Copyright &copy; 2016 <?= $company; ?></p>
+                        <p class="copyright">Copyright &copy; <?php echo date("Y"); ?> <?= $company; ?></p>
                     </div>
                     <div class="right floated right aligned column">
                         <?php include("parts/social.php"); ?>

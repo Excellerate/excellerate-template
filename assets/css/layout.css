@@ -578,9 +578,6 @@ small, .small{
     border-left:1px solid #ccc;
   }
   #featured .section{
-    border-right:1px solid #ccc;
-    border-bottom:1px solid #ccc;
-    border-left:1px solid #ccc;
     padding:15px;
   }
 
