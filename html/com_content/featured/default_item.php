@@ -3,6 +3,7 @@
 // Create shortcuts to some parameters.
 $item    = $this->item;
 $params  = $item->params;
+$attribs = json_decode($item->attribs);
 $images  = json_decode($this->item->images);
 $urls    = json_decode($this->item->urls);
 $info    = $params->get('info_block_position', 0);
@@ -14,31 +15,40 @@ $text = Excellerate::truncate( ($item->fulltext) ? $item->fulltext : $item->intr
 ?>
 
 <!-- Image -->
-<?php if( ! empty($image->image_intro)) : ?>
-<img class="ui fluid image" src="<?= $images->image_intro; ?>" />
+<?php if( ! empty($images->image_intro)) : ?>
+	<img class="ui fluid image" alt="<?= $images->image_intro_alt; ?>" src="<?= \JUri::base() . $images->image_intro; ?>" />
 <?php endif; ?>
 
+<!-- Text -->
 <div class="section">
-	
-	<h1><?= $this->item->title; ?></h1>
+	<?php
+//print "<pre>"; print_r($item); print "</pre>";
+?>
+	<!-- Title -->
+	<?php if($attribs->show_title != "0") : ?>
+	<h1 class="ui header"><?= $this->item->title; ?></h1>
+	<?php endif; ?>
+
 	<?= $this->item->introtext; ?>
 
-	<?php 
-	if ($params->get('show_readmore') && $this->item->readmore) :
-	if ($params->get('access-view')) :
-		$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
-	else :
-		$menu = JFactory::getApplication()->getMenu();
-		$active = $menu->getActive();
-		$itemId = $active->id;
-		$link = new JUri(JRoute::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false));
-		$link->setVar('return', base64_encode(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language)));
-	endif; ?>
+	<?php
 
-	<?php //echo JLayoutHelper::render('joomla.content.readmore', array('item' => $this->item, 'params' => $params, 'link' => $link)); ?>
+		if($params->get('show_readmore') && $this->item->readmore){
+			
+			if($params->get('access-view')){
+				$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
+			}
+			else{
+				$menu = JFactory::getApplication()->getMenu();
+				$active = $menu->getActive();
+				$itemId = $active->id;
+				$link = new JUri(JRoute::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false));
+				$link->setVar('return', base64_encode(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language)));
+			}
 
-	<a href="<?= $link; ?>" class="ui right labeled icon submit small button">Read More<i class="right arrow icon"></i></a>
-
-	<?php endif; ?>
+			// Print readmore link
+			print '<a href="'.$link.'" class="ui right labeled icon submit small button">Read More<i class="right arrow icon"></i></a>';
+		}
+	?>
 
 </div>
