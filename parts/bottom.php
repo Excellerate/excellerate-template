@@ -58,7 +58,6 @@
     else{
         $showFtoJ = false;
     }
-
 ?>
 
 <?php if($showFtoJ) : ?>

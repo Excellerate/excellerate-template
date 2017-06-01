@@ -78,14 +78,9 @@
                 <!-- SUB SITES ROW -->
                 <?php if($subsites) : ?>
                     <div id="byExcellerate" class="left floated left aligned eight wide column">
-                        <img class="ui logo <?= $toTop ? 'toTop' : null; ?> image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" >
+                        <a href="<?=JURI::base();?>"><img class="ui logo <?= $toTop ? 'toTop' : null; ?> image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" ></a>
                     </div>
                     <div id="subsites" class="right floated right aligned eight wide computer only column">
-                        <?php if($hideDrivenBy == false) : ?>
-                        <div id="drivenLogoWrapper"> 
-                            <a href="http://www.epsgroup.co.za/index.php"><img id="drivenLogo" onerror="this.onerror=null; this.src='/templates/excellerate/assets/img/driven-by-excellerate.png'" src="templates/excellerate/assets/img/driven-by-excellerate.svg"></a>
-                        </div>
-                        <?php endif; ?>
                         <jdoc:include type="modules" name="subsites" />
                     </div>
                     <?php if(IS_MOBILE) : ?>
@@ -198,7 +193,7 @@
                 <!-- COPYRIGHT ROW -->
                 <div id="copyright" class="grey two column row">
                     <div class="column">
-                        <p class="copyright">Copyright &copy; 2016 <?= $company; ?></p>
+                        <p class="copyright">Copyright &copy; <?php echo date("Y"); ?> <?= $company; ?></p>
                     </div>
                     <div class="right floated right aligned column">
                         <?php include("parts/social.php"); ?>

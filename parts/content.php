@@ -4,7 +4,7 @@
     <div class="row">
     
         <?php if($left) : ?>
-        <div class="four wide column">
+        <div id="leftside" class="four wide column">
             <jdoc:include type="modules" name="left" style="block" />
         </div>
         <?php endif; ?>
@@ -52,7 +52,7 @@
 
         <!-- Right Column -->  
         <?php if($right) : ?> 
-        <div class="four wide column">
+        <div id="rightside" class="four wide column">
             <jdoc:include type="modules" name="right" style="block" />
         </div>
         <?php endif; ?>

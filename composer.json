@@ -1,0 +1,9 @@
+{
+  "name": "excellerate/excellerate",
+  "type": "joomla-template",
+  "description": "Excellerate services theme",
+  "require": {
+    "composer/installers": "*",
+    "piwik/device-detector": "dev-master"
+  }
+}

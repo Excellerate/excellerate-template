@@ -12,6 +12,9 @@ $title = $item->title;
 $date = date('l, j F Y', strtotime($item->publish_up));
 $text = Excellerate::truncate( ($item->fulltext) ? $item->fulltext : $item->introtext, 200);
 
+// Find alt text
+$alt = $images->image_intro_alt ? : $images->image_fulltext_alt;
+
 ?>
 
 <tr>
@@ -25,7 +28,7 @@ $text = Excellerate::truncate( ($item->fulltext) ? $item->fulltext : $item->intr
   </td>
   <?php if($images->image_intro) : ?>
   <td class="four wide top center aligned cell">
-    <img class="ui fluid bordered image" src="<?= $images->image_intro; ?>" alt="<?= $images->image_intro_alt; ?>"/>
+    <img class="ui fluid bordered image" src="<?= $images->image_intro; ?>" alt="<?= $alt ?>"/>
   </td>
   <?php endif;?>
 </tr>
