@@ -557,6 +557,12 @@ small, .small{
   border-bottom:1px solid #f0f0f0;   
 }
 
+/* CONTACT */
+.contact.profile{
+  vertical-align:top;
+  padding-top:4px;
+}
+
 /* BLOG */
 .ui.blog .header i{
   font-size:12px;
@@ -575,7 +581,6 @@ small, .small{
   height:800px;
   width:100%;
 }
-
 #headoffice{
   position:absolute;
   width:400px;

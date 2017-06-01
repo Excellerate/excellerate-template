@@ -64,7 +64,7 @@
     // IMAGE (Left floated) //
     if( ! empty( $image ) ){
         //print '<a href="#" class="ui '.$floated.' floated image" '.($floated=='none' ? 'style="width:100%;"' : null).'>';
-            print '<img class="ui medium right floated image" src="'.$image.'" alt="'.$alt.'" title="'.$caption.'">';
+            print '<img class="ui right floated image" src="'.$image.'" alt="'.$alt.'" title="'.$caption.'">';
         //print '</a>';
     }
 
