@@ -390,7 +390,7 @@ small, .small{
     min-height:220px !important;
   }
 
-  #bottom .grid .column{
+  #bottom{
     background-color:rgba(0,0,0,0.05);
   }
 
