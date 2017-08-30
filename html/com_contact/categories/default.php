@@ -35,7 +35,7 @@
                     $contacts[] = '<td class="contact profile">';
                         $contacts[] = !empty($item->image) ? '<img class="ui profile image" src="'.$item->image.'" alt="'.$item->name.'">' : null;
                     $contacts[] = '</td>';
-                    $contacts[] = '<td>';
+                    $contacts[] = '<td style="vertical-align:top">';
                         $contacts[] = '<div>'.$item->misc.'</div>';
                     $contacts[] = '</td>';
                 $contacts[] = '</tr></tbody></table><br>';
