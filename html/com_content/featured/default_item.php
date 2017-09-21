@@ -21,12 +21,10 @@ $text = Excellerate::truncate( ($item->fulltext) ? $item->fulltext : $item->intr
 
 <!-- Text -->
 <div class="section">
-	<?php
-//print "<pre>"; print_r($item); print "</pre>";
-?>
+
 	<!-- Title -->
 	<?php if($attribs->show_title != "0") : ?>
-	<h1 class="ui header"><?= $this->item->title; ?></h1>
+	<h2 class="ui header"><?= $this->item->title; ?></h2>
 	<?php endif; ?>
 
 	<?= $this->item->introtext; ?>

@@ -13,11 +13,8 @@
 
         foreach($pieces as $k => $piece){
             foreach ($piece as $i => $item){
-
-                //print "<pre>"; print_r($item); print "</pre>"; die();
-                
                 $contacts[$k][] = '<div class="ui segment">';
-                    $contacts[$k][] = '<h4 class="ui header">'.$item->name.'<div class="ui sub header">' . $item->con_position.( ! empty($item->state) ? ',<br>'.$item->state : null) . '</div></h4>';
+                    $contacts[$k][] = '<h4 class="ui header">'.$item->name.'<span class="ui sub header">' . $item->con_position.( ! empty($item->state) ? ',<br>'.$item->state : null) . '</span></h4>';
                     $contacts[$k][] = '<table><tbody><tr>';
                         $contacts[$k][] = '<td>';
                             $contacts[$k][] = !empty($item->image) ? '<img class="ui profile image" src="'.$item->image.'" alt="'.$item->name.'">' : null;

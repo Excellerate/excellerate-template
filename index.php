@@ -56,51 +56,21 @@
         <div class="pusher">
 
             <!-- CONTENT -->
-            <div id="main" class="ui main container grid" style="padding-top:<?= $whiteSpace; ?>px;">
-            
-                <!-- BY EXCELLERATE ROW (No Subsites) -->
-                <?php if( ! $subsites) : ?>
-                <div id="byExcellerate" class="two column row">
+            <div id="main" class="ui main container grid">
+                <div id="epsLogo" class="two column row">
                     <div class="left floated left aligned column">
-                        <a href="http://epsgroup.co.za"><img class="ui logo image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" ></a>
-                        <?php if($number) : ?>
-                            <a id="numberLeft" href="tel:<?= preg_replace("/[^0-9]/","",$number) ;?>"><?= $number; ?></a>
-                        <?php endif; ?>
+                        <a href="http://www.excellerate.co.za" target="_blank"><img src="/templates/excellerate/assets/img/epsLogo.svg"></a>
                     </div>
-                    <?php if($number) : ?>
-                    <div class="right floated right aligned column">
-                        <a id="numberRight" href="tel:<?= preg_replace("/[^0-9]/","",$number) ;?>"><?= $number; ?></a>
-                    </div>
-                    <?php endif; ?>
                 </div>
-                <?php endif; ?>
 
-                <!-- SUB SITES ROW -->
-                <?php if($subsites) : ?>
-                    <div id="byExcellerate" class="left floated left aligned eight wide column">
-                        <a href="<?=JURI::base();?>"><img class="ui logo <?= $toTop ? 'toTop' : null; ?> image" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/<?=$groupLogo;?>.png'" src="<?=$template;?>/assets/img/<?=$groupLogo;?>.svg" ></a>
-                    </div>
-                    <div id="subsites" class="right floated right aligned eight wide computer only column">
-                        <jdoc:include type="modules" name="subsites" />
-                    </div>
-                    <?php if(IS_MOBILE) : ?>
-                    <div id="subsites" class="sixteen wide mobile only column">
-                        <jdoc:include type="modules" name="subsites" />
-                    </div>
-                    <?php endif; ?>
-                <?php endif; ?>
-                
                 <!-- BRANDING ROW -->
                 <?php if($branding) : ?>
                 <div id="brand" class="two column <?= $style; ?> row">
                     <div class="left floated left aligned column">
-                        <a href="<?=JURI::base();?>"><img <?= $logoWidth; ?> class="ui image logo" alt="<?=$config->get('sitename');?> Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logoA; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logoA; ?>.svg"></a>
-                        <?php if($logoB) : ?>
-                            <a href="<?=JURI::base();?>"><img <?= $logoWidth; ?> class="ui image logo" alt="Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logoB; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logoB; ?>.svg"></a>
-                        <?php endif; ?>
-                        <?php if($logoC) : ?>
-                            <a href="<?=JURI::base();?>"><img <?= $logoWidth; ?> class="ui image logo" alt="Logo" onerror="this.onerror=null; this.src='<?=$template;?>/assets/img/groupLogos/<?= $logoC; ?>.png'" src="<?=$template;?>/assets/img/groupLogos/<?= $logoC; ?>.svg"></a>
-                        <?php endif; ?>
+                        <a href="<?= JUri::base(); ?>"><h1 class="ui header">
+                            <?= $company; ?>
+                        </h1></a>
+                        <a class="ui sub header" href="tel:<?= preg_replace("/[^0-9]/","",$number) ;?>"><?= $number; ?></a>
                     </div>
                     <div class="right floated right aligned column">
                         <span class="slogan"><?php print $slogan; ?></span>
@@ -110,40 +80,23 @@
 
                 <!-- SLIDER ROW -->
                 <?php if($slider) : ?>
-                <div id="slider" class="two column <?= $style; ?> row">
-                    <div class="<?= $splash ? "twelve" : "sixteen" ;?> wide column">
+                <div id="slider" class="row">
+                    <div class="column">
                         <jdoc:include type="modules" name="slider" />
                     </div>
-                    <?php if($splash) : ?>
-                    <div class="four wide column">
-                        <div id="splashWrapper">
-                        <jdoc:include type="modules" name="splash" />
-                        </div>
-                    </div>
-                    <?php endif; ?>
                 </div>
                 <?php endif; ?>
 
                 <!-- MENU ROW -->
-                <?php if( ! IS_MOBILE) : ?>
                 <div id="menu" class="row">
                     <div class="column">
-                        <?php if($hideDrivenBy == false) : ?>
                         <nav>
                             <div class="ui stackable menu">
                                 <jdoc:include type="modules" name="menu" />
                             </div>
                         </nav>
-                        <?php else: ?>
-                        <nav>
-                            <div class="ui stackable menu">
-                                <a class="ui item" href="<?= \JUri::base(); ?>">HOME</a>
-                            </div>
-                        </nav>
-                        <?php endif; ?>
                     </div>
                 </div>
-                <?php endif; ?>
 
                 <!-- NEWSFLASH ROW -->
                 <?php if($newsFlashA or $newsFlashB or $newsFlashC or $newsFlashD or $newsFlashE) : ?>
@@ -193,7 +146,7 @@
                 <!-- COPYRIGHT ROW -->
                 <div id="copyright" class="grey two column row">
                     <div class="column">
-                        <p class="copyright">Copyright &copy; <?php echo date("Y"); ?> <?= $company; ?></p>
+                        <p class="copyright">Copyright &copy; <?php echo date("Y"); ?> Excellerate Services</p>
                     </div>
                     <div class="right floated right aligned column">
                         <?php include("parts/social.php"); ?>

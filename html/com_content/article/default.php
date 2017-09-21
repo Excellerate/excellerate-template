@@ -47,6 +47,12 @@
     // Fix editor replaces <i> with <em>
     $text = preg_replace("/\<em class=\"(.*)\"\>(.*?)\<\/em\>/", "<i class=\"$1\"></i>", $this->item->text);
 
+    // Swop out custom article page
+    if(preg_match("/{ ?article ([a-z]+) ?}/", $text, $matches)){
+        $html = file_get_contents(JPATH_BASE."/html_".$matches[1].'.php');
+        $text = $html; //preg_replace("/{ ?article ([a-z]+) ?}/", $html, $text);
+    }
+
     // Convert and to "&"
     $title[0] = preg_replace("/ and|AND|And /", " &amp; ", $title[0]);
 
@@ -63,9 +69,7 @@
 
     // IMAGE (Left floated) //
     if( ! empty( $image ) ){
-        //print '<a href="#" class="ui '.$floated.' floated image" '.($floated=='none' ? 'style="width:100%;"' : null).'>';
-            print '<img class="ui right floated image" src="'.$image.'" alt="'.$alt.'" title="'.$caption.'">';
-        //print '</a>';
+        print '<img class="ui right floated medium bordered image" src="'.$image.'" alt="'.$alt.'" title="'.$caption.'">';
     }
 
     // TEXT //
@@ -76,5 +80,5 @@
         print '<a href="'.$reference.'" class="reference"><i class="ui external link icon"></i>'.(preg_replace("/http:\/\//", "", $reference)).'</a>';
     }
 ?>
-<br>
+<div><br></div>
 <div class="addthis_sharing_toolbox"></div>

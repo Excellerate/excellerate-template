@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.0" type="template" client="site">
-  <name>Excellerate</name>
+  <name>Excellerate Services Template</name>
   <version>1.0</version>
   <creationDate>01/07/2015</creationDate>
   <author>CodeChap</author>
@@ -60,12 +60,6 @@
   <config>
     <fields name="params">
       <fieldset name="advanced">
-
-        <field name="group_logo" type="list" label="Group logo" description="Select group logo">
-          <option value="driven-by-excellerate">Driven by Excellerate</option>
-          <option value="excellerate-holdings">Excellerate Holdings</option>
-          <option value="excellerate-services">Excellerate Services</option>
-        </field>
 
         <field name="logo_a" type="list" label="Main logo" description="Select main logo">
           <option value="enforce">Enforce</option>

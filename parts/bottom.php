@@ -32,10 +32,6 @@
 </div>
 <?php endif; ?>
 
-
-
-
-
 <?php
 
     // Row F to J

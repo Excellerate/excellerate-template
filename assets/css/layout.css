@@ -15,7 +15,7 @@ i.navy.icon{      color:#003D62 !important;}
 }
 
 body.pushable{
-   background-color:#f0f0f0 !important; 
+   background-color:#f0f0f0 !important;
 }
 
 /* HTML */
@@ -26,6 +26,7 @@ body{
   color:#424242;
   background-color:#f0f0f0 !important;
   font-weight:300;
+
 }
 
 h1{
@@ -111,6 +112,9 @@ small, .small{
   margin-top:15px !important;
   display:block;
 }
+.addthis_sharing_toolbox{
+
+}
 
 /* COLORS */
 .main{
@@ -123,18 +127,7 @@ small, .small{
 /* LAYOUT */
 #main{
   max-width:1140px !important;
-}
-
-#content, #menu{
-  padding-left:10px;
-  padding-right:10px;
-}
-#menu{
-  padding-right:0px;
-}
-
-#bottom a{
-  text-decoration:underline !important;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* LOGO */
@@ -160,14 +153,19 @@ small, .small{
   position:relative;
 }
 
+#epsLogo a img{
+  padding-top:15px;
+  padding-bottom:2px;
+}
+
 #numberLeft, #numberRight{
   display:none;
   font-size:22px;
   color:black;
-  padding-top:25px;
+  padding-top:15px;
 }
   #numberRight{
-    display:block;
+    display:inline-block;
   }
 
   #numberLeft:hover, #numberRight:hover{
@@ -219,18 +217,37 @@ small, .small{
 
 
 #brand{
-  height:107px;
-  overflow: hidden;
+  padding-bottom:20px;
 }
+  #brand .ui.header{
+    color:white !important;
+  }
+  #brand .sub.header{
+    font-size:18px;
+    color:white !important;
+  }
   #brand .slogan{
     font-size:18px;
     font-weight:300;
     text-transform:uppercase;
   }
 
-  #brand .image.logo{
-    margin-bottom:3px;
-    margin-left:10px;
+  .credits table tr:nth-child(1) td{
+    padding-bottom:5px;
+  }
+    .credits table{
+      width:100%;
+    }
+    .credits table tr td{
+      vertical-align:top;
+    }
+    .credits table tr td:nth-child(2){
+      width:80px;
+      text-align:right;
+    }
+
+  #team table tr td{
+    vertical-align:top;
   }
 
   /* Mobile */
@@ -266,33 +283,36 @@ small, .small{
   }
 @media only screen and (max-width: 1920px) {
   #slider.row{
-    height:223px !important;
+
+    /* height:223px !important; */
   }
 }
 @media only screen and (max-width: 1280px) {
   #slider.row{
-    height:188px !important;
+
+    /* height:188px !important; */
   }
   #slider.row img{
-    height:188px;
-    min-height:188px;
-    max-height:188px;
+    /* height:188px;*/
+    /* min-height:188px;*/
+    /* max-height:188px;*/
   }
 }
 @media only screen and (max-width: 320px) {
+
   #slider.row{
-    height:152px !important;
+    /* height:152px !important; */
   }
   #slider.row img{
-    height:152px;
-    min-height:152px;
-    max-height:152px;
+    /* height:152px; */
+    /* min-height:152px; */
+    /* max-height:152px; */
   }
 }
   #slider .column{
     padding:0px !important;
     height:223px !important;
-    overflow:hidden;   
+    overflow:hidden;
   }
   /* Arrows */
   #slider .slick-prev, #slider .slick-next{
@@ -382,6 +402,7 @@ small, .small{
     display: inline-block;
     vertical-align: middle;
     max-width:100%;
+    width:100%;
     background-color: transparent;
   }
 
@@ -476,6 +497,8 @@ small, .small{
 #menu.row{
   padding-top:0px;
   padding-bottom:0px;
+  background-color:rgba(0,0,0,0.05);
+  border-bottom:1px solid rgba(0,0,0,0.1);
 }
   #menu.row .column{
     padding-left:0px;
@@ -516,6 +539,12 @@ small, .small{
     }
   #menu.row h3{
     display:none;
+  }
+
+  @media only screen and (max-width: 991px) {
+    #menu{
+      display:none;
+    }
   }
 
 /* SLICK */
@@ -560,6 +589,9 @@ small, .small{
 .segment h3.header{
   border-bottom:1px solid #f0f0f0;   
 }
+.segment table tr td{
+  vertical-align:top;
+}
 
 /* CONTACT */
 .contact.profile{
@@ -584,7 +616,10 @@ small, .small{
     border-left:1px solid #ccc;
   }
   #featured .section{
-    padding:15px;
+    padding:0px;
+  }
+  #featured .section .ui.header{
+    margin-top:18px;
   }
 
 /* PAGINATION */

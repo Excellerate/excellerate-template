@@ -30,7 +30,7 @@
 
         foreach($items as $i => $item){
             $contacts[] = '<div class="segment">';
-                $contacts[] = '<h4 class="ui header">'.$item->name.'<div class="ui sub header">' . $item->con_position.( ! empty($item->state) ? ',<br>'.$item->state : null) . '</div></h4>';
+                $contacts[] = '<h4 class="ui header">'.$item->name.'<span class="ui sub header">' . $item->con_position.( ! empty($item->state) ? ',<br>'.$item->state : null) . '</span></h4>';
                 $contacts[] = '<table><tbody><tr>';
                     $contacts[] = '<td class="contact profile">';
                         $contacts[] = !empty($item->image) ? '<img class="ui profile image" src="'.$item->image.'" alt="'.$item->name.'">' : null;
