@@ -59,7 +59,7 @@
             <div id="main" class="ui main container grid">
                 <div id="epsLogo" class="two column row">
                     <div class="left floated left aligned column">
-                        <a href="http://www.excellerate.co.za" target="_blank"><img src="/templates/excellerate/assets/img/epsLogo.svg"></a>
+                        <a href="http://www.excellerate.co.za" target="_blank"><img class="ui image" src="/templates/excellerate/assets/img/epsLogo.svg"></a>
                     </div>
                 </div>
 

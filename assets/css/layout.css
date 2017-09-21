@@ -246,6 +246,9 @@ small, .small{
       text-align:right;
     }
 
+  #team table.ui.table{
+    border:0px;
+  }
   #team table tr td{
     vertical-align:top;
   }
@@ -278,8 +281,8 @@ small, .small{
 #slider.row{
   padding:0px !important;
 }
-  #slider.row img{
-    width:1140px;
+  #slider.row .image{
+    background-position:top center;
   }
 @media only screen and (max-width: 1920px) {
   #slider.row{
@@ -303,10 +306,8 @@ small, .small{
   #slider.row{
     /* height:152px !important; */
   }
-  #slider.row img{
-    /* height:152px; */
-    /* min-height:152px; */
-    /* max-height:152px; */
+  #slider.row image{
+
   }
 }
   #slider .column{
