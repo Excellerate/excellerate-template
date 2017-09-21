@@ -17,8 +17,14 @@
         <![endif]-->
 
         <!-- Icons -->
-        <link rel="shortcut icon" href="<?= $template; ?>/assets/img/groupLogos/<?= $favicon; ?>.ico" type="image/x-icon">
-        <link rel="icon" href="<?= $template; ?>/assets/img/groupLogos/<?= $favicon; ?>.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="180x180" href="/templates/excellerate/assets/icons/apple-touch-icon.png?v=1">
+        <link rel="icon" type="image/png" sizes="32x32" href="/templates/excellerate/assets/icons/favicon-32x32.png?v=1">
+        <link rel="icon" type="image/png" sizes="16x16" href="/templates/excellerate/assets/icons/favicon-16x16.png?v=1">
+        <link rel="manifest" href="/templates/excellerate/assets/icons/manifest.json">
+        <link rel="mask-icon" href="/templates/excellerate/assets/icons/safari-pinned-tab.svg?v=1" color="#5bbad5">
+        <link rel="icon" type="image/x-icon" href="/templates/excellerate/assets/icons/favicon.ico?v=1" >
+
+        <meta name="theme-color" content="#ffffff">
 
         <!-- Excellerate Font -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
