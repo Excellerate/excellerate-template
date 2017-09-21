@@ -402,7 +402,6 @@ small, .small{
     display: inline-block;
     vertical-align: middle;
     max-width:100%;
-    width:100%;
     background-color: transparent;
   }
 
@@ -414,6 +413,9 @@ small, .small{
   #bottom{
     background-color:rgba(0,0,0,0.05);
   }
+    #bottom img{
+      width:100%;
+    }
 
   #footer{
     margin:0px 0px 0px 0px !important;
