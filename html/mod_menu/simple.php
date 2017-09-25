@@ -32,7 +32,7 @@
   // Open main menu
   foreach($menu as $item){
 
-    if($item->home == 1){
+    if(JUri::base() !== MOTHERSHIP){
       print '<a class="item" href="'.MOTHERSHIP.'">Home</a>';
       continue;
     }
