@@ -127,6 +127,10 @@ small, .small{
 
 }
 
+.ui.header{
+  font-family: 'Open Sans' !important;
+}
+
 /* COLORS */
 .main{
   background-color:white;
@@ -233,6 +237,7 @@ small, .small{
     font-size:18px;
     font-weight:300;
     text-transform:uppercase;
+    font-family: 'Open Sans' !important;
   }
 
   .credits table tr:nth-child(1) td{
