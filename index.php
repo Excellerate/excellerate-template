@@ -104,10 +104,9 @@
                         <a href="<?= JUri::base(); ?>"><h1 class="ui header">
                             <?= $company; ?>
                         </h1></a>
-                        <a class="ui sub header" href="tel:<?= preg_replace("/[^0-9]/","",$number) ;?>"><?= $number; ?></a>
                     </div>
-                    <div class="right floated right aligned column">
-                        <span class="slogan"><?php print $slogan; ?></span>
+                    <div class="right floated right aligned five wide column">
+                        <span class="slogan"><?= $slogan; ?></span>
                     </div>
                 </div>
                 <?php endif; ?>

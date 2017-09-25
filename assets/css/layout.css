@@ -145,6 +145,7 @@ small, .small{
 #epsLogo a img{
   padding-top:15px;
   padding-bottom:2px;
+  width:300px;
 }
 
 /* Numbers */
@@ -228,6 +229,7 @@ small, .small{
     color:white !important;
   }
   #brand .slogan{
+    display:block;
     font-size:18px;
     font-weight:300;
     text-transform:uppercase;
