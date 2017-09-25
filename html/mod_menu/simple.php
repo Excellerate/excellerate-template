@@ -33,7 +33,7 @@
   foreach($menu as $item){
 
     if($item->home == 1){
-      print '<a class="item" href="'.$mothership.'">Home</a>';
+      print '<a class="item" href="'.MOTHERSHIP.'">Home</a>';
       continue;
     }
 

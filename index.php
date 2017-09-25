@@ -65,7 +65,7 @@
             <div id="main" class="ui main container grid">
                 <div id="epsLogo" class="two column row">
                     <div class="left floated left aligned column">
-                        <a href="<?= $mothership; ?>" target="_blank"><img class="ui image" src="/templates/excellerate/assets/img/epsLogo.svg"></a>
+                        <a href="<?= MOTHERSHIP; ?>" target="_blank"><img class="ui image" src="/templates/excellerate/assets/img/epsLogo.svg"></a>
                     </div>
                     <div class="right floated right aligned column">
                         <?php if($subsites) : ?>
