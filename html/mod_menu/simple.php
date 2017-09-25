@@ -29,13 +29,13 @@
 
 <?php
 
+  // Force link back to main site
+  if(JUri::base() !== MOTHERSHIP){
+    print '<a class="item" href="'.MOTHERSHIP.'">Home</a>';
+  }
+
   // Open main menu
   foreach($menu as $item){
-
-    if(JUri::base() !== MOTHERSHIP){
-      print '<a class="item" href="'.MOTHERSHIP.'">Home</a>';
-      continue;
-    }
 
     if( ! IS_MOBILE) {
 
