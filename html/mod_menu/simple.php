@@ -32,6 +32,12 @@
   // Open main menu
   foreach($menu as $item){
 
+    if($item->home == 1){
+      $item->link = 'http://excellerate.co.za';
+      print '<a class="item" href="http://excellerate.co.za">Home</a>';
+      continue;
+    }
+
     if( ! IS_MOBILE) {
 
       // Find top active menu item
