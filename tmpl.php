@@ -6,6 +6,9 @@
   // Find php version
   $phpver = substr(filter_var(PHP_VERSION, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION), 0, 3);
 
+  // Main site
+  $mothership = 'http://excellerate.codechap.com';
+
   // Mobile detection class from Piwik
   $dd = new \DeviceDetector\DeviceDetector($_SERVER['HTTP_USER_AGENT']);
   $dd->discardBotInformation();
