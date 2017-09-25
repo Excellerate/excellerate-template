@@ -67,6 +67,34 @@
                     <div class="left floated left aligned column">
                         <a href="http://www.excellerate.co.za" target="_blank"><img class="ui image" src="/templates/excellerate/assets/img/epsLogo.svg"></a>
                     </div>
+                    <div class="right floated right aligned column">
+                        <?php if($subsites) : ?>
+                        <table id="subsites" class="ui very basic compact table">
+                            <tr>
+                                <td><a href="http://excellerateholdings.co.za"><i class="ui stop icon"></i>Excellerate Holdings</a></td>
+                                <td><a href="http://"><i class="ui stop icon"></i>Excellerate Facility Management</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://cwexcellerate.com"><i class="ui stop icon"></i>Cushman &amp; Wakefield Excellerate</a></td>
+                                <td><a href="http://"><i class="ui stop icon"></i>Excellerate Brand Management</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://"><i class="ui stop icon"></i>Katanga Property Care</a></td>
+                                <td><a href="http://"><i class="ui stop icon"></i>Excellerate Precinct Management</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://"><i class="ui stop icon"></i>Katanga Parking</a></td>
+                                <td><a href="http://"><i class="ui stop icon"></i>Excellerate Utilities Management</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://www.vitalds.co.za"><i class="ui stop icon"></i>Vital Distribution Solutions</a></td>
+                                <td><a href="http://"><i class="ui stop icon"></i>Excellerate Infrastructure Management</a></td>
+                            </tr>
+                        </table>
+                        <?php else: ?>
+                            <a id="numberRight" href="tel:<?= $number; ?>"><?= $number; ?></a>
+                        <?php endif; ?>
+                    </div>
                 </div>
 
                 <!-- BRANDING ROW -->
@@ -128,6 +156,13 @@
                 <div id="content" class="row">
                     <div class="column">
                         <?php include("parts/content.php"); ?>
+                    </div>
+                </div>
+
+                <!-- CARDS ROW -->
+                <div id="cards" class="row">
+                    <div class="ui column">
+                        <?php include("parts/cards.php"); ?>
                     </div>
                 </div>
 

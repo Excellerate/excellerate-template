@@ -34,6 +34,12 @@
         <position>top_c</position>
         <position>top_d</position>
         <position>top_e</position>
+        <position>card_a</position>
+        <position>card_b</position>
+        <position>card_c</position>
+        <position>card_d</position>
+        <position>card_e</position>
+        <position>card_f</position>
         <position>bottom_a</position>
         <position>bottom_b</position>
         <position>bottom_c</position>
@@ -44,6 +50,7 @@
         <position>bottom_h</position>
         <position>bottom_i</position>
         <position>bottom_j</position>
+        <position>bottom_k</position>
         <position>footer_a</position>
         <position>footer_b</position>
         <position>footer_c</position>
@@ -60,110 +67,6 @@
   <config>
     <fields name="params">
       <fieldset name="advanced">
-
-        <field name="logo_a" type="list" label="Main logo" description="Select main logo">
-          <option value="enforce">Enforce</option>
-          <option value="eradico">Eradico</option>
-          <option value="eradicomono">Eradico (monotone)</option>
-          <option value="excellerate-brand-management">Excellerate Brand Management</option>
-          <option value="excellerate-facility-management">Excellerate Facility Management</option>
-          <option value="excellerate-holdings">Excellerate Holdings</option>
-          <option value="excellerate-utilities-management">Excellerate Utilities Management</option>
-          <option value="first">First Technical</option>
-          <option value="fresh">Fresh Cafe</option>
-          <option value="freshmono">Fresh Cafe (monotone)</option>
-          <option value="interpark">Interpark</option>
-          <option value="interparkmono">Interpark (Monotone)</option>
-          <option value="jhi-advisory">JHI Advisory</option>
-          <option value="jhi-cres">JHI Cres</option>
-          <option value="jhi-projects">JHI Projects</option>
-          <option value="jhi-projects">JHI Projects</option>
-          <option value="jhi-retail">JHI Retail</option>
-          <option value="jhi-structures">JHI Structures</option>
-          <option value="jhi">JHI</option>
-          <option value="katanga">Katanga</option>
-          <option value="katangamono">Katanga (monotone)</option>
-          <option value="Spark">Spark</option>
-          <option value="sterikleen">Sterikleen</option>
-          <option value="sterikleenMono">Sterikleen (monotone)</option>
-          <option value="syenap">Syenap</option>
-          <option value="profica">Profica</option>
-        </field>
-
-        <field name="logo_b" type="list" label="Second logo" description="Select second logo">
-          <option value="">None</option>
-          <option value="enforce">Enforce</option>
-          <option value="eradico">Eradico</option>
-          <option value="excellerate-brand-management">Excellerate Brand Management</option>
-          <option value="excellerate-facility-management">Excellerate Facility Management</option>
-          <option value="excellerate-holdings">Excellerate Holdings</option>
-          <option value="excellerate-utilities-management">Excellerate Utilities Management</option>
-          <option value="first">First Technical</option>
-          <option value="fresh">Fresh Cafe</option>
-          <option value="interpark">Interpark</option>
-          <option value="jhi-advisory">JHI Advisory</option>
-          <option value="jhi-cres">JHI Cres</option>
-          <option value="jhi-projects">JHI Projects</option>
-          <option value="jhi-projects">JHI Projects</option>
-          <option value="jhi-retail">JHI Retail</option>
-          <option value="jhi-structures">JHI Structures</option>
-          <option value="jhi">JHI</option>
-          <option value="katanga">Katanga</option>
-          <option value="Spark">Spark</option>
-          <option value="sterikleen">Sterikleen</option>
-          <option value="syenap">Syenap</option>
-          <option value="profica">Profica</option>
-        </field>
-
-        <field name="logo_c" type="list" label="Third logo" description="Select third logo">
-          <option value="">None</option>
-          <option value="enforce">Enforce</option>
-          <option value="eradico">Eradico</option>
-          <option value="excellerate-brand-management">Excellerate Brand Management</option>
-          <option value="excellerate-facility-management">Excellerate Facility Management</option>
-          <option value="excellerate-holdings">Excellerate Holdings</option>
-          <option value="excellerate-utilities-management">Excellerate Utilities Management</option>
-          <option value="first">First Technical</option>
-          <option value="fresh">Fresh Cafe</option>
-          <option value="interpark">Interpark</option>
-          <option value="jhi-advisory">JHI Advisory</option>
-          <option value="jhi-cres">JHI Cres</option>
-          <option value="jhi-projects">JHI Projects</option>
-          <option value="jhi-projects">JHI Projects</option>
-          <option value="jhi-retail">JHI Retail</option>
-          <option value="jhi-structures">JHI Structures</option>
-          <option value="jhi">JHI</option>
-          <option value="katanga">Katanga</option>
-          <option value="Spark">Spark</option>
-          <option value="sterikleen">Sterikleen</option>
-          <option value="syenap">Syenap</option>
-          <option value="profica">Profica</option>
-        </field>
-
-        <field name="favicon" type="list" label="Favicon" description="The little logo in the url window">
-          <option value="default">Default</option>
-          <option value="enforce">Enforce</option>
-          <option value="eradico">Eradico</option>
-          <option value="excellerate-brand-management">Excellerate Brand Management</option>
-          <option value="excellerate-facility-management">Excellerate Facility Management</option>
-          <option value="excellerate-holdings">Excellerate Holdings</option>
-          <option value="excellerate-utilities-management">Excellerate Utilities Management</option>
-          <option value="first">First Technical</option>
-          <option value="fresh">Fresh Cafe</option>
-          <option value="interpark">Interpark</option>
-          <option value="jhi-advisory">JHI Advisory</option>
-          <option value="jhi-cres">JHI Cres</option>
-          <option value="jhi-projects">JHI Projects</option>
-          <option value="jhi-projects">JHI Projects</option>
-          <option value="jhi-retail">JHI Retail</option>
-          <option value="jhi-structures">JHI Structures</option>
-          <option value="jhi">JHI</option>
-          <option value="katanga">Katanga</option>
-          <option value="Spark">Spark</option>
-          <option value="sterikleen">Sterikleen</option>
-          <option value="syenap">Syenap</option>
-          <option value="profica">Profica</option>
-        </field>
 
         <field name="company"  type="text" default="" label="Full company name" description="Enter full name of the group company" filter="string" />
 

@@ -108,6 +108,12 @@
   $topC = $this->countModules('top_c');
   $topD = $this->countModules('top_d');
   $topE = $this->countModules('top_e');
+  $cardA = $this->countModules('card_a');
+  $cardB = $this->countModules('card_b');
+  $cardC = $this->countModules('card_c');
+  $cardD = $this->countModules('card_d');
+  $cardE = $this->countModules('card_e');
+  $cardF = $this->countModules('card_f');
   $bottomA = $this->countModules('bottom_a');
   $bottomB = $this->countModules('bottom_b');
   $bottomC = $this->countModules('bottom_c');
@@ -118,6 +124,7 @@
   $bottomH = $this->countModules('bottom_h');
   $bottomI = $this->countModules('bottom_i');
   $bottomJ = $this->countModules('bottom_j');
+  $bottomK = $this->countModules('bottom_k');
   $footerA = $this->countModules('footer_a');
   $footerB = $this->countModules('footer_b');
   $footerC = $this->countModules('footer_c');
@@ -128,6 +135,7 @@
 
 
   // Work subsites row
+  /*
   if($subsites and isset($active)){
     $toTop = false;
     switch(strtolower($active->title)){
@@ -150,4 +158,5 @@
       case 'profica' :                                $hideDrivenBy = true; $groupLogo = 'groupLogos/profica'; break;
     }
   }
+  */
 ?>

@@ -10,6 +10,17 @@ i.jade.icon{      color:#679146 !important;}
 i.aqua.icon{      color:#00A0AF !important;}
 i.navy.icon{      color:#003D62 !important;}
 
+.ui.button.blue{      background-color:#00539B !important;}
+.ui.button.green{     background-color:#B2BB1E !important;}
+.ui.button.orange{    background-color:#F47721 !important;}
+.ui.button.purple{    background-color:#003D62 !important;}
+.ui.button.red{       background-color:#E23D40 !important;}
+.ui.button.teal{      background-color:#00A0AF !important;}
+.ui.button.yellow{    background-color:#FFC222 !important;}
+.ui.button.jade{      background-color:#679146 !important;}
+.ui.button.aqua{      background-color:#00A0AF !important;}
+.ui.button.navy{      background-color:#003D62 !important;}
+
 .equal.height.grid > .column .segment{
   height: 180px;
 }
@@ -131,33 +142,12 @@ small, .small{
 }
 
 /* LOGO */
-#byExcellerate{
-  height:107px;
-}
-  #byExcellerate .logo{
-    position:absolute;
-    top:25px;
-    left:30px;
-  }
-  #byExcellerate .toTop.logo{
-    top:-16px;
-  }
-
-/* Right side driven by logo when the col layout is used */
-#drivenLogoWrapper{
-  margin-top: 0px;
-  margin-bottom: 7px;
-  overflow: hidden;
-  height: 39px;
-  text-align:left;
-  position:relative;
-}
-
 #epsLogo a img{
   padding-top:15px;
   padding-bottom:2px;
 }
 
+/* Numbers */
 #numberLeft, #numberRight{
   display:none;
   font-size:22px;
@@ -198,7 +188,7 @@ small, .small{
 #subsites{
   margin-top: 15px;
   font-size: 11px !important;
-  line-height: 20px !important;
+  line-height: 12px !important;
 }
   #subsites .ui.compact.table td{
     padding: .1em 0em;
@@ -213,6 +203,17 @@ small, .small{
     padding-top: 0em;
     padding-bottom: 0em;
     box-shadow: none !important;
+  }
+  #subsites a{
+    color:black;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+  }
+  #subsites a:hover{
+    color:red;
+  }
+  #subsites tr td{
+    width:80px;
   }
 
 
@@ -391,6 +392,55 @@ small, .small{
 }
 #content ul li, #content ol li{
   padding-left:10px;
+}
+
+/* CARDS */
+#cards{
+  background-color:rgba(0,0,0,0.05);
+}
+  #cards .card{
+    background-color: transparent;
+    border-radius:0px !important;
+  }
+  #cards .ui.card>:first-child, #cards .ui.cards>.card>:first-child{
+    border-radius:0px !important;
+  }
+  #cards .ui.card>.content, #cards.ui.cards>.card>.content{
+    padding:0px;
+  }
+  #cards .ui.card>.content h3, #cards.ui.cards>.card>.content h3{
+    font-size:12px;
+    padding:7px 0px 0px 5px;
+    margin:0px;
+    letter-spacing: -0px;
+    height:16px;
+    color:white;
+    position:absolute;
+    top:3px;
+    left:0px;
+    font-smoothing:antialiased;
+  }
+  #cards .ui.card>.content p, #cards.ui.cards>.card>.content p{
+    padding:8px;
+  }
+  #cards .extra.content{
+    padding:8px !important;
+  }
+  #cards .header{
+    font-size:11px !important;
+  }
+  #cards p{
+    font-size:12px !important;
+  }
+
+  .arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid green;
+  float:left;
+  margin-right:3px;
 }
 
 /* THREE CONTENT BLOCKS */
