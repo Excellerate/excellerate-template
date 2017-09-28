@@ -427,7 +427,6 @@ small, .small{
   }
   #cards .ui.card>.content, #cards.ui.cards>.card>.content{
     padding: 0px;
-    background-color:white;
     border-radius:0px !important;
     color:#424242;
   }
