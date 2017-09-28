@@ -65,7 +65,7 @@
             <div id="main" class="ui main container grid">
                 <div id="epsLogo" class="two column row">
                     <div class="left floated left aligned column">
-                        <a href="http://www.excellerate.co.za" target="_blank"><img class="ui image" src="/templates/excellerate/assets/img/epsLogo.svg"></a>
+                        <a href="<?= $motherShip; ?>" target="_blank"><img class="ui image" src="/templates/excellerate/assets/img/epsLogo.svg"></a>
                     </div>
                     <div class="right floated right aligned column">
                         <?php if($subsites) : ?>
@@ -176,7 +176,7 @@
 
                 <!-- FOOTER ROW -->
                 <?php if($footerA or $footerB or $footerC or $footerD) : ?>
-                <div id="footer" class="light row">
+                <div id="footer" class="dark row">
                     <div class="column">
                         <?php include("parts/footer.php"); ?>
                     </div>
@@ -184,9 +184,9 @@
                 <?php endif; ?>
 
                 <!-- COPYRIGHT ROW -->
-                <div id="copyright" class="grey two column row">
+                <div id="copyright" class="very dark two column row">
                     <div class="column">
-                        <p class="copyright">Copyright &copy; <?php echo date("Y"); ?> Excellerate Services</p>
+                        <p class="copyright">Copyright &copy; <?php echo date("Y"); ?> <a target="_blank" href="<?= $motherShip; ?>">Excellerate Services</a></p>
                     </div>
                     <div class="right floated right aligned column">
                         <?php include("parts/social.php"); ?>

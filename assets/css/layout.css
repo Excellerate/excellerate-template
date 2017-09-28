@@ -138,6 +138,18 @@ small, .small{
 .light{
   background-color: #E8E8E8;
 }
+.dark{
+  background-color: #3f3f3f;
+  color:#d8d8d8;
+}
+.very.dark{
+  background-color: #222;
+  color:#999;
+}
+.dark a, .very.dark a, .dark .header, .very.dark .header{
+  color:#d8d8d8;
+}
+
 
 /* LAYOUT */
 #main{
@@ -485,12 +497,6 @@ small, .small{
     padding:0px;
     list-style:none;
   }
-    #footer h3{
-      color:#333;
-    }
-    #footer li a{
-      color:#333;
-    }
     #footer li a:hover{
       text-decoration:none;
     }
