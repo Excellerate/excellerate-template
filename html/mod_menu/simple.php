@@ -37,6 +37,11 @@
   // Open main menu
   foreach($menu as $item){
 
+    // Skip home page button here
+    if($item->home == 1){
+      continue;
+    }
+
     if( ! IS_MOBILE) {
 
       // Find top active menu item
