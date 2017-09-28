@@ -8,11 +8,11 @@
         // Find the correct word count
         $count = count(array_filter(array($cardA, $cardB, $cardC, $cardD, $cardE, $cardF)));
         switch( $count ){
-            case 1 : $use = "four"; break;
-            case 2 : $use = "four"; break;
-            case 3 : $use = "four"; break;
+            case 1 : $use = "one"; break;
+            case 2 : $use = "two"; break;
+            case 3 : $use = "three"; break;
             case 4 : $use = "four"; break;
-            case 5 : $use = "three"; break;
+            case 5 : $use = "five"; break;
             case 6 : $use = "three"; break;
         }
     }
