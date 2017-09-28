@@ -74,13 +74,13 @@ function modChrome_card($module, &$params, &$attribs)
         ?>
         <div class="ui card">
             <div class="content">
-                <?php if($img) : ?><img class="ui image" src="<?= $img; ?>" ><?php endif; ?>
+                <?php if($img) : ?><img class="ui fluid image" src="<?= $img; ?>" ><?php endif; ?>
                 <h3><?= $module->title; ?></h3>
                 <p><?= $text ?></p>
             </div>
             <?php if($link) : ?>
             <div class="extra content">
-                <a href="<?= $link; ?>" class="ui mini right labeled <?= $headerClass; ?> icon button"><i class="ui right arrow icon"></i> Learn more...</a>
+                <a href="<?= $link; ?>" class="ui small right labeled <?= $headerClass; ?> icon button"><i class="ui right arrow icon"></i> Learn more...</a>
             </div>
             <?php endif; ?>
         </div>

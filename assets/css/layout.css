@@ -428,8 +428,9 @@ small, .small{
     padding:0px;
   }
   #cards .ui.card>.content h3, #cards.ui.cards>.card>.content h3{
-    font-size:12px;
-    padding:7px 0px 0px 5px;
+    font-family: 'Open Sans';
+    font-size:18px;
+    padding:21px 0px 0px 15px;
     margin:0px;
     letter-spacing: -0px;
     height:16px;
@@ -439,8 +440,27 @@ small, .small{
     left:0px;
     font-smoothing:antialiased;
   }
+    /* Mobile */
+  @media only screen and (max-width: 767px) {
+    #cards .ui.card>.content h3, #cards.ui.cards>.card>.content h3{
+      padding:30px 0px 0px 15px;
+    }
+  }
+  /* Tablet */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+   #cards .ui.card>.content h3, #cards.ui.cards>.card>.content h3{
+      padding:10px 0px 0px 8px;
+      font-size:16px;
+    }
+  }
+  /* Small Monitor */
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+   #cards .ui.card>.content h3, #cards.ui.cards>.card>.content h3{
+      padding:15px 0px 0px 15px;
+    }
+  }
   #cards .ui.card>.content p, #cards.ui.cards>.card>.content p{
-    padding:8px;
+    padding:15px;
   }
   #cards .extra.content{
     padding:8px !important;

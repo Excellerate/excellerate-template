@@ -1,4 +1,4 @@
-<div class="ui six cards">
+<div class="ui three stackable cards">
   <jdoc:include type="modules" name="card_a" style="card" />
   <jdoc:include type="modules" name="card_b" style="card" />
   <jdoc:include type="modules" name="card_c" style="card" />

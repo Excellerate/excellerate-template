@@ -65,7 +65,7 @@
             <div id="main" class="ui main container grid">
                 <div id="epsLogo" class="two column row">
                     <div class="left floated left aligned column">
-                        <a href="<?= $motherShip; ?>" target="_blank"><img class="ui image" src="/templates/excellerate/assets/img/epsLogo.svg"></a>
+                        <a href="<?= MOTHERSHIP; ?>"><img class="ui image" src="/templates/excellerate/assets/img/epsLogo.svg"></a>
                     </div>
                     <div class="right floated right aligned column">
                         <?php if($subsites) : ?>
@@ -186,7 +186,7 @@
                 <!-- COPYRIGHT ROW -->
                 <div id="copyright" class="very dark two column row">
                     <div class="column">
-                        <p class="copyright">Copyright &copy; <?php echo date("Y"); ?> <a target="_blank" href="<?= $motherShip; ?>">Excellerate Services</a></p>
+                        <p class="copyright">Copyright &copy; <?php echo date("Y"); ?> <a target="_blank" href="<?= MOTHERSHIP; ?>">Excellerate Services</a></p>
                     </div>
                     <div class="right floated right aligned column">
                         <?php include("parts/social.php"); ?>
