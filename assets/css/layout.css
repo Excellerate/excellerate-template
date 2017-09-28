@@ -415,7 +415,8 @@ small, .small{
 
 /* CARDS */
 #cards{
-  background-color:rgba(0,0,0,0.05);
+    background-color:#565656;
+    color:white;
 }
   #cards .card{
     background-color: transparent;
@@ -501,7 +502,8 @@ small, .small{
   }
 
   #bottom{
-    background-color:rgba(0,0,0,0.05);
+    background-color:#565656;
+    color:white;
   }
     #bottom img{
       width:100%;
