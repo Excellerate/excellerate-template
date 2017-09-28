@@ -71,10 +71,10 @@ function modChrome_card($module, &$params, &$attribs)
             $link = false;
         }
 
-        $reg_exUrl2 = "/{{ ?([a-zA-Z0-9\-\.]*) ?}}/";
+        $reg_exUrl2 = "/{{([a-zA-Z0-9\-\.\/]+)}}/";
         if(preg_match($reg_exUrl2, $text, $url)) {
-            $text = preg_replace($reg_exUrl2, "", $text);
-            $link = $url[0];
+            $text = preg_replace($reg_exUrl2, '', $text);
+            $link = $url[1];
         }else{
             $link = false;
         }
