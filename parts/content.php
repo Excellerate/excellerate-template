@@ -41,11 +41,14 @@
                 </div>
             </div>
 
+            <!-- SHARE -->
+            <?php if($addthiscode) : ?>
             <div class="ui one column grid">
                 <div class="column">
                     <div class="addthis_sharing_toolbox"></div>
                 </div>
             </div>
+            <?php endif; ?>
             
             <!-- Below content to the left and right -->
             <?php if($bottomLeft or $bottomRight) : ?>

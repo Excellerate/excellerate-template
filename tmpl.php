@@ -135,31 +135,4 @@
   $footerE = $this->countModules('footer_E');
   $underContent = $this->countModules('under_content');
   $splash = ($this->countModules('splash') and IS_MOBILE == false) ? true : false;
-
-
-  // Work subsites row
-  /*
-  if($subsites and isset($active)){
-    $toTop = false;
-    switch(strtolower($active->title)){
-      case 'excellerate facility management' :        $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-facility-management'; break;
-      case 'excellerate brand management' :           $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-brand-management'; break;
-      case 'excellerate utilities management' :       $hideDrivenBy = true; $groupLogo = 'groupLogos/excellerate-utilities-management'; break;
-      case 'jhi' :                                    $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi'; $toTop = true; break;
-      case 'jhi retail' :                             $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-retail'; $toTop = true; break;
-      case 'jhi advisory' :                           $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-advisory'; $toTop = true; break;
-      case 'jhi cres' :                               $hideDrivenBy = true; $groupLogo = 'groupLogos/jhi-cres'; $toTop = true; break;
-      case 'enforce security' :                       $hideDrivenBy = true; $groupLogo = 'groupLogos/enforce-dark'; break;
-      case 'interpark' :                              $hideDrivenBy = true; $groupLogo = 'groupLogos/interpark'; break;
-      case 'spark' :                                  $hideDrivenBy = true; $groupLogo = 'groupLogos/spark'; break;
-      case 'sterikleen' :                             $hideDrivenBy = true; $groupLogo = 'groupLogos/sterikleen'; break;
-      case 'eradico' :                                $hideDrivenBy = true; $groupLogo = 'groupLogos/eradico'; break;
-      case 'katanga' :                                $hideDrivenBy = true; $groupLogo = 'groupLogos/katanga'; break;
-      case 'chattels' :                               $hideDrivenBy = true; $groupLogo = 'excellerate'; break; // No logo as yet
-      case 'fresh' :                                  $hideDrivenBy = true; $groupLogo = 'groupLogos/fresh'; break;
-      case 'first technical' :                        $hideDrivenBy = true; $groupLogo = 'groupLogos/first'; break;
-      case 'profica' :                                $hideDrivenBy = true; $groupLogo = 'groupLogos/profica'; break;
-    }
-  }
-  */
 ?>
