@@ -106,6 +106,15 @@
           <option value="yes">Show &amp; hide number</option>
         </field>
 
+        <field name="home"
+          type="radio"
+          label="Show home page link"
+          description="Top colour bar"
+        >
+          <option value="yes">Show</option>
+          <option value="no">Hide</option>
+        </field>
+
         <field name="analytics"  type="string" default="" label="Google Analytics Code" description="Your analytics tracking ID" filter="raw" />
         <field name="addthiscode"  type="string" default="" label="Addthis Code" description="Your addthis tracking ID" filter="raw" />
 

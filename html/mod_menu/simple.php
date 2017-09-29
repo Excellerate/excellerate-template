@@ -39,7 +39,9 @@
 
     // Skip home page button here
     if($item->home == 1){
-      continue;
+      if(SHOWHOME == false){
+        continue;
+      }
     }
 
     if( ! IS_MOBILE) {
