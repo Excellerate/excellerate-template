@@ -40,6 +40,12 @@
                     <?php endif; ?>
                 </div>
             </div>
+
+            <div class="ui one column grid">
+                <div class="column">
+                    <div class="addthis_sharing_toolbox"></div>
+                </div>
+            </div>
             
             <!-- Below content to the left and right -->
             <?php if($bottomLeft or $bottomRight) : ?>
@@ -50,8 +56,8 @@
             <?php endif; ?>
         </div>
 
-        <!-- Right Column -->  
-        <?php if($right) : ?> 
+        <!-- Right Column -->
+        <?php if($right) : ?>
         <div id="rightside" class="four wide column">
             <jdoc:include type="modules" name="right" style="block" />
         </div>

@@ -81,4 +81,3 @@
     }
 ?>
 <div><br></div>
-<div class="addthis_sharing_toolbox"></div>
