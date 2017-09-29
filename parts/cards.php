@@ -1,6 +1,6 @@
 <?php
     // Row A to E
-    if($cardA or $cardB or $cardC or $cardD or $cardE or $cardf){
+    if($cardA or $cardB or $cardC or $cardD or $cardE or $cardF){
 
         // Create the row grid
         $showAtoF = true;
