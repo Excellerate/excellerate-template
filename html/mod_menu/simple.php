@@ -31,7 +31,7 @@
 
   // Force link back to main site
   if(JUri::base() !== MOTHERSHIP){
-    print '<a class="item" href="'.MOTHERSHIP.'">Home</a>';
+    print '<a class="item" target="_blank" href="'.MOTHERSHIP.'">Home</a>';
   }
 
   // Open main menu
