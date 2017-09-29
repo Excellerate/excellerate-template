@@ -24,10 +24,10 @@
 ?>
 
 <div class="ui <?= $use; ?> stackable cards">
-  <?php if($cardA) : ?><div class="ui <?= $widel ?> card"><jdoc:include type="modules" name="card_a" style="card" /></div><?php endif; ?>
-  <?php if($cardB) : ?><div class="ui <?= $widel ?> card"><jdoc:include type="modules" name="card_b" style="card" /></div><?php endif; ?>
-  <?php if($cardC) : ?><div class="ui <?= $widel ?> card"><jdoc:include type="modules" name="card_c" style="card" /></div><?php endif; ?>
-  <?php if($cardD) : ?><div class="ui <?= $widel ?> card"><jdoc:include type="modules" name="card_d" style="card" /></div><?php endif; ?>
-  <?php if($cardE) : ?><div class="ui <?= $widel ?> card"><jdoc:include type="modules" name="card_e" style="card" /></div><?php endif; ?>
-  <?php if($cardF) : ?><div class="ui <?= $widel ?> card"><jdoc:include type="modules" name="card_f" style="card" /></div><?php endif; ?>
+  <?php if($cardA) : ?><div class="ui <?= $wide ?> card"><jdoc:include type="modules" name="card_a" style="card" /></div><?php endif; ?>
+  <?php if($cardB) : ?><div class="ui <?= $wide ?> card"><jdoc:include type="modules" name="card_b" style="card" /></div><?php endif; ?>
+  <?php if($cardC) : ?><div class="ui <?= $wide ?> card"><jdoc:include type="modules" name="card_c" style="card" /></div><?php endif; ?>
+  <?php if($cardD) : ?><div class="ui <?= $wide ?> card"><jdoc:include type="modules" name="card_d" style="card" /></div><?php endif; ?>
+  <?php if($cardE) : ?><div class="ui <?= $wide ?> card"><jdoc:include type="modules" name="card_e" style="card" /></div><?php endif; ?>
+  <?php if($cardF) : ?><div class="ui <?= $wide ?> card"><jdoc:include type="modules" name="card_f" style="card" /></div><?php endif; ?>
 </div>

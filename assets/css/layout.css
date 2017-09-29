@@ -226,12 +226,20 @@ small, .small{
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
   }
-  #subsites a:hover{
-    color:red;
-  }
   #subsites tr td{
     width:80px;
   }
+  #subsites a.moBlue:hover{     color:#00539B;}
+  #subsites a.moGreen:hover{    color:#B2BB1E;}
+  #subsites a.moOrange:hover{   color:#F47721;}
+  #subsites a.moPurple:hover{   color:#003D62;}
+  #subsites a.moRed:hover{      color:#E23D40;}
+  #subsites a.moTeal:hover{     color:#00A0AF;}
+  #subsites a.moYellow:hover{   color:#FFC222;}
+  #subsites a.moJade:hover{     color:#679146;}
+  #subsites a.moAqua:hover{     color:#00A0AF;}
+  #subsites a.moNavy:hover{     color:#003D62;}
+  #subsites a.moBurgundy:hover{ color:#800020;}
 
 
 #brand{
@@ -249,7 +257,7 @@ small, .small{
     font-size:18px;
     font-weight:300;
     text-transform:uppercase;
-    font-family: 'Open Sans' !important;
+    font-family:'Open Sans' !important;
   }
 
   .credits table tr:nth-child(1) td{
@@ -433,7 +441,6 @@ small, .small{
   #cards .ui.card>.content h3, #cards.ui.cards>.card>.content h3{
     font-family: 'Open Sans';
     font-size:18px;
-    padding:8px 0px 0px 8px;
     margin:0px;
     letter-spacing: -0px;
     height:16px;
@@ -443,10 +450,17 @@ small, .small{
     left:0px;
     font-smoothing:antialiased;
   }
+  #cards .ui.three.cards>.card>.content h3{
+    padding:15px 0px 0px 8px;
+  }
     /* Mobile */
+  }
   @media only screen and (max-width: 767px) {
     #cards .ui.card>.content h3, #cards.ui.cards>.card>.content h3{
       padding:30px 0px 0px 15px;
+    }
+    #cards .ui.three.cards>.card>.content h3{
+      padding:40px 0px 0px 15px;
     }
   }
   /* Tablet */
@@ -455,11 +469,17 @@ small, .small{
       padding:10px 0px 0px 8px;
       font-size:16px;
     }
+    #cards .ui.three.cards>.card>.content h3{
+      padding:4px 0px 0px 15px;
+    }
   }
   /* Small Monitor */
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
    #cards .ui.card>.content h3, #cards.ui.cards>.card>.content h3{
       padding:15px 0px 0px 15px;
+    }
+    #cards .ui.three.cards>.card>.content h3{
+      padding:10px 0px 0px 15px;
     }
   }
   #cards .ui.card>.content p, #cards.ui.cards>.card>.content p{
