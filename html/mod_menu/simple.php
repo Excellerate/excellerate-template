@@ -38,11 +38,11 @@
   foreach($menu as $item){
 
     // Skip home page button here
-    if($item->home == 1){
-      if(SHOWHOME == false){
-        continue;
+      if($item->home == 1){
+        if(SHOWHOME == false){
+          continue;
+        }
       }
-    }
 
     if( ! IS_MOBILE) {
 

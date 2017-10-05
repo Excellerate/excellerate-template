@@ -2,11 +2,8 @@
     // Row A to E
     if($cardA or $cardB or $cardC or $cardD or $cardE or $cardF){
 
-        // Create the row grid
-        $showAtoF = true;
-
         // Find the correct word count
-        $count = count(array_filter(array($cardA, $cardB, $cardC, $cardD, $cardE, $cardF)));
+        $count = count(array_filter([$cardA, $cardB, $cardC, $cardD, $cardE, $cardF]));
         switch( $count ){
             case 1 : $use = "centered"; $wide = 'four'; break;
             case 2 : $use = "centered"; $wide = 'four'; break;
@@ -18,7 +15,7 @@
     }
 
     else{
-        $showAtoF = false;
+        $use = false;
     }
 
 ?>

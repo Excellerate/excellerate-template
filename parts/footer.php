@@ -6,7 +6,7 @@
         $show = true;
 
         // Find the correct word count
-        $count = count(array_filter(array($footerA, $footerB, $footerC, $footerD, $footerE)));
+        $count = count(array_filter([$footerA, $footerB, $footerC, $footerD, $footerE]));
         switch( $count ){
             case 1 : $total = "one"; break;
             case 2 : $total = "two"; break;

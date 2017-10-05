@@ -62,39 +62,30 @@
         <div class="pusher">
 
             <!-- CONTENT -->
-            <div id="main" class="ui main container grid">
+            <div id="main" class="ui main container stackable grid">
                 <div id="epsLogo" class="two column row">
-                    <div class="left floated left aligned column">
+                    <div class="left floated left aligned computer only column">
                         <a href="<?= MOTHERSHIP; ?>"><img class="ui image" src="/templates/excellerate/assets/img/epsLogo.svg"></a>
                     </div>
-                    <div class="right floated right aligned column">
-                        <?php if($subsites) : ?>
-                        <table id="subsites" class="ui very basic compact table">
-                            <tr>
-                                <td><a class="moGreen" href="http://excellerateholdings.co.za"><i class="ui stop icon"></i>Excellerate Holdings</a></td>
-                                <td><a class="moBurgundy" href="http://"><i class="ui stop icon"></i>Excellerate Facility Management</a></td>
-                            </tr>
-                            <tr>
-                                <td><a class="moRed" href="http://cwexcellerate.com"><i class="ui stop icon"></i>Cushman &amp; Wakefield Excellerate</a></td>
-                                <td><a class="moBurgundy" href="http://"><i class="ui stop icon"></i>Excellerate Brand Management</a></td>
-                            </tr>
-                            <tr>
-                                <td><a class="moRed" href="http://katanga.co.za"><i class="ui stop icon"></i>Katanga Services</a></td>
-                                <td><a class="moBurgundy" href="http://"><i class="ui stop icon"></i>Excellerate Precinct Management</a></td>
-                            </tr>
-                            <tr>
-                                <td><a class="moBlue" href="http://templewoodgroup.com"><i class="ui stop icon"></i>Templewood Services</a></td>
-                                <td><a class="moBurgundy" href="http://"><i class="ui stop icon"></i>Excellerate Utilities Management</a></td>
-                            </tr>
-                            <tr>
-                                <td><a class="moBurgundy" href="http://www.vitalds.co.za"><i class="ui stop icon"></i>Vital Distribution Solutions</a></td>
-                                <td><a class="moBurgundy" href="http://"><i class="ui stop icon"></i>Excellerate Infrastructure Management</a></td>
-                            </tr>
-                        </table>
-                        <?php else: ?>
-                            <a id="numberRight" href="tel:<?= $number; ?>"><?= $number; ?></a>
-                        <?php endif; ?>
+                    <div class="left floated left aligned mobile tablet only column">
+                        <a href="<?= MOTHERSHIP; ?>"><img class="ui small image" src="/templates/excellerate/assets/img/epsLogo.svg"></a>
                     </div>
+                    <?php if($subsites) : ?>
+                    <div id="subsitesWrapper" class="right floated right aligned wide column">
+                        <table id="subsites" class="ui very basic compact unstackable table">
+                            <?php include("parts/subsites.php"); ?>
+                        </table>
+                    </div>
+                    <div class="right floated right aligned column ">
+                        <table id="portraitSubsites" class="ui very basic compact table">
+                            <?php include("parts/subsites.php"); ?>
+                        </table>
+                    </div>
+                    <?php else: ?>
+                    <div class="right floated right aligned column">
+                        <a id="numberRight" href="tel:<?= $number; ?>"><?= $number; ?></a>
+                    </div>
+                    <?php endif; ?>
                 </div>
 
                 <!-- BRANDING ROW -->
@@ -121,7 +112,7 @@
                 <?php endif; ?>
 
                 <!-- MENU ROW -->
-                <div id="menu" class="row">
+                <div id="menu" class="computer only row">
                     <div class="column">
                         <nav>
                             <div class="ui stackable menu">

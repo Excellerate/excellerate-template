@@ -6,7 +6,7 @@
         $showAtoF = true;
 
         // Find the correct word count
-        $count = count(array_filter(array($bottomA, $bottomB, $bottomC, $bottomD, $bottomE, $bottomF)));
+        $count = count(array_filter([$bottomA, $bottomB, $bottomC, $bottomD, $bottomE, $bottomF]));
         switch( $count ){
             case 1 : $total = "one"; break;
             case 2 : $total = "two"; break;
@@ -43,7 +43,7 @@
         $showGtoK = true;
 
         // Find the correct word count
-        $count = count(array_filter(array($bottomG, $bottomH, $bottomI, $bottomJ, $bottomK)));
+        $count = count(array_filter([$bottomG, $bottomH, $bottomI, $bottomJ, $bottomK]));
         switch( $count ){
             case 1 : $total = "one"; break;
             case 2 : $total = "two"; break;

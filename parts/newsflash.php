@@ -6,7 +6,7 @@
         $show = true;
 
         // Find the correct word count
-        $count = count(array_filter(array($newsFlashA, $newsFlashB, $newsFlashC, $newsFlashD, $newsFlashE)));
+        $count = count(array_filter([$newsFlashA, $newsFlashB, $newsFlashC, $newsFlashD, $newsFlashE]));
         switch( $count ){
             case 1 : $total = "one"; break;
             case 2 : $total = "two"; break;
