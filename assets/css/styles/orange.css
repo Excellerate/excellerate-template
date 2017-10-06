@@ -1,15 +1,15 @@
 /* SEMANTIC COLORS */
 .ui.grid>.orange.column, .ui.grid>.orange.row, .ui.grid>.row>.orange.column{
-    background-color: #F47721 !important;
-    color: #FFF;
+  background-color: #F47721 !important;
+  color: #FFF;
 }
 .ui.button{
-    background: #F47721;
-    color: rgba(255,255,255,.6);
+  background: #F47721;
+  color: rgba(255,255,255,.6);
 }
 .ui.button:hover{
-    background: #F47721;
-    color: rgba(255,255,255,09) !important;
+  background: #F47721;
+  color: rgba(255,255,255,09) !important;
 }
 
 /* HTML */
@@ -23,16 +23,16 @@ a:hover{
 
 /* SLICK SLIDER */
 .slick-dots li button:before{
-    color: #F47721;
+  color: #F47721;
 }
 .slick-dots li.slick-active button:before{
-    color: #F47721;
+  color: #F47721;
 }
 
 /* LEFT SIDE COLORS */
 #leftside a{
-    color:#F47721 !important;
+  color:#F47721 !important;
 }
 #leftside a:hover{
-    color:#333 !important;
+  color:#333 !important;
 }

@@ -1,38 +1,38 @@
 /* SEMANTIC COLORS */
 .ui.grid>.red.column, .ui.grid>.red.row, .ui.grid>.row>.red.column{
-    background-color: #E23D40 !important;
-    color: #FFF;
+  background-color: #E23D40 !important;
+  color: #FFF;
 }
 .ui.button{
-    background: #E23D40;
-    color: rgba(255,255,255,.6);
+  background: #E23D40;
+  color: rgba(255,255,255,.6);
 }
 .ui.button:hover{
-    background: #E23D40;
-    color: rgba(255,255,255,09) !important;
+  background: #E23D40;
+  color: rgba(255,255,255,09) !important;
 }
 
 /* HTML */
 #content a:hover{
-    color:#E23D40 !important;
+  color:#E23D40 !important;
 }
 
 #menu .active, #footer li a:hover{
-    color:#E23D40 !important;
+  color:#E23D40 !important;
 }
 
 /* SLICK SLIDER */
 .slick-dots li button:before{
-    color: #E23D40;
+  color: #E23D40;
 }
 .slick-dots li.slick-active button:before{
-    color: #E23D40;
+  color: #E23D40;
 }
 
 /* LEFT SIDE COLORS */
 #leftside a{
-    color:#E23D40 !important;
+  color:#E23D40 !important;
 }
 #leftside a:hover{
-    color:#333 !important;
+  color:#333 !important;
 }

@@ -1,30 +1,30 @@
 /* SEMANTIC COLORS */
 .ui.grid>.navy.column, .ui.grid>.navy.row, .ui.grid>.row>.navy.column{
-    background-color: #003D62 !important;
-    color: #FFF;
+  background-color: #003D62 !important;
+  color: #FFF;
 }
 .ui.button{
-    background: #003D62;
-    color: rgba(255,255,255,.6);
+  background: #003D62;
+  color: rgba(255,255,255,.6);
 }
 .ui.button:hover{
-    background: #003D62;
-    color: rgba(255,255,255,09) !important;
+  background: #003D62;
+  color: rgba(255,255,255,09) !important;
 }
 
 /* HTML */
 #content a:hover{
-    color:#003D62 !important;
+  color:#003D62 !important;
 }
 
 #menu .active, #footer li a:hover{
-    color:#003D62 !important;
+  color:#003D62 !important;
 }
 
 /* SLICK SLIDER */
 .slick-dots li button:before{
-    color: #003D62;
+  color: #003D62;
 }
 .slick-dots li.slick-active button:before{
-    color: #003D62;
+  color: #003D62;
 }

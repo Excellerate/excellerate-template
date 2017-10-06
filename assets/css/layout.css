@@ -1,14 +1,14 @@
 /* COLOR OVERIDES */
-i.blue.icon{      color:#00539B !important;}
-i.green.icon{     color:#B2BB1E !important;}
-i.orange.icon{    color:#F47721 !important;}
-i.purple.icon{    color:#003D62 !important;}
-i.red.icon{       color:#E23D40 !important;}
-i.teal.icon{      color:#00A0AF !important;}
-i.yellow.icon{    color:#FFC222 !important;}
-i.jade.icon{      color:#679146 !important;}
-i.aqua.icon{      color:#00A0AF !important;}
-i.navy.icon{      color:#003D62 !important;}
+i.blue.icon{          color:#00539B !important;}
+i.green.icon{         color:#B2BB1E !important;}
+i.orange.icon{        color:#F47721 !important;}
+i.purple.icon{        color:#003D62 !important;}
+i.red.icon{           color:#E23D40 !important;}
+i.teal.icon{          color:#00A0AF !important;}
+i.yellow.icon{        color:#FFC222 !important;}
+i.jade.icon{          color:#679146 !important;}
+i.aqua.icon{          color:#00A0AF !important;}
+i.navy.icon{          color:#003D62 !important;}
 
 .ui.button.blue{      background-color:#00539B !important;}
 .ui.button.green{     background-color:#B2BB1E !important;}
@@ -37,7 +37,6 @@ body{
   color:#424242;
   background-color:#f0f0f0 !important;
   font-weight:300;
-
 }
 
 h1{
