@@ -45,7 +45,7 @@ $text = Excellerate::truncate( ($item->fulltext) ? $item->fulltext : $item->intr
 			}
 
 			// Print readmore link
-			print '<a href="'.$link.'" class="ui right labeled icon submit small button">Read More<i class="right arrow icon"></i></a>';
+			print '<a href="'.$link.'" class="ui right labeled icon submit small button">Read more&hellip;<i class="right arrow icon"></i></a>';
 		}
 	?>
 

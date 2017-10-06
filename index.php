@@ -1,5 +1,4 @@
 <?php include JPATH_BASE . '/templates/excellerate/tmpl.php'; ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +7,9 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <!-- Excellerate Font -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
         <!-- Joomla Head -->
         <jdoc:include type="head" />
@@ -25,28 +27,11 @@
         <link rel="icon" type="image/x-icon" href="/templates/excellerate/assets/icons/favicon.ico?v=1" >
 
         <meta name="theme-color" content="#ffffff">
-
-        <!-- Excellerate Font -->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-
-        <?php if( ($env == false or $env == 'production') and $analytics ) : ?>
-        <!-- Analytics -->
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', '<?= $analytics; ?>', 'auto');
-            ga('send', 'pageview');
-        </script>
-        <?php endif; ?>
-
-        <?php if( ($env == false or $env == 'production') and $addthiscode ) : ?>
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?= $addthiscode; ?>"></script>
-        <?php endif; ?>
-
     </head>
+
+        <style>
+        <?php include('templates/' . $this->template . '/assets/css/styles/'.$style.'.css'); ?>
+        </style>
 
     <body>
 
@@ -204,5 +189,40 @@
         </div>
 
         <jdoc:include type="modules" name="debug" style="none" />
+
+        <script>
+
+            // Analytics
+            <?php if( ($env == false or $env == 'production') and $analytics ) : ?>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', '<?= $analytics; ?>', 'auto');
+            ga('send', 'pageview');
+            <?php endif; ?>
+
+            // Actions
+            jQuery(document).ready(function(){
+
+              // Activate mobile menu
+              jQuery('#sidebar').sidebar({dimPage:false});
+              jQuery("#sidebarButton").click(function(){
+                jQuery('#sidebar').sidebar('toggle');  
+              });
+
+              // Accordian
+              jQuery('.ui.accordion').accordion();
+
+              // Video
+              jQuery('.ui.embed').embed();
+            });
+        </script>
+
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <?php if( ($env == false or $env == 'production') and $addthiscode ) : ?>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?= $addthiscode; ?>"></script>
+        <?php endif; ?>
+
     </body>
 </html>

@@ -87,7 +87,7 @@ function modChrome_card($module, &$params, &$attribs)
         </div>
         <?php if($link) : ?>
         <div class="extra content">
-            <a href="<?= $link; ?>" class="ui small right labeled <?= $headerClass; ?> icon button"><i class="ui right arrow icon"></i> Learn more...</a>
+            <a href="<?= $link; ?>" class="ui small right labeled <?= $headerClass; ?> icon button"><i class="ui right arrow icon"></i> Learn more&hellip;</a>
         </div>
         <?php endif; ?>
         <?php
