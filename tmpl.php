@@ -7,7 +7,12 @@
   $phpver = substr(filter_var(PHP_VERSION, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION), 0, 3);
 
   // Main site - must contain trailing slash
-  define('MOTHERSHIP', 'http://excellerate.codechap.com/');
+  if($env == 'development'){
+    define('MOTHERSHIP', 'http://excellerate.codechap.com/');
+  }
+  else{
+    define('MOTHERSHIP', 'http://excellerate.co.za');
+  }
 
   // Mobile detection class from Piwik
   $dd = new \DeviceDetector\DeviceDetector($_SERVER['HTTP_USER_AGENT']);

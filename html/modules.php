@@ -82,7 +82,6 @@ function modChrome_card($module, &$params, &$attribs)
         ?>
         <div class="content">
             <?php if($img) : ?><img class="ui fluid image" src="<?= $img; ?>" ><?php endif; ?>
-            <h3><?= $module->title; ?></h3>
             <p><?= $text ?></p>
         </div>
         <?php if($link) : ?>

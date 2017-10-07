@@ -473,46 +473,11 @@ small, .small{
     left:0px;
     font-smoothing:antialiased;
   }
-  #cards .ui.three.cards>.card>.content h3{
-    padding:15px 0px 0px 8px;
-  }
-    /* Mobile */
-  }
-  @media only screen and (max-width: 767px) {
-    #cards .ui.card>.content h3, #cards.ui.cards>.card>.content h3{
-      padding:30px 0px 0px 15px;
-    }
-    #cards .ui.three.cards>.card>.content h3{
-      padding:40px 0px 0px 15px;
-    }
-  }
-  /* Tablet */
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-   #cards .ui.card>.content h3, #cards.ui.cards>.card>.content h3{
-      padding:10px 0px 0px 8px;
-      font-size:16px;
-    }
-    #cards .ui.three.cards>.card>.content h3{
-      padding:4px 0px 0px 15px;
-    }
-  }
-  /* Small Monitor */
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-   #cards .ui.card>.content h3, #cards.ui.cards>.card>.content h3{
-      padding:15px 0px 0px 15px;
-    }
-    #cards .ui.three.cards>.card>.content h3{
-      padding:10px 0px 0px 15px;
-    }
-  }
   #cards .ui.card>.content p, #cards.ui.cards>.card>.content p{
     padding:15px;
   }
   #cards .extra.content{
     padding:8px !important;
-  }
-  #cards .header{
-    font-size:11px !important;
   }
   #cards p{
     font-size:12px !important;

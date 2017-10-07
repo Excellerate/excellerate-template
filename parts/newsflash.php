@@ -23,7 +23,7 @@
 ?>
 
 <?php if($show) : ?>
-    
+
 <div class="ui <?=$total; ?> column stackable grid">
     <?php if($newsFlashA) : ?><div class="column"><jdoc:include type="modules" name="newsflash_a" style="block" /></div><?php endif; ?>
     <?php if($newsFlashB) : ?><div class="column"><jdoc:include type="modules" name="newsflash_b" style="none" /></div><?php endif; ?>
