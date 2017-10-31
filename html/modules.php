@@ -89,10 +89,12 @@ function modChrome_card($module, &$params, &$attribs)
             }
         }
 
+        $text = trim($text);
+
         ?>
         <div class="content">
             <?php if($img) : ?><img class="ui fluid image" src="<?= $img; ?>" ><?php endif; ?>
-            <?= !empty($text) ? '<p>'.$text.'</p>' : null; ?>
+            <?= strlen($text) > 0 ? '<p>'.$text.'</p>' : null; ?>
         </div>
         <?php if(count($links)) : ?>
         <div class="extra content">
