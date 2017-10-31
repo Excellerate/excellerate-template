@@ -21,6 +21,16 @@ i.navy.icon{          color:#003D62 !important;}
 .ui.button.aqua{      background-color:#00A0AF !important;}
 .ui.button.navy{      background-color:#003D62 !important;}
 
+.ui.burgundy.menu{
+  background-color:#99074fff !important;
+  color:white !important;
+}
+  .ui.burgundy.menu .item, .ui.burgundy.menu .item:hover{
+    background-color:#99074fff !important;
+    color:white !important;
+  }
+
+
 .equal.height.grid > .column .segment{
   height: 180px;
 }

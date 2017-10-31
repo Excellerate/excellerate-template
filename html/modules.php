@@ -62,31 +62,55 @@ function modChrome_card($module, &$params, &$attribs)
         // Clean text
         $text = strip_tags($module->content);
 
+        // Default to no link
+        $links = [];
+
         // Find link if any
-        $reg_exUrl = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
+        $reg_exUrl = "/(http|https)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
         if(preg_match($reg_exUrl, $text, $url)) {
             $text = preg_replace($reg_exUrl, "", $text);
-            $link = $url[0];
-        }else{
-            $link = false;
+            $links[] = $url[0];
         }
 
-        $reg_exUrl2 = "/{{([a-zA-Z0-9\-\.\/]+)}}/";
-        if(preg_match($reg_exUrl2, $text, $url)) {
-            $text = preg_replace($reg_exUrl2, '', $text);
-            $link = $url[1];
-        }else{
-            $link = false;
+        $reg_exUrl3 = "/{{ ?other ?}}/";
+        if(preg_match($reg_exUrl3, $text, $url)) {
+            $text = preg_replace($reg_exUrl3, '', $text);
+            $links['/excellerate-facility-management'] = 'Facility Management';
+            $links['/excellerate-brand-management'] = 'Brand Management';
+            $links['/precinct-management'] = 'Precinct Management';
+            $links['/excellerate-utilities-management'] = 'Utilities Management';
+            $links['/excellerate-infrastructure-management'] = 'Infrastructure Management';
+        }
+        else{
+            $reg_exUrl2 = "/{{(.*)}}/";
+            if(preg_match($reg_exUrl2, $text, $url)) {
+                $text = preg_replace($reg_exUrl2, '', $text);
+                $links[] = $url[1];
+            }
         }
 
         ?>
         <div class="content">
             <?php if($img) : ?><img class="ui fluid image" src="<?= $img; ?>" ><?php endif; ?>
-            <p><?= $text ?></p>
+            <?php !empty($text) ? '<p>'.$text.'</p>' : null; ?>
         </div>
-        <?php if($link) : ?>
+        <?php if(count($links)) : ?>
         <div class="extra content">
-            <a href="<?= $link; ?>" class="ui small right labeled <?= $headerClass; ?> icon button"><i class="ui right arrow icon"></i> Learn more&hellip;</a>
+        <?php if(count($links) == 1) : ?>
+            <a href="<?= $links[0]; ?>" class="ui small right labeled <?= $headerClass; ?> icon button"><i class="ui right arrow icon"></i> Learn more&hellip;</a>
+        <?php else : ?>
+            <div class="ui small vertical burgundy menu">
+                <div class="ui simple dropdown item">
+                    Learn more...
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <?php foreach($links as $link => $name) : ?>
+                        <a href="<?= $link; ?>" class="item"><?= $name; ?></a>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
         </div>
         <?php endif; ?>
         <?php

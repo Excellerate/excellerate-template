@@ -42,7 +42,6 @@
   $addthiscode = $this->params->get('addthiscode', false);
   $hideDrivenBy = false;
   $toTop = false;
-  define('SHOWHOME', $this->params->get('home') == 'yes' ? true : false);
   
   if( ! IS_MOBILE and $branding == false){
     if($subsites){
