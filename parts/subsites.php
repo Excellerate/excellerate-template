@@ -18,3 +18,7 @@
         <td><a class="moBurgundy" href="http://www.vitalds.co.za"><i class="ui stop icon"></i>Vital Distribution Solutions</a></td>
         <td><a class="moBurgundy" href="/excellerate-infrastructure-management"><i class="ui stop icon"></i>Excellerate Infrastructure Management</a></td>
     </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td><a class="moBurgundy" href="/excellerate-mep-services"><i class="ui stop icon"></i>Excellerate MEP Services</a></td>
+    </tr>

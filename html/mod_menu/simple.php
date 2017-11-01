@@ -33,20 +33,24 @@
   $jMenu = (new JSite)->getMenu();
 
   // Force link back to main site
-  if($jMenu->getActive() == $jMenu->getDefault()){
-    print implode([
-      '<a class="item" target="_blank" href="'.MOTHERSHIP.'">',
-      $jMenu->getActive() == MOTHERSHIP ? : '<i class="angle double left icon"></i>&nbsp;',
-      'Home</a>'
-    ]);
+  if( ! JUri::base() == MOTHERSHIP){
+    if($jMenu->getActive() == $jMenu->getDefault()){
+      print implode([
+        '<a class="item" target="_blank" href="'.MOTHERSHIP.'">',
+        '<i class="angle double left icon"></i>&nbsp;',
+        'Home</a>'
+      ]);
+    }
   }
 
   // Open main menu
   foreach($menu as $item){
 
-    if($item->home == 1){
-      if($jMenu->getActive() == $jMenu->getDefault()){
-        continue;
+    if( ! JUri::base() == MOTHERSHIP){
+      if($item->home == 1){
+        if($jMenu->getActive() == $jMenu->getDefault()){
+          continue;
+        }
       }
     }
 
