@@ -49,12 +49,22 @@
       <!-- CONTENT -->
       <div id="main" class="ui main container stackable grid">
         <div id="epsLogo" class="two column row">
+          <?php if( ! $logoOveride) : ?>
           <div class="left floated left aligned computer only column">
             <a href="<?= MOTHERSHIP; ?>"><img class="ui image" src="/templates/excellerate/assets/img/epsLogo.svg"></a>
           </div>
           <div class="left floated left aligned mobile tablet only column">
             <a href="<?= MOTHERSHIP; ?>"><img class="ui small image" src="/templates/excellerate/assets/img/epsLogo.svg"></a>
           </div>
+          <?php else : ?>
+          <div class="left floated left aligned computer only column">
+            <a href="#"><img class="ui image" src="/templates/excellerate/assets/img/groupLogos/<?= $logoOveride; ?>.svg"></a>
+          </div>
+          <div class="left floated left aligned mobile tablet only column">
+            <a href="#"><img class="ui small image" src="/templates/excellerate/assets/img/groupLogos/<?= $logoOveride; ?>.svg"></a>
+          </div>
+          <?php endif; ?>
+          
           <?php if($subsites) : ?>
           <div id="subsitesWrapper" class="right floated right aligned wide column">
             <table id="subsites" class="ui very basic compact unstackable table">
@@ -90,8 +100,14 @@
         <!-- SLIDER ROW -->
         <?php if($slider) : ?>
         <div id="slider" class="row">
-          <div class="column">
+          <div class="ten wide column">
             <jdoc:include type="modules" name="slider" />
+          </div>
+          <div class="three wide logos column">
+            <img src="../../images/160x160.png" >
+          </div>
+         <div class="three wide logos column">
+            <img src="../../images/160x160.png" >
           </div>
         </div>
         <?php endif; ?>
@@ -161,6 +177,28 @@
         </div>
         <?php endif; ?>
 
+        <!-- AFFILIATIONS ROW -->
+        <div id="affiliations" class="ui dark nine column center aligned container grid">
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+          <div class="ui column">{{LOGO}}</div>
+        </div>
+
         <!-- COPYRIGHT ROW -->
         <div id="copyright" class="very dark two column row">
           <div class="column">
@@ -172,7 +210,7 @@
         </div>
       </div>
 
-      <!-- FINISH ROW -->
+      <!-- CREDITS ROW -->
       <div id="end" class="ui two column container grid">
         <div class="left floated left aligned five wide column">
           <a class="login" href="<?= JUri::base(); ?>administrator/index.php">Admin Login</a>

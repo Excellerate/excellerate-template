@@ -17,3 +17,7 @@
 <?php if ($googlePlus = $this->params->get('googlePlus', false)) : ?>
     <a href="<?= $googlePlus; ?>" class="socialLink"><i class="big google plus icon"></i></a>
 <?php endif; ?>
+
+<?php if ($whatsApp = $this->params->get('whatsApp', '123')) : ?>
+    <a href="tel:<?= preg_replace('/\D/', '', $whatsApp); ?>" title="Call <?= $whatsApp; ?>" class="socialLink"><i class="big whatsapp icon"></i></a>
+<?php endif; ?>

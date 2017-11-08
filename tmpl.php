@@ -27,11 +27,12 @@
   $template = JUri::base() . 'templates/' . $this->template;
 
   // Template params
-  $groupLogo = strtolower($this->params->get('group_logo', 'driven-by-excellerate'));
-  $logoA = strtolower($this->params->get('logo_a'));
-  $logoB = strtolower($this->params->get('logo_b'));
-  $logoC = strtolower($this->params->get('logo_c'));
-  $favicon = strtolower($this->params->get('favicon', 'default'));
+  //$groupLogo = strtolower($this->params->get('group_logo', 'driven-by-excellerate'));
+  //$logoA = strtolower($this->params->get('logo_a'));
+  //$logoB = strtolower($this->params->get('logo_b'));
+  //$logoC = strtolower($this->params->get('logo_c'));
+  //$favicon = strtolower($this->params->get('favicon', 'default'));
+  $logoOveride = $this->params->get('logoOveride');
   $company = $this->params->get('company');
   $slogan = $this->params->get('siteSlogan');
   $number = (IS_MOBILE == false and $this->params->get('siteNumber')) ? $this->params->get('siteNumber') : false;

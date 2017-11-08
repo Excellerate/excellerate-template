@@ -74,6 +74,14 @@
         
         <field name="siteNumber"  type="text" default="" label="Phone number" description="Holding company number" filter="string" />
 
+        <field name="logoOveride"
+          type="list"
+          label="Logo overide"
+          description="Overide Excellerate logo with"
+        >
+          <option value="enpower">Enpower logo</option>
+        </field>
+
         <field name="style"
           type="radio"
           label="Style"
@@ -126,6 +134,7 @@
         <field name="linkedin"  type="url" default="" label="LinkedIn page" description="Link to Linked In" filter="url" />
         <field name="pinterest"  type="url" default="" label="Pinterest page" description="Link to Pinterest" filter="url" />
         <field name="googlePlus"  type="url" default="" label="Google Plus page" description="Link to Google Plus" filter="url" />
+        <field name="whatsApp"  type="url" default="" label="Whats App number" description="Popup with your Whats App cell phone number" filter="number" />
       </fieldset>
 
     </fields>
