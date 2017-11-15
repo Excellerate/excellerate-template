@@ -89,6 +89,8 @@ function modChrome_card($module, &$params, &$attribs)
             }
         }
 
+        // Clean up
+        $links = array_filter($links);
         $text = trim($text);
 
         ?>

@@ -104,10 +104,10 @@
             <jdoc:include type="modules" name="slider" />
           </div>
           <div class="three wide logos column">
-            <img src="../../images/160x160.png" >
+            <img src="/templates/excellerate/assets/img/vitalSkills.png" style="border:1px solid #ccc;">
           </div>
          <div class="three wide logos column">
-            <img src="../../images/160x160.png" >
+            <img src="/templates/excellerate/assets/img/beeLevel2.png" style="border:1px solid #ccc;">
           </div>
         </div>
         <?php endif; ?>
@@ -177,28 +177,6 @@
         </div>
         <?php endif; ?>
 
-        <!-- AFFILIATIONS ROW -->
-        <div id="affiliations" class="ui dark nine column center aligned container grid">
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-          <div class="ui column">{{LOGO}}</div>
-        </div>
-
         <!-- COPYRIGHT ROW -->
         <div id="copyright" class="very dark two column row">
           <div class="column">
@@ -209,6 +187,31 @@
           </div>
         </div>
       </div>
+
+        <!-- AFFILIATIONS ROW -->
+        <div id="affiliations" class="ui center aligned container grid">
+          <div class="ui column">
+            <div class="ui centered seven cards">
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/protea-coin.png" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/irc.png" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/hollywood-bets-net.png" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/sodexo.svg" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/eoh.svg" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/blackrock.png" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/fidelity.png" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/excellerate.svg" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/child-welfare.png" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/toyota.svg" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/cartrack.svg" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/sabt.png" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/vital-consulting.png" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/nashua.svg" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/bosasa.png" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/adt.svg" /></div>
+              <div class="card"><img class="ui centered tiny image" src="/images/affiliations/smit.png" /></div>
+            </div>
+          </div>
+        </div>
 
       <!-- CREDITS ROW -->
       <div id="end" class="ui two column container grid">
