@@ -50,7 +50,7 @@
     // Swop out custom article page
     if(preg_match("/{ ?article ([a-z]+) ?}/", $text, $matches)){
         $html = file_get_contents(JPATH_BASE."/html_".$matches[1].'.php');
-        $text = $html; //preg_replace("/{ ?article ([a-z]+) ?}/", $html, $text);
+        $text = preg_replace("/{ ?article ([a-z]+) ?}/", $html, $text);
     }
 
     // Convert and to "&"
