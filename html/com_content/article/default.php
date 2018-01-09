@@ -69,7 +69,8 @@
 
     // IMAGE (Left floated) //
     if( ! empty( $image ) ){
-        print '<img class="ui right floated medium bordered image" src="'.$image.'" alt="'.$alt.'" title="'.$caption.'">';
+        list($width, $height) = getimagesize(JPATH_ROOT . DIRECTORY_SEPARATOR . $image);
+        print '<img class="ui right floated'.($width >= 250 ? " medium " : " ") .'bordered image" src="'.$image.'" alt="'.$alt.'" title="'.$caption.'">';
     }
 
     // TEXT //

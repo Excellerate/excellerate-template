@@ -29,20 +29,26 @@
 
 <?php
 
+  // Are we on the home page
+  $jMenu = (new JSite)->getMenu();
+
   // Force link back to main site
-  if(JUri::base() !== MOTHERSHIP){
-    print '<a class="item" target="_blank" href="'.MOTHERSHIP.'">Home</a>';
+  if($jMenu->getActive() == $jMenu->getDefault()){
+    print implode([
+      '<a class="item" target="_blank" href="'.MOTHERSHIP.'">',
+      $jMenu->getActive() == MOTHERSHIP ? : '<i class="angle double left icon"></i>&nbsp;',
+      'Home</a>'
+    ]);
   }
 
   // Open main menu
   foreach($menu as $item){
 
-    // Skip home page button here
-      if($item->home == 1){
-        if(SHOWHOME == false){
-          continue;
-        }
+    if($item->home == 1){
+      if($jMenu->getActive() == $jMenu->getDefault()){
+        continue;
       }
+    }
 
     if( ! IS_MOBILE) {
 
