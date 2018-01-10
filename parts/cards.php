@@ -7,7 +7,7 @@
         switch( $count ){
             case 1 : $use = "centered"; $wide = 'four'; break;
             case 2 : $use = "centered"; $wide = 'four'; break;
-            case 3 : $use = "centered"; $wide = 'four'; break;
+            case 3 : $use = "three"; $wide = ''; break;
             case 4 : $use = "four"; $wide = ''; break;
             case 5 : $use = "five"; $wide = ''; break;
             case 6 : $use = "three"; $wide = ''; break;
