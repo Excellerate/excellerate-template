@@ -1,0 +1,38 @@
+/* SEMANTIC COLORS */
+.ui.grid>.purple.column, .ui.grid>.purple.row, .ui.grid>.row>.purple.column{
+  background-color: #964b87 !important;
+  color: #FFF;
+}
+.ui.button{
+  background: #964b87;
+  color: rgba(255,255,255,.6);
+}
+.ui.button:hover{
+  background: #964b87;
+  color: rgba(255,255,255,09) !important;
+}
+
+/* HTML */
+a:hover{
+  color:#964b87 !important;  
+}
+
+#menu .active, #footer li a:hover{
+  color:#964b87 !important;
+}
+
+/* SLICK SLIDER */
+.slick-dots li button:before{
+  color: #964b87;
+}
+.slick-dots li.slick-active button:before{
+  color: #964b87;
+}
+
+/* LEFT SIDE COLORS */
+#leftside a{
+  color:#964b87 !important;
+}
+#leftside a:hover{
+  color:#333 !important;
+}
