@@ -9,6 +9,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 		<meta http-equiv="Expires" content="86400, private">
 
+		<style><?= file_get_contents("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"); ?></style>
+		<style><?= file_get_contents("https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin);"); ?></style>
+		
 		<?php
 		$doc = JFactory::getDocument();
 		foreach($doc->_scripts as $key => $script){
@@ -31,9 +34,6 @@
 		?>
 
 		<!-- Excellerate Font -->
-		<style>
-			<?= file_get_contents("http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"); ?>
-		</style>
 
 		<!-- Joomla Head -->
 		<script>var base = "<?= JUri::base(); ?>";</script>
