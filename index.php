@@ -7,6 +7,7 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="Cache-Control" content="max-age=2592000, public">
 
 		<!-- Excellerate Font -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -14,7 +15,10 @@
 		<!-- Joomla Head -->
 		<script>var base = "<?= JUri::base(); ?>";</script>
 
-		<script><?php require('assets/js/jquery.min.js'); ?></script>
+		<script>
+			<?php require('assets/js/jquery.min.js'); ?>
+			<?php require('assets/js/semantic.min.js'); ?>
+		</script>
 
 		<!--[if IE]>
 		<link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/ie.css" />
