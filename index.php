@@ -9,6 +9,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 		<meta http-equiv="Expires" content="86400, private">
 
+		<!--<jdoc:include type="head" />-->
+
+		<?php
+		$doc = JFactory::getDocument();
+		foreach($doc->_scripts as $key => $script){
+			if(substr($key, 0, 4) != 'http'){
+				require( JPATH_ROOT.$key );
+			}
+		}
+		?>
+
 		<!-- Excellerate Font -->
 		<style>
 			<?= file_get_contents("http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"); ?>
