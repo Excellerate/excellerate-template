@@ -22,6 +22,16 @@
 		}
 		?>
 
+		<?php
+		$doc = JFactory::getDocument();
+		foreach($doc->_styleSheets as $key => $stype){
+			$stylePath = str_replace(JUri::base(), '', $key);
+			print '<style>';
+			require( JPATH_ROOT.DIRECTORY_SEPARATOR.$stylePath);
+			print '</style>';
+		}
+		?>
+
 		<!-- Excellerate Font -->
 		<style>
 			<?= file_get_contents("http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"); ?>
