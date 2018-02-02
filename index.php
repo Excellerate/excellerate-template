@@ -10,7 +10,9 @@
 		<meta http-equiv="Expires" content="30">
 
 		<!-- Excellerate Font -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+		<style>
+			<?= file_get_contents("http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"); ?>
+		</style>
 
 		<!-- Joomla Head -->
 		<script>var base = "<?= JUri::base(); ?>";</script>
