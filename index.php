@@ -12,7 +12,6 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
 		<!-- Joomla Head -->
-		<jdoc:include type="head" />
 		<script>var base = "<?= JUri::base(); ?>";</script>
 
 		<!--[if IE]>
@@ -228,5 +227,6 @@
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?= $addthiscode; ?>"></script>
 		<?php endif; ?>
 
+		<script src="/templates/excellerate/assets/js/jquery.min.js" type="text/javascript"></script>
 	</body>
 </html>
