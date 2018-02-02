@@ -15,7 +15,9 @@
 		$doc = JFactory::getDocument();
 		foreach($doc->_scripts as $key => $script){
 			if(substr($key, 0, 4) != 'http'){
+				print '<script>';
 				require( JPATH_ROOT.$key );
+				print '</script>';
 			}
 		}
 		?>
