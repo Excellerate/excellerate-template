@@ -14,6 +14,8 @@
 		<!-- Joomla Head -->
 		<script>var base = "<?= JUri::base(); ?>";</script>
 
+		<script><?php include('/assets/js/jquery.min.js'); ?></script>
+
 		<!--[if IE]>
 		<link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/ie.css" />
 		<![endif]-->
@@ -226,7 +228,5 @@
 		<?php if( ($env == false or $env == 'production') and $addthiscode ) : ?>
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=<?= $addthiscode; ?>"></script>
 		<?php endif; ?>
-
-		<script src="/templates/excellerate/assets/js/jquery.min.js" type="text/javascript"></script>
 	</body>
 </html>
