@@ -20,15 +20,8 @@
 		}
 		?>
 
-		<!-- Excellerate Font -->
-
 		<!-- Joomla Head -->
 		<script>var base = "<?= JUri::base(); ?>";</script>
-
-		<script>
-			<?php require('assets/js/jquery.min.js'); ?>
-			<?php require('assets/js/semantic.min.js'); ?>
-		</script>
 
 		<!--[if IE]>
 		<link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/ie.css" />
