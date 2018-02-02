@@ -45,10 +45,6 @@
 		<meta name="theme-color" content="#ffffff">
 	</head>
 
-	<style>
-	<?php include('templates/' . $this->template . '/assets/css/styles/'.$style.'.css'); ?>
-	</style>
-
 	<body>
 
 		<!-- Mobile Menu -->
@@ -221,6 +217,9 @@
 			print '</style>';
 		}
 		?>
+		<style>
+		<?php include('templates/' . $this->template . '/assets/css/styles/'.$style.'.css'); ?>
+		</style>
 
 		<script>
 
