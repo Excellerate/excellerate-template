@@ -9,8 +9,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 		<meta http-equiv="Expires" content="86400, private">
 
-		<!--<jdoc:include type="head" />-->
-
 		<?php
 		$doc = JFactory::getDocument();
 		foreach($doc->_scripts as $key => $script){
