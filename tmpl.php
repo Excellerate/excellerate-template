@@ -94,7 +94,7 @@
   $doc->addStyleSheet(JUri::base() . 'templates/' . $this->template . '/assets/css/semantic.min.css', $type = 'text/css');
   $doc->addStyleSheet(JUri::base() . 'templates/' . $this->template . '/assets/css/layout.css', $type = 'text/css');
   $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/jquery.min.js', 'text/javascript');
-  $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/semantic.min.js', 'text/javascript');
+  $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/semantic.min.js', 'text/javascript', 'async');
   $doc->addScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyDVS_kXDZNdFwPfLH02P9ac0MnxT6xdvdM', 'text/javascript');
 
   // Check modules
