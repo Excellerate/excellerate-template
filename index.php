@@ -14,7 +14,7 @@
 		<!-- Joomla Head -->
 		<script>var base = "<?= JUri::base(); ?>";</script>
 
-		<script><?php include('/assets/js/jquery.min.js'); ?></script>
+		<script><?php require('assets/js/jquery.min.js'); ?></script>
 
 		<!--[if IE]>
 		<link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/ie.css" />
