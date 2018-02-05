@@ -80,6 +80,7 @@
   $defaultPage = $menu->getActive() == $menu->getDefault() ? true : false; // Check default home page
   
   // Document style sheets and js will all be rendered inline
+  $doc->addStyleSheet(JUri::base() . 'templates/'  . $this->template . '/assets/css/semantic.min.css', $type = 'text/css');
   $doc->addStyleSheet(JUri::base() . 'templates/'  . $this->template . '/assets/css/layout.css', $type = 'text/css');
   $doc->addStyleSheet(JUri::base() . 'templates/'  . $this->template . '/assets/css/styles/'.$style.'.css', $type = 'text/css');
   $doc->addScript($this->baseurl   . '/templates/' . $this->template . '/assets/js/jquery.min.js', 'text/javascript');

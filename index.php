@@ -203,7 +203,7 @@
 		<jdoc:include type="modules" name="debug" style="none" />
 
 		<!-- Keep as external link to prevent font from breaking -->
-		<link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/semantic.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/semantic.min.css" />-->
 
 		<!-- We build our style block for page speed -->
 		<style>
