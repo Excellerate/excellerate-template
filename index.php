@@ -199,8 +199,7 @@
 		<jdoc:include type="modules" name="debug" style="none" />
 
 		<style><?= file_get_contents("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"); ?></style>
-		<style><?= //file_get_contents("https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin);"); ?></style>
-		
+
 		<?php
 		$doc = JFactory::getDocument();
 		foreach($doc->_styleSheets as $key => $stype){
