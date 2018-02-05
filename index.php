@@ -9,17 +9,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 		<meta http-equiv="Expires" content="86400, private">
 
-		<?php
-		$doc = JFactory::getDocument();
-		foreach($doc->_scripts as $key => $script){
-			if(substr($key, 0, 4) != 'http'){
-				print '<script>';
-				require( JPATH_ROOT.$key );
-				print '</script>';
-			}
-		}
-		?>
-
 		<!-- Joomla Head -->
 		<script>var base = "<?= JUri::base(); ?>";</script>
 
@@ -36,6 +25,17 @@
 		<link rel="icon" type="image/x-icon" href="/templates/excellerate/assets/icons/favicon.ico?v=1" >
 
 		<meta name="theme-color" content="#ffffff">
+
+		<?php
+		$doc = JFactory::getDocument();
+		foreach($doc->_scripts as $key => $script){
+			if(substr($key, 0, 4) != 'http'){
+				print '<script>';
+				require( JPATH_ROOT.$key );
+				print '</script>';
+			}
+		}
+		?>
 	</head>
 
 	<body>
