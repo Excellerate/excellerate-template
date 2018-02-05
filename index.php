@@ -4,13 +4,13 @@
 	<head>
 
 		<!-- Standard Meta -->
+		<base href="<?= JUri::base(); ?>" />
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 		<meta http-equiv="Expires" content="86400, private">
-
-		<!-- Joomla Head -->
-		<script>var base = "<?= JUri::base(); ?>";</script>
+		<meta name="description" content="<?= $doc->getMetaData("description"); ?>" />
+		<meta name="theme-color" content="#ffffff">
 
 		<!--[if IE]>
 		<link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/ie.css" />
@@ -24,20 +24,23 @@
 		<link rel="mask-icon" href="/templates/excellerate/assets/icons/safari-pinned-tab.svg?v=1" color="#5bbad5">
 		<link rel="icon" type="image/x-icon" href="/templates/excellerate/assets/icons/favicon.ico?v=1" >
 
-		<meta name="theme-color" content="#ffffff">
+		<!-- Keep as external link to prevent font from breaking -->
+		<link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/semantic.min.css" />
 
+		<!-- Title -->
+		<title><?= $doc->getTitle(); ?></title>
+
+		<!-- We build our script head for page speed-->
+		<script>
 		<?php
-		$doc = JFactory::getDocument();
 		foreach($doc->_scripts as $key => $script){
+			$scripting[] = 'var base = "'.JUri::base().'";';
 			if(substr($key, 0, 4) != 'http'){
-				ob_start();
 				require( JPATH_ROOT.$key );
-				$scripting[] = ob_get_contents();
-				ob_end_clean();
 			}
 		}
-		print '<script>'.implode($scripting).'</script>';
 		?>
+		</script>
 	</head>
 
 	<body>
@@ -200,20 +203,17 @@
 
 		<jdoc:include type="modules" name="debug" style="none" />
 
-		<style><?= file_get_contents("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"); ?></style>
-
+		<!-- We build our style block for page speed -->
+		<style>
 		<?php
-		$doc = JFactory::getDocument();
+		print file_get_contents("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic");
 		foreach($doc->_styleSheets as $key => $stype){
 			$stylePath = str_replace(JUri::base(), '', $key);
-			print '<style>';
-			require( JPATH_ROOT.DIRECTORY_SEPARATOR.$stylePath);
-			print '</style>';
+			include( JPATH_ROOT.DIRECTORY_SEPARATOR.$stylePath);
 		}
 		?>
-		<style>
-		<?php include('templates/' . $this->template . '/assets/css/styles/'.$style.'.css'); ?>
 		</style>
+
 
 		<script>
 
