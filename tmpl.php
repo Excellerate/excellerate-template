@@ -31,15 +31,13 @@
 
   // Template params
   $groupLogo = strtolower($this->params->get('group_logo', 'driven-by-excellerate'));
-  $logoA = strtolower($this->params->get('logo_a'));
-  $logoB = strtolower($this->params->get('logo_b'));
-  $logoC = strtolower($this->params->get('logo_c'));
   $favicon = strtolower($this->params->get('favicon', 'default'));
   $company = $this->params->get('company');
   $slogan = $this->params->get('siteSlogan');
   $number = (IS_MOBILE == false and $this->params->get('siteNumber')) ? $this->params->get('siteNumber') : false;
   $style = $this->params->get('style', 'white');
   $branding = $this->params->get('branding') == 'yes' ? true : false;
+  $brand = $this->params->get('brand');
   $subsites = $this->params->get('subsites') == 'yes' ? true : false;
   $analytics = $this->params->get('analytics', false);
   $addthiscode = $this->params->get('addthiscode', false);
@@ -56,17 +54,6 @@
   }
   else{
     $whiteSpace = 0;
-  }
-
-  // Set logo width and height
-  if($logoA and $logoB and $logoC){
-    $logoWidth = "width=151px";
-  }
-  else if ($logoA and $logoB){
-    $logoWidth = "width=226px";
-  }
-  else{
-    $logoWidth = false;
   }
 
   // Gather Config
@@ -93,9 +80,10 @@
   $defaultPage = $menu->getActive() == $menu->getDefault() ? true : false; // Check default home page
   
   // Document style sheets and js will all be rendered inline
-  $doc->addStyleSheet(JUri::base() . 'templates/' . $this->template . '/assets/css/layout.css', $type = 'text/css');
-  $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/jquery.min.js', 'text/javascript');
-  $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/semantic.min.js', 'text/javascript');
+  $doc->addStyleSheet(JUri::base() . 'templates/'  . $this->template . '/assets/css/layout.css', $type = 'text/css');
+  $doc->addStyleSheet(JUri::base() . 'templates/'  . $this->template . '/assets/css/styles/'.$style.'.css', $type = 'text/css');
+  $doc->addScript($this->baseurl   . '/templates/' . $this->template . '/assets/js/jquery.min.js', 'text/javascript');
+  $doc->addScript($this->baseurl   . '/templates/' . $this->template . '/assets/js/semantic.min.js', 'text/javascript');
   $doc->addScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyDVS_kXDZNdFwPfLH02P9ac0MnxT6xdvdM', 'text/javascript');
 
   // Check modules

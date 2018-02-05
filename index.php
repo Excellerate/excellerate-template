@@ -24,8 +24,6 @@
 		<link rel="mask-icon" href="/templates/excellerate/assets/icons/safari-pinned-tab.svg?v=1" color="#5bbad5">
 		<link rel="icon" type="image/x-icon" href="/templates/excellerate/assets/icons/favicon.ico?v=1" >
 
-		<!-- Keep as external link to prevent font from breaking -->
-
 		<!-- Title -->
 		<title><?= $doc->getTitle(); ?></title>
 
@@ -86,7 +84,9 @@
 				<?php if($branding) : ?>
 				<div id="brand" class="two column <?= $style; ?> row">
 					<div class="left floated left aligned column">
-						<img class="ui left floated image" src="/templates/excellerate/assets/img/groupLogos/templewood.svg" />
+						<?php $brand = 'templewood'; if($brandLogo = '/templates/excellerate/assets/img/groupLogos/'.$brand.'.svg' and file_exists($brandLogo)) : ?>
+						<img class="ui left floated image" src="" />
+						<?php endif; ?>
 						<a href="<?= JUri::base(); ?>"><h1 class="ui header">
 							<?= $company; ?>
 						</h1></a>
@@ -202,6 +202,9 @@
 
 		<jdoc:include type="modules" name="debug" style="none" />
 
+		<!-- Keep as external link to prevent font from breaking -->
+		<link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/semantic.min.css" />
+
 		<!-- We build our style block for page speed -->
 		<style>
 		<?php
@@ -213,10 +216,7 @@
 		?>
 		</style>
 
-		<link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/semantic.min.css" />
-
 		<script>
-
 			// Analytics
 			<?php if( ($env == false or $env == 'production') and $analytics ) : ?>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
