@@ -25,7 +25,6 @@
 		<link rel="icon" type="image/x-icon" href="/templates/excellerate/assets/icons/favicon.ico?v=1" >
 
 		<!-- Keep as external link to prevent font from breaking -->
-		<link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/semantic.min.css" />
 
 		<!-- Title -->
 		<title><?= $doc->getTitle(); ?></title>
@@ -214,6 +213,7 @@
 		?>
 		</style>
 
+		<link rel="stylesheet" type="text/css" href="<?= $template; ?>/assets/css/semantic.min.css" />
 
 		<script>
 
