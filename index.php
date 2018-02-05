@@ -30,11 +30,13 @@
 		$doc = JFactory::getDocument();
 		foreach($doc->_scripts as $key => $script){
 			if(substr($key, 0, 4) != 'http'){
-				print '<script>';
+				ob_start();
 				require( JPATH_ROOT.$key );
-				print '</script>';
+				$scripting[] = ob_get_contents();
+				ob_end_clean();
 			}
 		}
+		print '<script>'.implode($scripting).'</script>';
 		?>
 	</head>
 
