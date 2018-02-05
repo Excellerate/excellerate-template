@@ -1,3 +1,15 @@
+/* FONT OVERIDES */
+@font-face {
+  font-family: 'Icons';
+  src: url("/templates/excellereate/assets/css/themes/default/assets/fonts/icons.eot");
+  src: url("/templates/excellereate/assets/css/themes/default/assets/fonts/icons.eot?#iefix") format('embedded-opentype'), url("/templates/excellerate/assets/css/themes/default/assets/fonts/icons.woff2") format('woff2'), url("/templates/excellerate/assets/css/themes/default/assets/fonts/icons.woff") format('woff'), url("/templates/excellerate/assets/css/themes/default/assets/fonts/icons.ttf") format('truetype'), url("/templates/excellerate/assets/css/themes/default/assets/fonts/icons.svg#icons") format('svg');
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: inherit;
+  text-transform: none;
+}
+
 /* COLOR OVERIDES */
 i.blue.icon{          color:#00539B !important;}
 i.green.icon{         color:#B2BB1E !important;}
