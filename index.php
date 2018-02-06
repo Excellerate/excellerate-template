@@ -84,8 +84,8 @@
 				<?php if($branding) : ?>
 				<div id="brand" class="two column <?= $style; ?> row">
 					<div class="left floated left aligned column">
-						<?php $brand = 'templewood'; if($brandLogo = '/templates/excellerate/assets/img/groupLogos/'.$brand.'.svg' and file_exists($brandLogo)) : ?>
-						<img class="ui left floated image" src="" />
+						<?php if($brandLogo = 'templates/excellerate/assets/img/groupLogos/'.$brand.'.svg' and file_exists($brandLogo)) : ?>
+						<img class="ui left floated image" src="<?= $brandLogo; ?>" style="padding-top:6px;" />
 						<?php endif; ?>
 						<a href="<?= JUri::base(); ?>"><h1 class="ui header">
 							<?= $company; ?>
