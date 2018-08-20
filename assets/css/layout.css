@@ -42,7 +42,6 @@ i.navy.icon{          color:#003D62 !important;}
     color:white !important;
   }
 
-
 .equal.height.grid > .column .segment{
   height: 180px;
 }
@@ -169,6 +168,20 @@ small, .small{
 }
 .dark a, .very.dark a, .dark .header, .very.dark .header{
   color:#d8d8d8;
+}
+
+
+/* PRELOAD */
+#preload{
+  text-align:center;
+  position:absolute;
+  width:100vw;
+  height:100vh;
+  background-color:white;
+  padding-top:25vh;
+}
+#main.hidden, #end.hidden{
+  display:none;
 }
 
 

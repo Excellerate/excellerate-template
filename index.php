@@ -53,8 +53,15 @@
 		<!-- Mobile Menu Push -->
 		<div class="pusher">
 
+			<!-- Pre-Loader -->
+			<div id="preload">
+				<div><i class="ui huge spinner loading icon"></i></div>
+				<br>
+				<p><strong>Loading...</strong></p>
+			</div>
+
 			<!-- CONTENT -->
-			<div id="main" class="ui main container stackable grid">
+			<div id="main" class="ui hidden main container stackable grid">
 				<div id="epsLogo" class="two column row">
 					<div class="left floated left aligned computer only column">
 						<a href="<?= MOTHERSHIP; ?>"><img class="ui image" src="/templates/excellerate/assets/img/epsLogo.svg"></a>
@@ -183,7 +190,7 @@
 			</div>
 
 			<!-- FINISH ROW -->
-			<div id="end" class="ui two column container grid">
+			<div id="end" class="ui hidden two column container grid">
 				<div class="left floated left aligned five wide column">
 					<a class="login" href="<?= JUri::base(); ?>administrator/index.php">Admin Login</a>
 				</div>
@@ -233,7 +240,7 @@
 				// Activate mobile menu
 				jQuery('#sidebar').sidebar({dimPage:false});
 				jQuery("#sidebarButton").click(function(){
-				jQuery('#sidebar').sidebar('toggle');  
+					jQuery('#sidebar').sidebar('toggle');
 				});
 
 				// Accordian
@@ -241,6 +248,13 @@
 
 				// Video
 				jQuery('.ui.embed').embed();
+
+				// Remove spinner
+				jQuery('#main').removeClass('hidden');
+				jQuery('#end').removeClass('hidden');
+				jQuery('#preload').fadeTo('fast', 0, function(){
+					jQuery('#preload').remove();
+				});
 			});
 		</script>
 
